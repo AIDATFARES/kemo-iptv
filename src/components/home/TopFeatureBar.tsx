@@ -1,106 +1,58 @@
-"use client";
-
-import { useEffect, useRef, useState } from "react";
-import { Tv, Film, ShieldCheck, Zap, Headphones } from "lucide-react";
+import Link from "next/link";
+import { Tv, Film, ShieldCheck, Headphones } from "lucide-react";
 
 export default function TopFeatureBar() {
-  const stats = [
-    { value: 7, label: "In Business", prefix: "", suffix: " Years" },
-    { value: 7500, label: "Satisfied customers", prefix: "+", suffix: "" },
-    { value: 120000, label: "Films & Series", prefix: "+", suffix: "" },
-    { value: 50000, label: "Channels", prefix: "+", suffix: "" },
-  ];
-
   const highlights = [
     {
       icon: Tv,
       title: "+50,000 Channels",
-      desc: "150+ Countries 🇺🇸🇬🇧🇨🇦",
+      desc: "150+ Countries Live 4K",
+      href: "/channels",
     },
     {
       icon: Film,
       title: "200,000+ VOD",
-      desc: "Movies & Series 4K",
+      desc: "Updated Daily with 4K Hits",
+      href: "/channels",
     },
     {
       icon: ShieldCheck,
-      title: "99.99% Uptime",
-      desc: "Anti-Buffer 10.0",
+      title: "99.9% Uptime",
+      desc: "Anti-Freeze 10.0 Servers",
+      href: "/how-it-works",
     },
-
     {
       icon: Headphones,
-      title: "24/7 Live Support",
-      desc: "WhatsApp & Email",
+      title: "24/7 VIP Support",
+      desc: "Instant WhatsApp & Email",
+      href: "/contact",
     },
   ];
 
   return (
     <div className="w-full">
-      <div className="w-full">
-        <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4 lg:grid-cols-4">
-          {highlights.map((item, index) => {
-            const Icon = item.icon;
-            return (
-              <div
-                key={index}
-                className="bg-[#145082] rounded-xl p-3.5 sm:p-4 flex items-center gap-3.5 shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all duration-300 group"
-              >
-                <div className="p-2.5 rounded-lg bg-white/10 text-[#00e5ff] group-hover:scale-110 transition-transform shrink-0">
-                  <Icon className="w-5 h-5" strokeWidth={2} />
-                </div>
-                <div className="min-w-0">
-                  <p className="text-xs sm:text-[13px] font-black text-white leading-tight truncate">
-                    {item.title}
-                  </p>
-                  <p className="text-[11px] text-white/80 truncate mt-0.5">{item.desc}</p>
-                </div>
+      <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4 lg:grid-cols-4">
+        {highlights.map((item, index) => {
+          const Icon = item.icon;
+          return (
+            <Link
+              key={index}
+              href={item.href}
+              className="bg-slate-50/80 border border-slate-200/80 rounded-2xl p-4 flex items-center gap-3.5 hover:border-blue-300 hover:bg-white hover:shadow-xs transition-all duration-200 group block"
+            >
+              <div className="p-2.5 rounded-xl bg-blue-100/80 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors shrink-0">
+                <Icon className="w-5 h-5" strokeWidth={2.2} />
               </div>
-            );
-          })}
-        </div>
+              <div className="min-w-0">
+                <p className="text-xs sm:text-sm font-bold text-slate-900 group-hover:text-blue-600 transition-colors leading-tight truncate">
+                  {item.title}
+                </p>
+                <p className="text-[11px] text-slate-500 truncate mt-0.5">{item.desc}</p>
+              </div>
+            </Link>
+          );
+        })}
       </div>
     </div>
   );
-}
-
-function AnimatedStat({ value, prefix, suffix }: { value: number; prefix: string; suffix: string }) {
-  const ref = useRef<HTMLSpanElement>(null);
-  const [isInView, setIsInView] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsInView(true);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.2 }
-    );
-    if (ref.current) observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, []);
-
-  useEffect(() => {
-    if (!isInView || !ref.current) return;
-
-    const duration = 1200;
-    const startedAt = performance.now();
-    let frameId = 0;
-    const element = ref.current;
-
-    const tick = (now: number) => {
-      const progress = Math.min((now - startedAt) / duration, 1);
-      const eased = 1 - (1 - progress) ** 3;
-      const currentCount = Math.round(value * eased);
-      element.textContent = `${prefix}${currentCount.toLocaleString()}${suffix}`;
-      if (progress < 1) frameId = requestAnimationFrame(tick);
-    };
-
-    frameId = requestAnimationFrame(tick);
-    return () => cancelAnimationFrame(frameId);
-  }, [isInView, value, prefix, suffix]);
-
-  return <span className="block text-3xl font-extrabold tracking-tight text-black sm:text-4xl" ref={ref}>{prefix}0{suffix}</span>;
 }

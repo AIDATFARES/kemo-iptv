@@ -19,13 +19,15 @@ import SupportCtaSection from "@/components/home/SupportCtaSection";
 
 export default function Home() {
   return (
-    <main className="flex-col flex min-h-screen">
+    <main className="flex-col flex min-h-screen bg-white">
       {/* Hero Section */}
       <HeroSection />
 
       {/* 50,000+ Premium Live Channels Tape */}
-      <div className="w-full bg-transparent pt-12 relative z-20">
-        <span className="block text-center text-sm font-bold tracking-widest text-slate-400 uppercase mb-2">50,000+ Premium Live Channels</span>
+      <div className="w-full bg-slate-50/40 py-10 border-b border-slate-200/70 relative z-20">
+        <span className="block text-center text-xs font-bold tracking-widest text-slate-400 uppercase mb-4">
+          50,000+ Premium Live International Channels
+        </span>
         <BrandMarquee />
       </div>
 
@@ -35,8 +37,10 @@ export default function Home() {
       <MovieStrips />
 
       {/* Sports Tape */}
-      <div className="w-full bg-transparent pt-12 pb-2 relative z-20">
-        <span className="block text-center text-sm font-bold tracking-widest text-slate-400 uppercase mb-4">All Major Sports & Leagues Live</span>
+      <div className="w-full bg-slate-50/40 pt-12 pb-4 relative z-20">
+        <span className="block text-center text-xs font-bold tracking-widest text-slate-400 uppercase mb-4">
+          All Major Global Sports & Leagues Live in 4K
+        </span>
       </div>
       <BrandMarquee
         imagesFolder="chn"
@@ -55,28 +59,41 @@ export default function Home() {
           "imggt1 (11).webp",
           "imggt1 (12).webp"
         ]}
-        cardClassName="flex-shrink-0 w-[140px] h-[200px] md:w-[200px] md:h-[280px] relative rounded-xl overflow-hidden shadow-2xl border border-[#36a9ff]/20 bg-white hover:border-[#36a9ff]/50 hover:shadow-[0_0_20px_rgba(54,169,255,0.2)] transition-all duration-300 group p-4"
-        imageClassName="object-contain rounded-xl drop-shadow-md"
+        cardClassName="flex-shrink-0 w-[140px] h-[200px] md:w-[200px] md:h-[280px] relative rounded-2xl overflow-hidden shadow-xs border border-slate-200 bg-white hover:border-blue-300 hover:shadow-md transition-all duration-200 group p-4"
+        imageClassName="object-contain rounded-xl"
       />
 
-      {/* Channel & Installation Quick Links */}
-      <div className="w-full bg-transparent py-6 px-4 text-center border-t border-[#36a9ff]/10 relative z-20">
-        <p className="text-center text-sm md:text-base text-gray-600 max-w-3xl mx-auto">
-          Explore the complete <Link prefetch={false} className="font-semibold text-[#36a9ff] hover:text-[#2196f3] transition-colors" href="/channels">RealMIPTV Channel List</Link> or check out our <Link prefetch={false} className="font-semibold text-[#36a9ff] hover:text-[#2196f3] transition-colors" href="/installation">RealMIPTV Installation Guide</Link> to get your IPTV service running in minutes.
+      {/* Comprehensive SEO Interlinking Bar */}
+      <div className="w-full bg-slate-50/60 py-8 px-4 text-center border-y border-slate-200/70 relative z-20">
+        <p className="text-center text-sm md:text-base text-slate-700 max-w-4xl mx-auto font-medium leading-relaxed mb-3">
+          Explore the complete <Link prefetch={false} className="font-bold text-blue-600 hover:underline" href="/channels">50,000+ Reflexsat IPTV Channel List</Link>, choose an affordable <Link prefetch={false} className="font-bold text-blue-600 hover:underline" href="/pricing">Subscription Plan</Link>, or follow our <Link prefetch={false} className="font-bold text-blue-600 hover:underline" href="/installation">Installation Guide</Link> to start streaming in under 5 minutes.
         </p>
+        <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-xs font-bold text-slate-500">
+          <Link href="/how-it-works" className="hover:text-blue-600 transition-colors">How It Works</Link>
+          <span>·</span>
+          <Link href="/reseller" className="hover:text-blue-600 transition-colors">Reseller Panel Credits</Link>
+          <span>·</span>
+          <Link href="/blog" className="hover:text-blue-600 transition-colors">Streaming Guides &amp; Blog</Link>
+          <span>·</span>
+          <Link href="/faq" className="hover:text-blue-600 transition-colors">Frequently Asked Questions</Link>
+          <span>·</span>
+          <Link href="/contact" className="hover:text-blue-600 transition-colors">24/7 VIP Support Desk</Link>
+        </div>
       </div>
 
-      {/* Device Support & How It Works */}
+      {/* Comparison & Device Support */}
       <ComparisonSection />
       <DeviceSupport />
 
       {/* Supported Devices Banner */}
-      <div className="w-full bg-transparent pt-12 pb-6 relative z-10 flex justify-center px-4">
+      <div className="w-full bg-white py-12 border-b border-slate-200/70 relative z-10 flex justify-center px-4">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="/Devices-1-1024x350.webp"
-          alt="Supported on all your favorite devices"
-          className="max-w-full h-auto w-full md:w-[1024px] object-contain drop-shadow-sm"
+          src="/reflexsat-devices-banner.webp"
+          alt="Reflexsat IPTV 4K streaming supported across Firestick, Apple TV, Smart TV, Android, iOS, Windows and MAG devices"
+          title="Reflexsat IPTV Multi-Screen Device Compatibility"
+          loading="lazy"
+          className="max-w-full h-auto w-full md:w-[1024px] object-contain"
         />
       </div>
 

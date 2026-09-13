@@ -9,42 +9,49 @@ export default function Blog() {
   const gridPosts = blogPosts.slice(1);
 
   return (
-    <main className="flex-grow pt-32 pb-24 px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto w-full relative z-10">
+    <main className="flex-grow pt-24 pb-24 px-5 sm:px-8 max-w-[1300px] mx-auto w-full relative z-10 bg-white">
       {/* Header */}
-      <header className="mb-16 text-center md:text-left">
-        <h1 className="font-display-lg text-display-lg text-slate-900 mb-4 font-bold tracking-tight">Latest News &amp; Streaming Tips</h1>
-        <p className="font-body-lg text-body-lg text-slate-600 max-w-2xl mx-auto md:mx-0">
-          Stay updated with the latest in 4K streaming technology, new channel additions, and guides to optimize your realmiptv experience.
+      <header className="mb-14 text-center md:text-left">
+        <span className="inline-block py-1.5 px-4 rounded-full bg-blue-50 border border-blue-200 text-blue-700 font-bold text-xs tracking-wider uppercase mb-4">
+          Streaming Insights
+        </span>
+        <h1 className="text-4xl sm:text-5xl font-extrabold text-slate-900 mb-3 tracking-tight">
+          Latest News &amp; <span className="text-blue-600">Streaming Guides</span>
+        </h1>
+        <p className="text-slate-600 text-base sm:text-lg max-w-3xl leading-relaxed">
+          Stay updated with 4K streaming technology, player setup guides, and tips to optimize your Reflexsat IPTV experience.
+          Explore our <Link href="/pricing" className="font-semibold text-blue-600 hover:underline">subscription plans</Link>, browse our <Link href="/channels" className="font-semibold text-blue-600 hover:underline">50,000+ channel catalog</Link>, or check out our <Link href="/installation" className="font-semibold text-blue-600 hover:underline">device setup tutorials</Link>.
         </p>
       </header>
 
       {/* Featured Post */}
       {featuredPost && (
-        <section className="mb-24">
+        <section className="mb-16">
           <Link href={`/blog/${featuredPost.slug}`}>
-            <div className="bg-[#051f33] border border-[#36a9ff]/20 rounded-2xl overflow-hidden flex flex-col md:flex-row group cursor-pointer transition-all duration-500 shadow-2xl hover:shadow-[#36a9ff]/20 hover:border-[#36a9ff]/50">
-              <div className="md:w-3/5 h-64 md:h-[450px] relative overflow-hidden">
+            <div className="bg-white border border-slate-200 rounded-3xl overflow-hidden flex flex-col md:flex-row group cursor-pointer transition-all duration-200 shadow-xs hover:border-blue-300 hover:shadow-md">
+              <div className="md:w-3/5 h-64 md:h-[400px] relative overflow-hidden bg-slate-100">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
-                  alt={featuredPost.title}
+                  className="w-full h-full object-cover transform group-hover:scale-102 transition-transform duration-500"
+                  alt={`${featuredPost.title} - Reflexsat IPTV Streaming Guide`}
+                  title={`${featuredPost.title} | Reflexsat IPTV`}
+                  fetchPriority="high"
                   src={featuredPost.coverImage || ""}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#051f33] to-transparent md:bg-gradient-to-r md:from-transparent md:to-[#051f33] opacity-90 md:opacity-100"></div>
               </div>
-              <div className="md:w-2/5 p-8 md:p-12 flex flex-col justify-center z-10 relative bg-[#051f33] md:bg-transparent">
-                <span className="inline-block px-3 py-1 bg-[#36a9ff]/10 text-[#36a9ff] rounded-full font-label-caps text-[12px] font-bold tracking-widest uppercase mb-6 w-max border border-[#36a9ff]/30">
+              <div className="md:w-2/5 p-8 md:p-10 flex flex-col justify-center">
+                <span className="inline-block px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-bold uppercase tracking-wider mb-4 w-max border border-blue-200">
                   {featuredPost.category}
                 </span>
-                <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 group-hover:text-[#36a9ff] transition-colors leading-tight">
+                <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors leading-snug">
                   {featuredPost.title}
                 </h2>
-                <p className="text-gray-300 text-lg mb-8 line-clamp-3 leading-relaxed">
+                <p className="text-slate-600 text-sm sm:text-base mb-6 line-clamp-3 leading-relaxed">
                   {featuredPost.description}
                 </p>
-                <div className="flex items-center gap-4 mt-auto">
-                  <span className="text-white font-bold text-base uppercase tracking-wider">Read Article</span>
-                  <ArrowRight className="text-[#36a9ff] w-6 h-6 group-hover:translate-x-2 transition-transform" />
+                <div className="flex items-center gap-2 mt-auto text-blue-600 font-bold text-xs uppercase tracking-wider">
+                  <span>Read Full Guide</span>
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </div>
               </div>
             </div>
@@ -53,33 +60,34 @@ export default function Blog() {
       )}
 
       {/* Blog Grid */}
-      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24">
+      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
         {gridPosts.map((post) => (
           <Link href={`/blog/${post.slug}`} key={post.id}>
-            <article className="bg-[#051f33] border border-[#36a9ff]/20 rounded-xl overflow-hidden flex flex-col group cursor-pointer hover:-translate-y-2 transition-transform duration-300 h-full shadow-lg hover:shadow-[#36a9ff]/20 hover:border-[#36a9ff]/50">
-              <div className="h-56 relative overflow-hidden shrink-0">
+            <article className="bg-white border border-slate-200 rounded-2xl overflow-hidden flex flex-col group cursor-pointer hover:border-blue-300 hover:shadow-md transition-all duration-200 h-full">
+              <div className="h-52 relative overflow-hidden shrink-0 bg-slate-100">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  alt={post.title}
+                  className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300"
+                  alt={`${post.title} - Reflexsat IPTV Guide`}
+                  title={`${post.title} | Reflexsat IPTV`}
+                  loading="lazy"
                   src={post.coverImage || ""}
                 />
-                <div className="absolute bottom-0 w-full h-2/3 bg-gradient-to-t from-[#051f33] to-transparent"></div>
-                <span className="absolute top-4 left-4 px-3 py-1 bg-black/60 backdrop-blur-md text-white rounded-md font-bold text-[10px] tracking-widest uppercase border border-white/10">
+                <span className="absolute top-3 left-3 px-2.5 py-0.5 bg-white/95 backdrop-blur-xs text-slate-800 rounded-full font-bold text-[10px] tracking-wider uppercase border border-slate-200">
                   {post.category}
                 </span>
               </div>
               <div className="p-6 flex flex-col flex-grow">
-                <p className="text-xl font-bold text-white mb-3 group-hover:text-[#36a9ff] transition-colors leading-snug">
+                <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors leading-snug">
                   {post.title}
-                </p>
-                <p className="text-sm text-gray-400 mb-6 line-clamp-2 leading-relaxed">
+                </h3>
+                <p className="text-xs sm:text-sm text-slate-600 mb-4 line-clamp-2 leading-relaxed">
                   {post.description}
                 </p>
-                <div className="mt-auto flex items-center justify-between text-gray-500 text-xs font-semibold tracking-wider uppercase">
+                <div className="mt-auto flex items-center justify-between text-slate-400 text-xs font-semibold">
                   <span>{post.date}</span>
-                  <span className="text-[#36a9ff] flex items-center gap-1 group-hover:gap-2 transition-all">
-                    Read <ArrowRight className="w-3 h-3" />
+                  <span className="text-blue-600 flex items-center gap-1 group-hover:gap-1.5 transition-all font-bold">
+                    Read <ArrowRight className="w-3.5 h-3.5" />
                   </span>
                 </div>
               </div>
@@ -88,23 +96,24 @@ export default function Blog() {
         ))}
       </section>
 
-      {/* Newsletter Signup */}
-      <section className="bg-[#051f33] border border-[#36a9ff]/20 rounded-2xl p-8 md:p-16 text-center relative overflow-hidden shadow-2xl">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#36a9ff]/10 to-transparent opacity-50 pointer-events-none"></div>
-        <div className="relative z-10 max-w-2xl mx-auto">
-          <Mail className="w-12 h-12 text-[#36a9ff] mb-6 mx-auto" />
-          <h2 className="text-3xl font-bold text-white mb-4">Never Miss an Update</h2>
-          <p className="text-gray-300 text-lg mb-8">
-            Subscribe to our newsletter for the latest streaming tips, platform updates, and exclusive reseller offers delivered straight to your inbox.
+      {/* Newsletter Card */}
+      <section className="bg-slate-50 border border-slate-200 rounded-3xl p-8 md:p-12 text-center">
+        <div className="max-w-xl mx-auto">
+          <div className="w-12 h-12 rounded-2xl bg-blue-100 text-blue-600 flex items-center justify-center mx-auto mb-4">
+            <Mail className="w-6 h-6" />
+          </div>
+          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-2">Subscribe to Streaming Updates</h2>
+          <p className="text-slate-600 text-sm mb-6">
+            Get notified of new channel bouquets, 4K sports schedules, and setup tutorials.
           </p>
-          <form className="flex flex-col sm:flex-row gap-4 justify-center" onSubmit={(e) => e.preventDefault()}>
+          <form className="flex flex-col sm:flex-row gap-3 justify-center" onSubmit={(e) => e.preventDefault()}>
             <input
-              className="bg-[#031726] border border-[#36a9ff]/30 rounded-lg px-6 py-4 text-white focus:outline-none focus:border-[#36a9ff] focus:ring-1 focus:ring-[#36a9ff] w-full sm:w-96 transition-all shadow-inner"
+              className="border border-slate-200 bg-white rounded-full px-5 py-3 text-sm text-slate-900 focus:outline-none focus:border-blue-600 w-full sm:w-80"
               placeholder="Enter your email address"
               type="email"
             />
             <button
-              className="bg-[#36a9ff] hover:bg-[#2196f3] text-white font-bold text-base tracking-wider uppercase px-8 py-4 rounded-lg whitespace-nowrap transition-colors shadow-lg shadow-[#36a9ff]/20"
+              className="btn-primary-reflex px-7 py-3 text-xs font-bold uppercase tracking-wider"
               type="submit"
             >
               Subscribe

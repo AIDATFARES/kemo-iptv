@@ -14,45 +14,40 @@ const reviewImages = [
 ];
 
 const metrics = [
-  { icon: Star, value: "4.9 / 5.0", label: "Average rating", tone: "text-amber-300" },
-  { icon: Users, value: "14K+", label: "Happy customers", tone: "text-blue-300" },
-  { icon: Tv, value: "50K+", label: "Live channels", tone: "text-[#36a9ff]" },
-  { icon: Globe2, value: "80+", label: "Countries supported", tone: "text-[#36a9ff]" },
-  { icon: RefreshCw, value: "94%", label: "Renewal rate", tone: "text-pink-300" },
+  { icon: Star, value: "4.9 / 5.0", label: "Average rating", tone: "text-amber-500" },
+  { icon: Users, value: "14K+", label: "Happy customers", tone: "text-blue-600" },
+  { icon: Tv, value: "50K+", label: "Live channels", tone: "text-blue-600" },
+  { icon: Globe2, value: "80+", label: "Countries supported", tone: "text-blue-600" },
+  { icon: RefreshCw, value: "94%", label: "Renewal rate", tone: "text-emerald-500" },
 ];
 
 export default function TestimonialsSection() {
   return (
-    <section className="relative z-10 overflow-hidden bg-white py-24 sm:py-28">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_22%_36%,rgba(92,49,153,0.12),transparent_28%),radial-gradient(ellipse_at_76%_52%,rgba(30,94,185,0.09),transparent_28%)]" />
-      <div className="relative">
-        <div className="mx-auto max-w-3xl px-5 text-center">
-          <span className="inline-flex items-center gap-1.5 rounded-full border border-amber-400/40 bg-amber-400/[0.06] px-4 py-1.5 text-[10px] font-extrabold uppercase tracking-[0.15em] text-amber-300">
-            <Trophy className="h-3 w-3" /> TOP RATED IPTV PROVIDER
+    <section className="relative z-10 overflow-hidden bg-slate-50/50 py-24 sm:py-28 border-b border-slate-200/80">
+      <div className="relative max-w-[1240px] mx-auto px-5 sm:px-8">
+        <div className="mx-auto max-w-3xl text-center">
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-amber-300 bg-amber-50 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-amber-800">
+            <Trophy className="h-3.5 w-3.5 text-amber-600" /> Top Rated IPTV Provider
           </span>
-          <h2 className="mt-6 text-4xl font-black uppercase leading-[0.98] tracking-tight text-black sm:text-5xl animate-fade-up">
-            <span className="block">Trusted by Thousands of</span>
-            <span className="mt-1 block bg-gradient-to-r from-[#36a9ff] via-[#36a9ff] to-[#36a9ff] bg-clip-text text-transparent">
-              Happy Cord-Cutters
-            </span>
+          <h2 className="mt-6 text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
+            Trusted by Thousands of Cord-Cutters Worldwide
           </h2>
-          <p className="mx-auto mt-5 max-w-2xl text-sm leading-6 text-gray-600 animate-fade-up" style={{ animationDelay: '0.1s' }}>
-            Read real reviews from our global community. Discover why Realm IPTV is rated as the most reliable, buffer-free IPTV service for live sports, movies, and international channels.
+          <p className="mx-auto mt-4 max-w-2xl text-base text-slate-600 leading-relaxed">
+            Read verified feedback from our global streaming community. Discover why Reflexsat IPTV is recommended for buffer-free live sports, 4K movies, and reliable international feeds.
           </p>
         </div>
 
-        <div className="mx-auto mt-10 grid max-w-[760px] grid-cols-2 gap-3 px-5 sm:grid-cols-5 sm:px-0">
+        <div className="mx-auto mt-10 grid max-w-3xl grid-cols-2 gap-3 sm:grid-cols-5">
           {metrics.map((metric, index) => {
             const Icon = metric.icon;
             return (
               <div
                 key={metric.label}
-                className="rounded-xl border border-black/10 bg-white/90 px-3 py-4 text-center shadow-[0_0_20px_rgba(0,0,0,0.18)] animate-fade-up"
-                style={{ animationDelay: `${0.2 + (index * 0.06)}s`, animationFillMode: 'both' }}
+                className="rounded-2xl border border-slate-200 bg-white px-3 py-4 text-center shadow-xs"
               >
                 <Icon className={`mx-auto h-4 w-4 ${metric.tone}`} />
-                <span className="mt-2 block text-base font-bold text-black">{metric.value}</span>
-                <small className="mt-0.5 block text-[8px] font-bold uppercase tracking-wide text-gray-600">
+                <span className="mt-2 block text-base font-bold text-slate-900">{metric.value}</span>
+                <small className="mt-0.5 block text-[10px] font-bold uppercase tracking-wider text-slate-500">
                   {metric.label}
                 </small>
               </div>
@@ -60,8 +55,8 @@ export default function TestimonialsSection() {
           })}
         </div>
 
-        {/* Infinite Image Carousel of Real Reviews (Without background) */}
-        <div className="mt-11 flex overflow-hidden select-none [mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)] py-4">
+        {/* Carousel of Real Reviews */}
+        <div className="mt-12 flex overflow-hidden select-none py-4">
           <div
             className="flex min-w-full gap-6 px-4 animate-marquee"
             style={{ animationDuration: '40s' }}
@@ -69,40 +64,30 @@ export default function TestimonialsSection() {
             {[...reviewImages, ...reviewImages, ...reviewImages].map((img, index) => (
               <div
                 key={index}
-                className="flex-shrink-0 w-[220px] sm:w-[280px] h-[340px] sm:h-[420px] relative rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 group drop-shadow-2xl"
+                className="flex-shrink-0 w-[220px] sm:w-[280px] h-[340px] sm:h-[400px] relative rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm hover:scale-102 transition-all duration-200"
               >
                 <Image
                   src={`/reviews/${img}`}
-                  alt="Realm IPTV Customer Review"
+                  alt={`Reflexsat IPTV verified customer review ${index + 1} - 5-star subscriber satisfaction`}
+                  title={`Reflexsat IPTV Verified Review ${index + 1}`}
                   fill
                   sizes="(max-width: 640px) 220px, 280px"
-                  className="object-contain group-hover:scale-105 transition-transform duration-300"
+                  className="object-contain"
                 />
               </div>
             ))}
           </div>
         </div>
 
-        <div className="mt-12 text-center animate-fade-up" style={{ animationDelay: '0.4s', animationFillMode: 'both' }}>
+        <div className="mt-12 text-center">
           <a
-            href="https://wa.me/213552069874?text=Hello%2C%20I%20would%20like%20a%20free%20trial%20for%20realmiptv%20IPTV."
+            href="https://wa.me/447882781998?text=Hello,%20I%20would%20like%20a%20free%20trial%20for%20Reflexsat%20IPTV."
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-2 rounded-full bg-[#145082] hover:bg-[#1a6098] px-7 py-4 text-sm font-extrabold text-white shadow-[0_0_28px_rgba(54,169,255,0.35)] transition-all hover:-translate-y-0.5 hover:scale-105"
+            className="btn-primary-reflex inline-flex items-center gap-2 px-8 py-3.5 text-xs sm:text-sm font-extrabold uppercase tracking-wider"
           >
-            <Trophy className="h-4 w-4" /> Get Your Free Trial
+            <Trophy className="h-4 w-4" /> Request Free 24h Trial
           </a>
-          <div className="mt-7 flex flex-wrap justify-center gap-x-6 gap-y-2 text-[10px] text-gray-600">
-            <span className="flex items-center gap-1.5">
-              <Headphones className="h-3 w-3 text-[#25D366]" /> Instant WhatsApp delivery
-            </span>
-            <span className="flex items-center gap-1.5">
-              <Tv className="h-3 w-3 text-[#36a9ff]" /> Works on all devices
-            </span>
-            <span className="flex items-center gap-1.5">
-              <ShieldCheck className="h-3 w-3 text-[#36a9ff]" /> 99.9% uptime guaranteed
-            </span>
-          </div>
         </div>
       </div>
     </section>

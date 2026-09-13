@@ -1,24 +1,24 @@
 "use client";
 
+import Link from "next/link";
 import { Apple, Box, ChevronDown, Download, HelpCircle, Monitor, Satellite, Smartphone, Tv } from "lucide-react";
 import { useState } from "react";
-import Image from "next/image";
 
 const devices = [
-  { id: "smart-tv", label: "Smart TV", icon: Monitor, title: "Smart TV Setup (Samsung, LG, Sony, etc.)", app: "Smart IPTV or IPTV Smarters", note: "Samsung TVs commonly use Smart IPTV, while LG TVs can use IPTV Smarters or SS IPTV." },
-  { id: "firestick", label: "Firestick", icon: Tv, title: "Firestick Setup", app: "IPTV Smarters Pro or TiviMate", note: "Install your preferred IPTV player from the Amazon Appstore, then sign in with the details from your welcome email." },
-  { id: "android", label: "Android", icon: Smartphone, title: "Android Setup", app: "IPTV Smarters Pro or TiviMate", note: "Download your player from Google Play and use your supplied playlist details to sign in." },
-  { id: "ios", label: "iOS", icon: Apple, title: "iPhone & iPad Setup", app: "IPTV Smarters Player", note: "Install a compatible player from the App Store and enter the credentials from your welcome email." },
-  { id: "mag", label: "MAG Box", icon: Box, title: "MAG Box Setup", app: "Portal URL", note: "Send your MAG device MAC address to support so we can activate your portal before setup." },
-  { id: "enigma", label: "Enigma2", icon: Satellite, title: "Enigma2 Setup", app: "XtreamTV or E-Channelizer", note: "Use a compatible Enigma2 plugin and add the playlist details supplied with your subscription." },
+  { id: "smart-tv", label: "Smart TV", icon: Monitor, title: "Smart TV Setup (Samsung, LG, Sony, etc.)", app: "IBO Player, Smart IPTV, or IPTV Smarters Pro", note: "Samsung Tizen TVs commonly use IBO Player or Smart IPTV, while LG webOS TVs support IPTV Smarters Pro and IBO Player." },
+  { id: "firestick", label: "Firestick", icon: Tv, title: "Amazon Firestick 4K Setup", app: "TiviMate or IPTV Smarters Pro", note: "Download Downloader from the Amazon Appstore, install your favorite player (TiviMate recommended), and sign in using your Reflexsat IPTV credentials." },
+  { id: "android", label: "Android TV & Box", icon: Smartphone, title: "Android TV & Android Box Setup", app: "TiviMate or IPTV Smarters Pro", note: "Install your player from the Google Play Store and enter the Xtream Codes API details supplied in your welcome message." },
+  { id: "ios", label: "iOS (iPhone & iPad)", icon: Apple, title: "Apple iOS Setup", app: "IPTV Smarters Player or GSE Smart IPTV", note: "Install a compatible player from the Apple App Store and enter the server details from your welcome message." },
+  { id: "mag", label: "MAG Device", icon: Box, title: "MAG Box Setup", app: "Portal URL", note: "Provide your MAG MAC address (00:1A:79:...) to Reflexsat support on WhatsApp so we can authorize your portal before you connect." },
+  { id: "enigma", label: "Enigma2 & PC", icon: Satellite, title: "Enigma2 & Windows/Mac Setup", app: "VLC Player, IPTV Smarters PC or XtreamTV", note: "Use the M3U playlist file in VLC or enter your Xtream Codes parameters into the desktop IPTV player." },
 ];
 
 const faqs = [
-  { question: "1. How do I install IPTV on a Smart TV?", answer: "Install a compatible player such as Smart IPTV or IPTV Smarters from your TV's app store, then add the M3U URL or Xtream credentials from your welcome email." },
-  { question: "2. Where do I find my M3U URL?", answer: "Your M3U URL is included in the welcome email sent after activation. Contact support if you need it resent." },
-  { question: "3. How can I reduce buffering?", answer: "Use a stable internet connection, restart your device and router, and select an appropriate quality setting for your connection." },
-  { question: "4. How do I set up Realm IPTV using Xtream Codes API?", answer: "Choose Xtream Codes API in your player and enter the server URL, username, and password from your welcome email." },
-  { question: "5. Can I connect using a MAC address (Portal URL)?", answer: "Yes. MAG and compatible portal devices can be activated using their MAC address. Send it to our support team for assistance." },
+  { question: "1. How do I configure Reflexsat IPTV on a Smart TV?", answer: <>Install a player application such as IBO Player or IPTV Smarters from your TV&apos;s app store. Open the app and input the M3U playlist URL or Xtream Codes credentials (Server, Username, Password) from your <Link href="/pricing" className="text-blue-600 font-semibold hover:underline">welcome email</Link>.</> },
+  { question: "2. Where do I find my M3U URL and Xtream credentials?", answer: <>Your connection credentials are sent to your WhatsApp and email immediately after checkout. <Link href="/contact" className="text-blue-600 font-semibold hover:underline">Contact our support desk</Link> if you need them resent.</> },
+  { question: "3. How can I ensure zero buffering during live sports?", answer: <>We recommend connecting your streaming device via Ethernet cable where possible, or using 5GHz Wi-Fi with at least 25 Mbps download speed. Our streams run on <Link href="/how-it-works" className="text-blue-600 font-semibold hover:underline">anti-freeze 10.0 servers</Link> designed for peak traffic.</> },
+  { question: "4. How do I set up Reflexsat IPTV using Xtream Codes API?", answer: <>Choose &apos;Login with Xtream Codes API&apos; inside your player. Enter any name, then copy the Server URL, Username, and Password provided with your <Link href="/pricing" className="text-blue-600 font-semibold hover:underline">Reflexsat plan</Link>.</> },
+  { question: "5. Can I connect using a MAC address (Portal URL)?", answer: <>Yes. MAG boxes and STB emulators can be activated using their MAC address. Message our <Link href="/contact" className="text-blue-600 font-semibold hover:underline">support team on WhatsApp</Link> to bind your device.</> },
 ];
 
 export default function DeviceSetupGuide() {
@@ -27,129 +27,130 @@ export default function DeviceSetupGuide() {
   const DeviceIcon = device.icon;
 
   return (
-    <section className="mb-16 md:mb-[100px]">
-      <header className="mx-auto mb-9 max-w-2xl text-center">
-        <h2 className="text-3xl font-extrabold tracking-tight text-black sm:text-4xl">Device Setup Instructions</h2>
-        <p className="mt-3 text-base text-gray-600">Select your device to receive clear setup instructions.</p>
+    <section className="mb-16 md:mb-24">
+      <header className="mx-auto mb-10 max-w-2xl text-center">
+        <h2 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
+          Choose Your Streaming Device
+        </h2>
+        <p className="mt-2 text-sm sm:text-base text-slate-600">
+          Select your platform below for customized step-by-step instructions.
+        </p>
       </header>
 
-      <div className="mb-7 flex flex-wrap justify-center gap-2">
+      {/* Device Selector Buttons */}
+      <div className="mb-8 flex flex-wrap justify-center gap-2">
         {devices.map((item) => {
           const Icon = item.icon;
           const active = item.id === activeDevice;
           return (
             <button 
-              className={`inline-flex items-center gap-2 rounded-full border px-5 py-2.5 text-sm font-semibold transition-colors ${active ? "border-[#36a9ff] bg-[#36a9ff] text-white shadow-lg shadow-[#36a9ff]/30" : "border-black/15 bg-white text-gray-600 hover:border-[#36a9ff] hover:text-[#36a9ff]"}`} 
+              className={`inline-flex items-center gap-2 rounded-full border px-5 py-2 text-xs sm:text-sm font-semibold transition-all ${
+                active 
+                  ? "border-blue-600 bg-blue-600 text-white shadow-xs" 
+                  : "border-slate-200 bg-white text-slate-700 hover:border-blue-300 hover:text-blue-600"
+              }`} 
               key={item.id} 
               onClick={() => setActiveDevice(item.id)} 
               type="button"
             >
-              <Icon className="h-4 w-4" />{item.label}
+              <Icon className="h-4 w-4" />
+              {item.label}
             </button>
           );
         })}
       </div>
 
-      <article className="mx-auto max-w-[1000px] rounded-3xl border-2 border-[#36a9ff] bg-white p-6 sm:p-10 shadow-2xl overflow-hidden">
-        
+      {/* Instructions Card */}
+      <article className="mx-auto max-w-[1000px] rounded-3xl border border-slate-200 bg-white p-6 sm:p-10 shadow-xs">
         {/* Device Header */}
-        <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6 border-b border-black/5 pb-6 mb-8">
-          <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-[#36a9ff]/10 shrink-0">
-            <DeviceIcon className="h-8 w-8 text-[#36a9ff]" />
+        <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6 border-b border-slate-100 pb-6 mb-8">
+          <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-100 text-blue-600 shrink-0">
+            <DeviceIcon className="h-7 w-7" />
           </div>
           <div>
-            <h3 className="text-2xl font-black text-black sm:text-3xl">{device.title}</h3>
-            <p className="mt-1 text-gray-600 font-medium">Follow these steps to configure your {device.label} for Realm IPTV.</p>
+            <h3 className="text-2xl font-bold text-slate-900">{device.title}</h3>
+            <p className="mt-1 text-xs sm:text-sm text-slate-600">
+              Follow these simple steps to configure your {device.label} for <strong className="text-slate-900">Reflexsat IPTV</strong>.
+            </p>
           </div>
         </div>
         
-        {/* Important Note */}
+        {/* Important Note Box */}
         {device.note && (
-          <div className="mb-8 rounded-2xl border border-[#36a9ff]/30 bg-[#36a9ff]/5 p-5 flex items-start gap-4">
-            <HelpCircle className="h-6 w-6 text-[#36a9ff] shrink-0" />
+          <div className="mb-8 rounded-2xl border border-blue-200/80 bg-blue-50/60 p-5 flex items-start gap-3.5">
+            <HelpCircle className="h-5 w-5 text-blue-600 shrink-0 mt-0.5" />
             <div>
-              <h4 className="font-bold text-black mb-1">Important Note</h4>
-              <p className="text-sm leading-relaxed text-gray-700">{device.note}</p>
+              <h4 className="font-bold text-xs uppercase tracking-wider text-blue-800 mb-1">Recommended Player & Tip</h4>
+              <p className="text-xs sm:text-sm leading-relaxed text-slate-700">{device.note}</p>
             </div>
           </div>
         )}
 
-        {/* Steps Grid */}
-        <div className="space-y-6">
-          <SetupStep 
-            number="1" 
-            title="Install IPTV App"
-          >
-            Navigate to your device's app store, search for <strong>{device.app}</strong>, and install the application directly to your device.
-          </SetupStep>
-          
-          <SetupStep 
-            number="2" 
-            title="Configure your playlist"
-          >
-            Launch the IPTV app, open its settings menu, and enter the M3U playlist details or Xtream Codes credentials supplied in your welcome email.
-            <div className="mt-4">
-              <CodeLine label="M3U URL" text="Use the secure playlist URL from your welcome email" />
+        {/* Steps */}
+        <div className="space-y-4">
+          <div className="flex gap-4 p-5 rounded-2xl border border-slate-200 bg-slate-50/50">
+            <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-blue-600 text-xs font-bold text-white">
+              1
+            </span>
+            <div>
+              <h4 className="font-bold text-slate-900 text-sm sm:text-base">1. Install Player App</h4>
+              <p className="mt-1 text-xs sm:text-sm text-slate-600 leading-relaxed">
+                Open your device&apos;s application store, search for <strong>{device.app}</strong>, and download it.
+              </p>
             </div>
-          </SetupStep>
-          
-          <SetupStep 
-            number="3" 
-            title="Start Watching"
-          >
-            Save your settings and allow the app a few moments to load the channels. You now have immediate access to live channels, movies and TV shows in stunning 4K quality!
-          </SetupStep>
+          </div>
+
+          <div className="flex gap-4 p-5 rounded-2xl border border-slate-200 bg-slate-50/50">
+            <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-blue-600 text-xs font-bold text-white">
+              2
+            </span>
+            <div className="flex-1">
+              <h4 className="font-bold text-slate-900 text-sm sm:text-base">2. Input Login Credentials</h4>
+              <p className="mt-1 text-xs sm:text-sm text-slate-600 leading-relaxed">
+                Open the application, choose &quot;Xtream Codes API&quot; or &quot;Load M3U Playlist&quot;, and enter your credentials from your welcome message.
+              </p>
+              <div className="mt-3 p-3 rounded-xl bg-white border border-slate-200 font-mono text-xs text-slate-700">
+                <span className="font-bold text-blue-600 mr-2">Server & Credentials:</span>
+                Provided in your Reflexsat welcome email / WhatsApp
+              </div>
+            </div>
+          </div>
+
+          <div className="flex gap-4 p-5 rounded-2xl border border-slate-200 bg-slate-50/50">
+            <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-blue-600 text-xs font-bold text-white">
+              3
+            </span>
+            <div>
+              <h4 className="font-bold text-slate-900 text-sm sm:text-base">3. Enjoy 4K Streaming</h4>
+              <p className="mt-1 text-xs sm:text-sm text-slate-600 leading-relaxed">
+                Save your connection. The player will download all 50,000+ live channels and 200,000+ VOD titles with full EPG program guide.
+              </p>
+            </div>
+          </div>
         </div>
       </article>
 
+      {/* Installation FAQ */}
       <div className="mx-auto mt-20 max-w-[1000px]">
-        <h2 className="mb-8 text-center text-3xl font-extrabold tracking-tight text-black sm:text-4xl">Installation FAQ</h2>
-        <div className="grid gap-5 md:grid-cols-2">
+        <h2 className="mb-8 text-center text-2xl sm:text-3xl font-extrabold text-slate-900">
+          Setup FAQ
+        </h2>
+        <div className="grid gap-4 md:grid-cols-2">
           {faqs.map((faq) => (
-            <div className="flex flex-col rounded-2xl overflow-hidden border border-black/10 bg-white shadow-sm hover:border-[#36a9ff]/50 transition-colors" key={faq.question}>
-              <div className="bg-white border-b border-black/5 px-5 py-4 flex items-center gap-3">
-                <HelpCircle className="w-5 h-5 text-[#36a9ff] shrink-0" />
-                <h3 className="text-base sm:text-lg font-bold text-black leading-snug">
+            <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-xs" key={faq.question}>
+              <div className="flex items-start gap-3 mb-2">
+                <HelpCircle className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
+                <h3 className="text-sm sm:text-base font-bold text-slate-900 leading-snug">
                   {faq.question}
                 </h3>
               </div>
-              <div className="p-5 text-sm text-gray-700 leading-relaxed bg-white flex-1">
-                <p>{faq.answer}</p>
-              </div>
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed pl-8">
+                {faq.answer}
+              </p>
             </div>
           ))}
         </div>
       </div>
     </section>
-  );
-}
-
-function SetupStep({ children, number, title }: { children: React.ReactNode; number: string; title: string }) {
-  return (
-    <div className="flex flex-col sm:flex-row gap-6 bg-white border border-black/10 p-6 sm:p-8 rounded-2xl shadow-sm hover:border-[#36a9ff] transition-colors">
-      
-      {/* Content */}
-      <div className="flex flex-1 gap-5 items-start">
-         <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#36a9ff] text-lg font-extrabold text-white shadow-md">
-           {number}
-         </span>
-         <div className="flex-1 mt-1">
-           <h4 className="text-lg font-bold text-black sm:text-xl">{title}</h4>
-           <div className="mt-3 text-sm leading-relaxed text-gray-600">
-             {children}
-           </div>
-         </div>
-      </div>
-      
-    </div>
-  );
-}
-
-function CodeLine({ label, text }: { label: string; text: string }) {
-  return (
-    <div className="rounded-xl bg-white border border-black/10 px-4 py-3 font-mono text-xs text-gray-700 break-all">
-      <span className="font-bold text-[#36a9ff] mr-2">{label}:</span> 
-      {text}
-    </div>
   );
 }

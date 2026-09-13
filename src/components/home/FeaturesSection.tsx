@@ -7,24 +7,24 @@ export default function FeaturesSection() {
     {
       icon: Monitor,
       title: "4K ULTRA HD STREAMING",
-      desc: "Enjoy every channel and live event in stunning 4K, Full HD, and HD. RealMIPTV anti-freeze technology ensures smooth IPTV streaming on any compatible device.",
+      desc: "Enjoy every channel and live event in stunning 4K, Full HD, and 60 FPS HD. Reflexsat IPTV anti-freeze technology ensures smooth streaming on any device.",
     },
     {
       icon: Layers,
-      title: "50,000+ LIVE IPTV CHANNELS",
-      desc: "Access over 50,000 live channels covering sports, news, and premium entertainment. Every broadcast on our IPTV service is delivered in crystal-clear quality.",
+      title: "50,000+ LIVE CHANNELS",
+      desc: "Access over 50,000 live channels covering sports, news, and premium entertainment. Every broadcast is delivered in crystal-clear quality.",
     },
     {
       icon: Film,
       title: "200,000+ MOVIES & SERIES",
-      desc: "Explore a massive VOD library featuring the latest movies, hit series, and documentaries—available on demand with your RealMIPTV subscription.",
+      desc: "Explore a massive VOD library featuring the latest movies, hit series, and documentaries—available on demand with your Reflexsat IPTV subscription.",
     },
   ];
 
   const bottomFeatures = [
     {
       icon: Zap,
-      title: "Instant Activation",
+      title: "Instant Setup",
       desc: "Your subscription is activated within minutes.",
     },
     {
@@ -35,7 +35,7 @@ export default function FeaturesSection() {
     {
       icon: Globe,
       title: "Works Worldwide",
-      desc: "Enjoy the RealMIPTV service wherever you are, on any stable internet connection.",
+      desc: "Enjoy Reflexsat IPTV anywhere on any standard internet connection.",
     },
     {
       icon: ShieldCheck,
@@ -45,36 +45,36 @@ export default function FeaturesSection() {
   ];
 
   return (
-    <section className="py-20 bg-white relative z-10">
+    <section className="py-20 bg-white relative z-10 border-b border-slate-200">
       <div className="max-w-[1240px] mx-auto px-6">
 
         {/* Section Header */}
         <div className="text-center mb-14">
-          <span className="inline-block py-1 px-4 rounded-full bg-[#36a9ff]/10 border border-[#36a9ff]/30 text-[#36a9ff] text-xs font-bold tracking-widest uppercase mb-5">
+          <span className="inline-block py-1.5 px-4 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-bold tracking-wider uppercase mb-4">
             Premium Features
           </span>
-          <h2 className="text-3xl md:text-5xl font-extrabold text-black leading-tight">
+          <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 leading-tight">
             Everything You Need for the{" "}
-            <span className="block text-[#36a9ff]">Ultimate RealMIPTV Experience.</span>
+            <span className="block text-blue-600">Ultimate Reflexsat IPTV Experience</span>
           </h2>
         </div>
 
         {/* Top Row — 3 large cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-5">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
           {topFeatures.map((feature, index) => {
             const Icon = feature.icon;
             return (
               <div
                 key={index}
-                className="bg-[#145082] rounded-2xl p-8 flex flex-col gap-4 hover:bg-[#1a6098] transition-colors duration-300 group shadow-lg"
+                className="bg-slate-50 rounded-2xl p-8 flex flex-col gap-4 border border-slate-200 hover:border-blue-300 hover:shadow-md transition-all duration-200"
               >
-                <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors">
-                  <Icon className="w-6 h-6 text-white" strokeWidth={1.5} />
+                <div className="w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center text-blue-600">
+                  <Icon className="w-6 h-6" strokeWidth={2} />
                 </div>
-                <h3 className="text-white font-extrabold text-base tracking-wide uppercase">
+                <h3 className="text-slate-900 font-bold text-base tracking-wide uppercase">
                   {feature.title}
                 </h3>
-                <p className="text-white/70 text-sm leading-relaxed">
+                <p className="text-slate-600 text-sm leading-relaxed">
                   {feature.desc}
                 </p>
               </div>
@@ -83,21 +83,21 @@ export default function FeaturesSection() {
         </div>
 
         {/* Bottom Row — 4 smaller cards */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {bottomFeatures.map((feature, index) => {
             const Icon = feature.icon;
             return (
               <div
                 key={index}
-                className="bg-[#145082] rounded-2xl p-6 flex flex-col gap-3 hover:bg-[#1a6098] transition-colors duration-300 group shadow-lg"
+                className="bg-slate-50/60 rounded-xl p-5 flex flex-col gap-2.5 border border-slate-200"
               >
-                <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors">
-                  <Icon className="w-5 h-5 text-white" strokeWidth={1.5} />
+                <div className="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center text-blue-600">
+                  <Icon className="w-5 h-5" strokeWidth={2} />
                 </div>
-                <h3 className="text-white font-bold text-sm tracking-wide">
+                <h3 className="text-slate-900 font-bold text-sm tracking-wide">
                   {feature.title}
                 </h3>
-                <p className="text-white/60 text-xs leading-relaxed">
+                <p className="text-slate-500 text-xs leading-relaxed">
                   {feature.desc}
                 </p>
               </div>

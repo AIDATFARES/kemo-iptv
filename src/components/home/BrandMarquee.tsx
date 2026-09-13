@@ -25,29 +25,30 @@ export default function BrandMarquee({
     : [...brandList, ...brandList];
 
   return (
-    <div className="w-full overflow-hidden bg-transparent py-6 relative flex items-center">
-      {/* Left/Right Gradient Masks removed per user request */}
-      
-      {/* The scrolling container */}
+    <div className="w-full overflow-hidden bg-transparent py-4 relative flex items-center">
       <div
-        className={`flex gap-6 md:gap-8 px-6 items-center w-max ${brandList.length < 10 ? 'animate-marquee-fast' : 'animate-marquee'}`}
+        className={`flex gap-4 md:gap-6 px-6 items-center w-max ${brandList.length < 10 ? 'animate-marquee-fast' : 'animate-marquee'}`}
       >
-        {repeatList.map((brand, i) => (
-          <div 
-            key={i} 
-            className={cardClassName || "flex-shrink-0 w-[100px] h-[50px] md:w-[140px] md:h-[65px] relative bg-white border border-[#36a9ff]/20 rounded-xl p-3 hover:border-[#36a9ff]/50 hover:shadow-[0_0_20px_rgba(54,169,255,0.2)] hover:scale-105 transition-all duration-300 shadow-sm"}
-          >
-            <div className="relative w-full h-full overflow-hidden rounded-xl">
-              <Image 
-                src={`/${imagesFolder}/${brand}`} 
-                alt="Channel Logo" 
-                fill
-                sizes="(max-width: 640px) 100px, (max-width: 1024px) 140px, 160px"
-                className={imageClassName || "object-contain drop-shadow-md rounded-lg"}
-              />
+        {repeatList.map((brand, i) => {
+          const cleanBrandName = brand.replace(/\.[^/.]+$/, "").replace(/[-_()0-9]/g, " ").trim() || "Live TV Channel";
+          return (
+            <div 
+              key={i} 
+              className={cardClassName || "flex-shrink-0 w-[100px] h-[52px] md:w-[130px] md:h-[64px] relative bg-white border border-slate-200 rounded-2xl p-2.5 hover:border-blue-300 hover:shadow-xs transition-all duration-150"}
+            >
+              <div className="relative w-full h-full overflow-hidden rounded-xl">
+                <Image 
+                  src={`/${imagesFolder}/${brand}`} 
+                  alt={`Watch ${cleanBrandName} live in 4K on Reflexsat IPTV`} 
+                  title={`${cleanBrandName} - Reflexsat IPTV Live Stream`}
+                  fill
+                  sizes="(max-width: 640px) 100px, (max-width: 1024px) 130px, 150px"
+                  className={imageClassName || "object-contain rounded-lg"}
+                />
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </div>
   );

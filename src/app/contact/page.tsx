@@ -1,134 +1,176 @@
 "use client";
 
-import { Mail, MessageCircle, ArrowRight, Clock, Send } from "lucide-react";
+import Link from "next/link";
+import { Mail, MessageCircle, ArrowRight, Clock, Send, ShieldCheck } from "lucide-react";
 
 export default function Contact() {
   return (
-    <main className="flex-grow pt-32 pb-24 px-6 md:px-12 max-w-[1440px] mx-auto w-full relative z-10">
+    <main className="flex-grow pt-24 pb-24 px-6 md:px-12 max-w-[1300px] mx-auto w-full relative z-10 bg-white">
       <div className="mx-auto mb-14 max-w-3xl text-center">
-        <span className="inline-block py-1.5 px-4 rounded-full bg-[#36a9ff]/10 text-[#36a9ff] font-bold text-xs tracking-widest uppercase mb-6 border border-[#36a9ff]/20">
-          Contact Support
+        <span className="inline-block py-1.5 px-4 rounded-full bg-blue-50 border border-blue-200 text-blue-700 font-bold text-xs tracking-wider uppercase mb-4">
+          Direct Customer Care
         </span>
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.05] tracking-tight">
-          <span className="block text-black">Get in Touch with</span>
-          <span className="mt-1 block text-transparent bg-clip-text bg-gradient-to-r from-[#36a9ff] to-[#2196f3]">Our Support Team.</span>
+        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-tight">
+          Get in Touch with <span className="text-blue-600">Reflexsat Support</span>
         </h1>
-        <p className="mx-auto mt-5 max-w-2xl text-sm md:text-base leading-6 text-gray-600 font-medium">
-          We&apos;re here to help you get the best streaming experience. Send us a message and we&apos;ll get back to you quickly.
+        <p className="mx-auto mt-4 max-w-2xl text-base text-slate-600 leading-relaxed">
+          Need help <Link href="/pricing" className="text-blue-600 font-semibold hover:underline">choosing a package</Link>,{" "}
+          <Link href="/installation" className="text-blue-600 font-semibold hover:underline">setting up your device</Link>, or exploring our{" "}
+          <Link href="/channels" className="text-blue-600 font-semibold hover:underline">channel lineup</Link>?
+          You can also consult our <Link href="/faq" className="text-blue-600 font-semibold hover:underline">FAQ knowledge base</Link> or reach out directly below.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10">
         {/* Contact Info Sidebar */}
-        <div className="lg:col-span-4 flex flex-col gap-6">
-          <div className="bg-[#145082] rounded-xl p-8 flex flex-col items-center text-center group hover:-translate-y-1 transition-transform duration-300 shadow-lg">
-            <Mail className="text-white w-10 h-10 mb-4" />
-            <h3 className="font-bold text-xl text-white mb-2">Email Us</h3>
-            <p className="text-sm text-gray-200 mb-6 font-medium">For general inquiries and support.</p>
+        <div className="lg:col-span-4 flex flex-col gap-4">
+          <div className="bg-slate-50 border border-slate-200 rounded-2xl p-6 text-center hover:bg-white hover:border-blue-300 hover:shadow-xs transition-all">
+            <div className="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mx-auto mb-4">
+              <Mail className="w-6 h-6" />
+            </div>
+            <h3 className="font-bold text-lg text-slate-900 mb-1">Email Support</h3>
+            <p className="text-xs text-slate-500 mb-4">For billing inquiries and general support.</p>
             <a
-              className="text-[#36a9ff] font-bold hover:text-white transition-colors"
-              href="mailto:support@realmiptv4k.shop"
+              className="text-xs sm:text-sm font-bold text-blue-600 hover:text-blue-800 transition-colors break-all"
+              href="mailto:support@reflexsat-iptv4k.shop"
             >
-              support@realmiptv4k.shop
+              support@reflexsat-iptv4k.shop
             </a>
           </div>
 
-          <div className="bg-[#145082] rounded-xl p-8 flex flex-col items-center text-center group hover:-translate-y-1 transition-transform duration-300 shadow-lg">
-            <MessageCircle className="text-white w-10 h-10 mb-4" />
-            <h3 className="font-bold text-xl text-white mb-2">WhatsApp Support</h3>
-            <p className="text-sm text-gray-200 mb-6 font-medium">
-              Fastest way to reach us for technical issues.
+          <div className="bg-slate-50 border border-slate-200 rounded-2xl p-6 text-center hover:bg-white hover:border-emerald-300 hover:shadow-xs transition-all">
+            <div className="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto mb-4">
+              <MessageCircle className="w-6 h-6" />
+            </div>
+            <h3 className="font-bold text-lg text-slate-900 mb-1">WhatsApp Live Desk</h3>
+            <p className="text-xs text-slate-500 mb-1">
+              Fastest response time for instant setups &amp; free trials.
+            </p>
+            <p className="text-xs font-bold text-emerald-700 font-mono mb-3">
+              +44 7882 781998
             </p>
             <a
-              className="text-[#25D366] font-bold hover:text-white transition-colors flex items-center gap-2"
-              href="https://wa.me/213552069874?text=Hello,%20I%20need%20support%20for%20Realm IPTV."
+              className="btn-whatsapp-clean inline-flex items-center gap-2 px-6 py-2.5 text-xs font-bold uppercase tracking-wider"
+              href="https://wa.me/447882781998?text=Hello,%20I%20need%20support%20for%20Reflexsat%20IPTV."
               target="_blank"
               rel="noreferrer"
             >
-              Start Chat <ArrowRight className="w-4 h-4" />
+              Chat on WhatsApp <ArrowRight className="w-3.5 h-3.5" />
             </a>
           </div>
 
-          <div className="bg-[#145082] rounded-xl p-8 flex flex-col items-center text-center group hover:-translate-y-1 transition-transform duration-300 shadow-lg">
-            <Clock className="text-white w-10 h-10 mb-4" />
-            <h3 className="font-bold text-xl text-white mb-2">Response Time</h3>
-            <p className="text-sm text-gray-200 font-medium">
-              We typically reply in <strong className="text-white">Under 2 hours</strong> during standard business hours.
+          <div className="bg-slate-50 border border-slate-200 rounded-2xl p-6 text-center">
+            <div className="w-12 h-12 rounded-xl bg-slate-200 text-slate-700 flex items-center justify-center mx-auto mb-4">
+              <Clock className="w-6 h-6" />
+            </div>
+            <h3 className="font-bold text-lg text-slate-900 mb-1">Live Response Times</h3>
+            <p className="text-xs text-slate-500">
+              WhatsApp messages typically answered in <strong className="text-slate-900">under 5 minutes</strong> 24/7.
             </p>
           </div>
         </div>
 
         {/* Contact Form */}
         <div className="lg:col-span-8">
-          <div className="bg-[#145082] rounded-xl p-8 md:p-12 h-full shadow-lg">
-            <h2 className="text-2xl font-extrabold text-white mb-8 border-b border-white/10 pb-6">
-              Send a Message
+          <div className="bg-white border border-slate-200 rounded-3xl p-8 md:p-10 shadow-xs">
+            <h2 className="text-xl sm:text-2xl font-bold text-slate-900 mb-6 pb-4 border-b border-slate-100">
+              Send Us a Message
             </h2>
-            <form className="flex flex-col gap-6" onSubmit={(e) => e.preventDefault()}>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="flex flex-col gap-2">
-                  <label className="text-xs font-bold uppercase tracking-widest text-gray-300" htmlFor="name">
-                    Name
+            <form className="flex flex-col gap-5" onSubmit={(e) => {
+              e.preventDefault();
+              const form = e.currentTarget;
+              const name = (form.elements.namedItem('name') as HTMLInputElement)?.value || '';
+              const subject = (form.elements.namedItem('subject') as HTMLInputElement)?.value || '';
+              const msg = (form.elements.namedItem('message') as HTMLTextAreaElement)?.value || '';
+              const prompt = `Hello Reflexsat support,\n\nName: ${name}\nSubject: ${subject}\n\n${msg}`;
+              window.open(`https://wa.me/447882781998?text=${encodeURIComponent(prompt)}`, "_blank");
+            }}>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <div className="flex flex-col gap-1.5">
+                  <label className="text-xs font-bold uppercase tracking-wider text-slate-700" htmlFor="name">
+                    Your Name
                   </label>
                   <input
-                    className="bg-white/5 border border-white/10 focus:border-[#36a9ff] focus:ring-1 focus:ring-[#36a9ff] rounded-xl px-5 py-4 text-white placeholder:text-gray-400 focus:outline-none transition-all font-medium"
+                    required
+                    className="border border-slate-200 bg-slate-50 focus:bg-white focus:border-blue-600 rounded-xl px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none transition-all"
                     id="name"
                     name="name"
-                    placeholder="John Doe"
+                    placeholder="e.g. Alex Smith"
                     type="text"
                   />
                 </div>
-                <div className="flex flex-col gap-2">
-                  <label className="text-xs font-bold uppercase tracking-widest text-gray-300" htmlFor="email">
+                <div className="flex flex-col gap-1.5">
+                  <label className="text-xs font-bold uppercase tracking-wider text-slate-700" htmlFor="email">
                     Email Address
                   </label>
                   <input
-                    className="bg-white/5 border border-white/10 focus:border-[#36a9ff] focus:ring-1 focus:ring-[#36a9ff] rounded-xl px-5 py-4 text-white placeholder:text-gray-400 focus:outline-none transition-all font-medium"
+                    required
+                    className="border border-slate-200 bg-slate-50 focus:bg-white focus:border-blue-600 rounded-xl px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none transition-all"
                     id="email"
                     name="email"
-                    placeholder="john@example.com"
+                    placeholder="alex@example.com"
                     type="email"
                   />
                 </div>
               </div>
 
-              <div className="flex flex-col gap-2">
-                <label className="text-xs font-bold uppercase tracking-widest text-gray-300" htmlFor="subject">
-                  Subject
+              <div className="flex flex-col gap-1.5">
+                <label className="text-xs font-bold uppercase tracking-wider text-slate-700" htmlFor="subject">
+                  Topic / Device
                 </label>
                 <input
-                  className="bg-white/5 border border-white/10 focus:border-[#36a9ff] focus:ring-1 focus:ring-[#36a9ff] rounded-xl px-5 py-4 text-white placeholder:text-gray-400 focus:outline-none transition-all font-medium"
+                  required
+                  className="border border-slate-200 bg-slate-50 focus:bg-white focus:border-blue-600 rounded-xl px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none transition-all"
                   id="subject"
                   name="subject"
-                  placeholder="How can we help?"
+                  placeholder="e.g. Firestick 4K Setup or Free Trial Request"
                   type="text"
                 />
               </div>
 
-              <div className="flex flex-col gap-2">
-                <label className="text-xs font-bold uppercase tracking-widest text-gray-300" htmlFor="message">
-                  Message
+              <div className="flex flex-col gap-1.5">
+                <label className="text-xs font-bold uppercase tracking-wider text-slate-700" htmlFor="message">
+                  How Can We Help?
                 </label>
                 <textarea
-                  className="bg-white/5 border border-white/10 focus:border-[#36a9ff] focus:ring-1 focus:ring-[#36a9ff] rounded-xl px-5 py-4 text-white placeholder:text-gray-400 focus:outline-none transition-all resize-none font-medium"
+                  required
+                  className="border border-slate-200 bg-slate-50 focus:bg-white focus:border-blue-600 rounded-xl px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none transition-all resize-none"
                   id="message"
                   name="message"
-                  placeholder="Describe your issue or question in detail..."
-                  rows={6}
-                ></textarea>
+                  placeholder="Tell us what device you use or any question you have..."
+                  rows={5}
+                />
               </div>
 
-              <div className="mt-4 flex justify-end">
+              <div className="mt-2 flex justify-end">
                 <button
-                  className="bg-[#36a9ff] hover:bg-[#2196f3] text-white px-10 py-4 text-sm font-bold flex items-center gap-2 group shadow-[0_10px_30px_rgba(54,169,255,0.3)] hover:-translate-y-1 transition-all rounded-xl"
+                  className="btn-primary-reflex px-8 py-3.5 text-xs sm:text-sm font-extrabold uppercase tracking-wider flex items-center gap-2"
                   type="submit"
                 >
-                  <span>Send Message</span>
-                  <Send className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+                  <span>Send Message via WhatsApp Desk</span>
+                  <Send className="w-4 h-4" />
                 </button>
               </div>
             </form>
           </div>
+        </div>
+      </div>
+
+      {/* Quick Links Help Strip */}
+      <div className="mt-16 text-center border-t border-slate-200 pt-8">
+        <p className="text-xs sm:text-sm text-slate-500 font-medium mb-3">
+          Looking for quick answers? Check our self-service resources:
+        </p>
+        <div className="flex flex-wrap items-center justify-center gap-4 text-xs font-bold text-slate-600">
+          <Link href="/installation" className="text-blue-600 hover:underline">Device Setup Tutorials</Link>
+          <span>·</span>
+          <Link href="/pricing" className="text-blue-600 hover:underline">Subscription Packages</Link>
+          <span>·</span>
+          <Link href="/channels" className="text-blue-600 hover:underline">50,000+ Channels List</Link>
+          <span>·</span>
+          <Link href="/refund-policy" className="text-blue-600 hover:underline">Refund Policy</Link>
+          <span>·</span>
+          <Link href="/faq" className="text-blue-600 hover:underline">Full FAQ</Link>
         </div>
       </div>
     </main>

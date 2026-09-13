@@ -1,108 +1,134 @@
 import Link from "next/link";
+import { Check, X, Sparkles } from "lucide-react";
 
 export default function ComparisonSection() {
   const rows = [
-    { feature: "Monthly Cost", fiesta: "From $4.2/mo", cable: "$80-$200/mo", other: "$10-$30/mo (unreliable)" },
-    { feature: "Live Channels", fiesta: "+50,000 Channels", cable: "200-500", other: "5,000-15,000" },
-    { feature: "4K Streaming", fiesta: "✓ Native 4K", cable: "Limited", other: "Rarely stable" },
-    { feature: "VOD Library", fiesta: "+120,000 Films", cable: "Add-on cost", other: "Varies wildly" },
-    { feature: "Server Uptime", fiesta: "99.9% Guaranteed", cable: "99%", other: "60-85%" },
-    { feature: "Buffering", fiesta: "Zero — Ever", cable: "Rare", other: "Common at peak" },
-    { feature: "Setup Time", fiesta: "5 minutes", cable: "Technician visit", other: "Varies" },
-    { feature: "Contract", fiesta: "No", cable: "12-24 months", other: "Sometimes" },
-    { feature: "Multi-Screen", fiesta: "✓ Included", cable: "Extra cost", other: "Limited" },
-    { feature: "Free Trial", fiesta: "✓ Available", cable: "No", other: "Rare" },
+    { feature: "Monthly Cost", reflexsat: "From $4.2/mo", cable: "$80 - $200/mo", other: "$10 - $30/mo" },
+    { feature: "Live 4K Channels", reflexsat: "+50,000 Channels", cable: "150 - 300 Channels", other: "5,000 - 15,000" },
+    { feature: "4K & 60 FPS Sports", reflexsat: "Native 4K UHD 60FPS", cable: "Limited 1080i", other: "Compressed / Laggy" },
+    { feature: "On-Demand VOD", reflexsat: "200,000+ Movies & Series", cable: "$6 - $20 Per Rental", other: "Unreliable / Outdated" },
+    { feature: "Server Stability", reflexsat: "99.9% Anti-Freeze 10.0", cable: "High (Cable line)", other: "Frequent Peak Buffering" },
+    { feature: "Long-Term Contract", reflexsat: "Zero Contracts", cable: "12 - 24 Months Locked", other: "Varies" },
+    { feature: "Setup Time", reflexsat: "Under 5 Minutes", cable: "Requires Technician", other: "Complex Setup" },
+    { feature: "Multi-Screen Streaming", reflexsat: "Included Option", cable: "Extra Box Rental", other: "Single Screen Only" },
+    { feature: "24/7 Human Support", reflexsat: "Instant WhatsApp Chat", cable: "Automated Call Center", other: "No Live Response" },
   ];
 
   return (
-    <section className="bg-transparent text-black relative z-10 border-b border-black/10 overflow-hidden py-24">
-      <div className="max-w-[1200px] mx-auto px-6">
-        
+    <section className="bg-white text-slate-900 py-24 border-b border-slate-200/80">
+      <div className="max-w-[1240px] mx-auto px-5 sm:px-8">
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 md:mb-24">
-          <span className="inline-block py-1.5 px-4 rounded-full bg-[#36a9ff]/10 text-[#36a9ff] font-bold text-xs tracking-widest uppercase mb-6 border border-[#36a9ff]/20">
-            IPTV vs Cable TV
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <span className="inline-block py-1.5 px-4 rounded-full bg-blue-50 text-blue-700 font-bold text-xs tracking-wider uppercase mb-4 border border-blue-200/80">
+            Smart Cord-Cutting Comparison
           </span>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-black tracking-tight leading-[1.1]">
-            Why RealMIPTV is the <br/>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#36a9ff] to-[#2196f3]">
-              Ultimate Cable Alternative
-            </span>
+          <h2 className="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
+            Why <span className="text-blue-600">Reflexsat IPTV</span> Beats Traditional Cable & Other Providers
           </h2>
-          <p className="text-gray-600 text-lg md:text-xl mt-6 leading-relaxed max-w-2xl mx-auto">
-            Discover why thousands of users are cutting the cord and switching to RealMIPTV. Our premium IPTV service offers an expansive <Link href="/channels" className="font-semibold text-[#36a9ff] hover:text-[#2196f3] hover:underline transition-colors">channel lineup</Link>, stunning 4K streaming quality, and reliable anti-freeze technology—all at a fraction of the cost of traditional cable TV.
+          <p className="text-slate-600 text-base sm:text-lg mt-4 leading-relaxed max-w-2xl mx-auto">
+            Compare side by side and see why thousands of families are upgrading to{" "}
+            <Link href="/pricing" className="font-semibold text-blue-600 hover:underline">
+              Reflexsat IPTV plans
+            </Link>{" "}
+            for superior{" "}
+            <Link href="/channels" className="font-semibold text-blue-600 hover:underline">
+              50,000+ live channel content
+            </Link>
+            , true 4K clarity via{" "}
+            <Link href="/how-it-works" className="font-semibold text-blue-600 hover:underline">
+              anti-freeze 10.0 tech
+            </Link>
+            , and fast{" "}
+            <Link href="/installation" className="font-semibold text-blue-600 hover:underline">
+              5-minute setup
+            </Link>
+            .
           </p>
         </div>
 
         {/* Desktop Comparison Table */}
-        <div className="hidden md:block relative max-w-5xl mx-auto">
-          <div className="bg-gray-50/40 backdrop-blur-md rounded-3xl border border-[#36a9ff]/30 p-8 pb-10 relative overflow-hidden">
-            
-            {/* Vertical Borders for Realm IPTV Column */}
-            <div className="absolute top-0 bottom-0 left-[25%] w-[25%] border-x border-[#36a9ff]/30 z-0"></div>
-
-            {/* Table Header */}
-            <div className="grid grid-cols-4 gap-4 mb-2 relative z-10">
-              <div className="text-left font-black text-slate-400 uppercase tracking-widest text-xs flex items-center pb-4 pl-4">Features</div>
-              
-              <div className="flex flex-col items-center justify-center bg-[#36a9ff] text-white rounded-2xl py-3 shadow-[0_0_20px_rgba(54,169,255,0.4)] border border-white/40 transform -translate-y-2 relative z-20 mx-2">
-                <span className="text-[8px] uppercase tracking-widest font-black opacity-90 mb-0.5">Premium Choice</span>
-                <span className="text-[22px] font-black tracking-tight leading-none">RealMIPTV</span>
-              </div>
-              
-              <div className="text-center font-black text-slate-400 uppercase tracking-widest text-xs flex items-center justify-center pb-4">Cable / Satellite</div>
-              <div className="text-center font-black text-slate-400 uppercase tracking-widest text-xs flex items-center justify-center pb-4">Other IPTV</div>
-            </div>
-
-            {/* Table Rows */}
-            <div className="relative z-10">
-              {rows.map((row, idx) => (
-                <div key={idx} className="grid grid-cols-4 gap-4 py-5 border-b border-[#36a9ff]/20 last:border-0 items-center">
-                  <div className="font-bold text-gray-800 text-sm md:text-[15px] pl-4">{row.feature}</div>
-                  <div className="font-black text-[#36a9ff] text-center text-[15px] md:text-[17px]">{row.fiesta}</div>
-                  <div className="font-medium text-slate-400 text-center text-xs md:text-[13px]">{row.cable}</div>
-                  <div className="font-medium text-slate-400 text-center text-xs md:text-[13px]">{row.other}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Mobile Comparison (Cards) */}
-        <div className="md:hidden space-y-8">
-          <div className="bg-gradient-to-br from-[#36a9ff] to-[#2196f3] rounded-3xl p-1 relative shadow-xl">
-            <div className="bg-black/20 text-white rounded-[1.35rem] p-6 backdrop-blur-sm">
-              <h3 className="text-2xl font-black mb-6 text-center">RealMIPTV</h3>
-              <div className="space-y-4">
-                {rows.map((row, idx) => (
-                  <div key={idx} className="flex justify-between items-center border-b border-black/10 pb-3 last:border-0 last:pb-0">
-                    <span className="text-black/70 text-sm">{row.feature}</span>
-                    <span className="font-bold text-black text-right">{row.fiesta}</span>
+        <div className="hidden md:block overflow-hidden rounded-2xl border border-slate-200 shadow-sm">
+          <table className="w-full text-left border-collapse">
+            <thead>
+              <tr className="bg-slate-50 border-b border-slate-200 text-xs font-bold uppercase tracking-wider text-slate-500">
+                <th className="py-4 px-6">Features & Capabilities</th>
+                <th className="py-4 px-6 bg-blue-50/80 text-blue-700 text-center border-x border-blue-200/80">
+                  <div className="inline-flex items-center gap-1">
+                    <Sparkles className="w-3.5 h-3.5" />
+                    <span>Reflexsat IPTV</span>
                   </div>
-                ))}
-              </div>
+                </th>
+                <th className="py-4 px-6 text-center">Traditional Cable TV</th>
+                <th className="py-4 px-6 text-center">Low-Grade IPTV</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-slate-100 text-sm">
+              {rows.map((row, idx) => (
+                <tr key={idx} className={idx % 2 === 0 ? "bg-white" : "bg-slate-50/40"}>
+                  <td className="py-4 px-6 font-semibold text-slate-900">{row.feature}</td>
+                  <td className="py-4 px-6 text-center font-bold text-blue-700 bg-blue-50/50 border-x border-blue-200/60">
+                    {row.reflexsat}
+                  </td>
+                  <td className="py-4 px-6 text-center text-slate-500">{row.cable}</td>
+                  <td className="py-4 px-6 text-center text-slate-400">{row.other}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        {/* Mobile View Cards */}
+        <div className="md:hidden space-y-6">
+          <div className="rounded-2xl border-2 border-blue-600 bg-white p-6 shadow-md">
+            <div className="flex items-center justify-between mb-4 pb-3 border-b border-blue-100">
+              <span className="text-xs font-bold uppercase tracking-wider text-blue-700">Top Rated</span>
+              <h3 className="text-xl font-black text-slate-900">Reflexsat IPTV</h3>
+            </div>
+            <div className="space-y-3 text-sm">
+              {rows.map((row, idx) => (
+                <div key={idx} className="flex justify-between items-center py-1.5 border-b border-slate-100 last:border-0">
+                  <span className="text-slate-600 text-xs font-medium">{row.feature}</span>
+                  <span className="font-bold text-blue-700 text-xs">{row.reflexsat}</span>
+                </div>
+              ))}
             </div>
           </div>
 
-          <div className="bg-gray-50/80 backdrop-blur-sm rounded-3xl shadow-lg border border-[#36a9ff]/20 p-6">
-            <h3 className="text-xl font-bold mb-6 text-center text-slate-400">Cable / Satellite</h3>
-            <div className="space-y-4">
+          <div className="rounded-2xl border border-slate-200 bg-slate-50 p-6">
+            <h3 className="text-base font-bold text-slate-700 mb-4 pb-2 border-b border-slate-200">
+              Traditional Cable TV
+            </h3>
+            <div className="space-y-2.5 text-xs text-slate-600">
               {rows.map((row, idx) => (
-                <div key={idx} className="flex justify-between items-center border-b border-black/5 pb-3 last:border-0 last:pb-0">
-                  <span className="text-gray-600 text-sm">{row.feature}</span>
-                  <span className="font-medium text-gray-700 text-right">{row.cable}</span>
+                <div key={idx} className="flex justify-between items-center py-1 border-b border-slate-200/60 last:border-0">
+                  <span>{row.feature}</span>
+                  <span className="text-slate-500 font-medium">{row.cable}</span>
                 </div>
               ))}
             </div>
           </div>
         </div>
 
-        <div className="mt-16 text-center">
+        {/* Action Link Strip */}
+        <div className="mt-12 flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-xs sm:text-sm font-bold">
           <Link
             href="/pricing"
-            className="inline-flex items-center justify-center bg-gray-50 border border-[#36a9ff]/30 text-black font-black uppercase text-sm px-10 py-5 rounded-full hover:bg-[#051f33] hover:text-white hover:border-[#36a9ff] hover:shadow-[0_0_20px_rgba(54,169,255,0.4)] transition-all hover:-translate-y-1 gap-2"
+            className="inline-flex items-center gap-1.5 text-blue-600 hover:text-blue-800 transition-colors"
           >
-            View Plans & Pricing <span aria-hidden="true">&rarr;</span>
+            <span>Explore all Reflexsat IPTV plans</span>
+            <span>&rarr;</span>
+          </Link>
+          <span className="text-slate-300 hidden sm:inline">·</span>
+          <Link href="/channels" className="text-slate-600 hover:text-blue-600 transition-colors">
+            50,000+ Channels Lineup
+          </Link>
+          <span className="text-slate-300 hidden sm:inline">·</span>
+          <Link href="/installation" className="text-slate-600 hover:text-blue-600 transition-colors">
+            Device Setup Instructions
+          </Link>
+          <span className="text-slate-300 hidden sm:inline">·</span>
+          <Link href="/how-it-works" className="text-slate-600 hover:text-blue-600 transition-colors">
+            How Streaming Works
           </Link>
         </div>
       </div>

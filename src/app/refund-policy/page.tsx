@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Refund Policy | Realm IPTV",
-  description: "Learn about the refund policy, eligibility, and process for Realm IPTV.",
+  title: "Refund Policy | Reflexsat IPTV",
+  description: "Learn about the refund policy, eligibility criteria, and process for Reflexsat IPTV subscriptions.",
   alternates: {
     canonical: "/refund-policy",
   },
@@ -11,111 +11,86 @@ export const metadata: Metadata = {
 
 const sections = [
   {
-    title: "Our Commitment to You",
+    title: "Our Quality Commitment",
     content: [
-      "At Realm IPTV, we uphold the standard of our IPTV subscription service. This policy specifies when refunds may be applicable, ensuring that we maintain a transparent and just process for every customer.",
+      <>
+        At Reflexsat IPTV, we stand behind the reliability of our{" "}
+        <Link className="font-semibold text-blue-600 hover:text-blue-800" href="/how-it-works">
+          satellite-grade streaming infrastructure
+        </Link>
+        . We offer a transparent, fair refund policy across all{" "}
+        <Link className="font-semibold text-blue-600 hover:text-blue-800" href="/pricing">
+          Reflexsat subscription packages
+        </Link>{" "}
+        to protect your purchase.
+      </>,
     ],
   },
   {
     title: "Refund Eligibility",
-    content: ["You could be entitled to a total or partial refund in the following cases:"],
+    content: ["You may be eligible for a refund under the following conditions:"],
     items: [
-      "Technical Failures: Service is completely non-functional on your compatible device for 72+ consecutive hours due to a fault on our side.",
-      "Duplicate Payments: Accidental duplicate charge for the same subscription period.",
-      "Initial 7 Day Window for new customers: Request within 7 days of first purchase after attempting support-led troubleshooting.",
+      "Unresolvable Technical Faults: If our service experiences an ongoing, unresolvable outage on our server infrastructure lasting 72+ consecutive hours.",
+      "Accidental Duplicate Charges: In the event of a verified accidental billing duplicate for the same account period.",
+      "Initial 7-Day Guarantee: If our support specialists are unable to assist you in getting your connection running within 7 days of your first purchase.",
     ],
   },
   {
-    title: "How to Request a Refund",
-    content: ["To seek a refund, kindly follow these steps:"],
+    title: "How to Submit a Request",
+    content: ["To request a refund review, please contact us:"],
     items: [
-      <>Connect with our support team using our <Link className="font-semibold text-[#36a9ff] hover:text-[#36a9ff]" href="/contact">Contact page</Link>.</>,
-      "Please use the subject: 'Refund Request'.",
-      "Please provide your complete name, the email linked to your subscription, and the purpose of your inquiry.",
-    ],
-  },
-  {
-    title: "Sample Refund Request Message",
-    content: [
-      <>Contact: Send a message via our <Link className="font-semibold text-[#36a9ff] hover:text-[#36a9ff]" href="/contact">Contact page</Link></>,
-      "Message Title: Refund Request",
-      "Hello,",
-      "I am writing to ask for a refund regarding my IPTV subscription.",
-      "My Name: [Your Full Name]",
-      "My Email: [Your Subscription Email]",
-      "Reason for Refund: [Concise explanation of your concern, for example, technical errors, billing duplicates, etc.]",
-      "Thank you.",
-    ],
-  },
-  {
-    title: "What We Need to Process Your Refund",
-    content: [],
-    items: [
-      "Account email used at checkout",
-      "Order/transaction ID from {Payment Gateway Name}",
-      "Brief reason and steps already tried with support",
-      "Device/app details (e.g., Firestick + IPTV Smarters)",
+      <>Reach our support specialists via our <Link className="font-semibold text-blue-600 hover:text-blue-800" href="/contact">Contact page</Link> or on WhatsApp.</>,
+      "Provide your order email and payment transaction reference ID.",
+      "Include a concise summary of the issue encountered and the device/app you are using.",
     ],
   },
   {
     title: "Processing Timeline",
     content: [],
     items: [
-      "0-3 business days: Analysis executed by support team",
-      "Same day after approval: The refund has been initiated, returning funds to your original method ({Payment Gateway 1} / {Payment Gateway 2}).",
-      "5-10 business days: Funds manifest according to bank/card issuer.",
-    ],
-    after: "Expect to receive an email update at every step. Response times may increase on weekends or holidays.",
-  },
-  {
-    title: "Exceptions (When Refunds Are Not Provided)",
-    content: ["Refunds will be denied in these outlined cases:"],
-    items: [
-      <>You are discontent with the <Link className="font-semibold text-[#36a9ff] hover:text-[#36a9ff]" href="/channels">channel list</Link> or provided content.</>,
-      "Your connection speed is too slow or unstable to stream effectively.",
-      "Your actions have breached our Terms of Service, including account sharing.",
-      "Geo-blocking problems in your region are unfortunately outside of our influence and control.",
+      "Review within 24 to 48 hours by our customer care department.",
+      "Approved refunds are credited directly to your original payment method.",
+      "Bank/card processing typically reflects within 3 to 7 business days depending on your financial institution.",
     ],
   },
   {
-    title: "How to Avoid Refund Requests",
-    content: [],
+    title: "Non-Refundable Circumstances",
+    content: ["Refunds are not granted in cases where:"],
     items: [
-      "Check Compatibility: Confirm your device/app supports M3U/Portal before purchase.",
-      "Stable Internet: Use 30 Mbps+ and 5GHz Wi-Fi or Ethernet for 4K.",
-      <>Use Setup Guides: Follow our step by step <Link className="font-semibold text-[#36a9ff] hover:text-[#36a9ff]" href="/installation">Installation page</Link>.</>,
-      <>Ask Support First: Most issues are solved in minutes-please <Link className="font-semibold text-[#36a9ff] hover:text-[#36a9ff]" href="/contact">contact support</Link>.</>,
+      "Your internet speed is below minimum streaming requirements (15 Mbps for HD, 30 Mbps for 4K).",
+      "Account sharing violations or sharing credentials across unauthorized IP addresses.",
+      "Changes of mind after consuming full active subscription periods.",
     ],
   },
 ];
 
 export default function RefundPolicyPage() {
-  const currentDate = new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
-  
   return (
-    <main className="flex-grow px-5 pb-20 pt-12 sm:px-8 md:pt-16 text-format-legal">
+    <main className="flex-grow px-5 pb-20 pt-16 sm:px-8 md:pt-20 text-format-legal bg-white">
       <article className="mx-auto max-w-4xl">
-        <header className="border-b border-black/10 pb-10 text-center mx-auto max-w-3xl">
-          <span className="inline-flex rounded-full border border-[#36a9ff]/35 bg-[#36a9ff]/[0.06] px-4 py-1.5 text-[10px] font-extrabold uppercase tracking-[0.18em] text-[#36a9ff]">Legal information</span>
-          <h1 className="mt-6 text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.05] tracking-tight">
-            <span className="block text-black">Refund &amp; Money-Back</span>
-            <span className="mt-1 block text-[#36a9ff]">Official Policy.</span>
+        <header className="border-b border-slate-200 pb-10 text-center mx-auto max-w-3xl">
+          <span className="inline-flex rounded-full border border-blue-200 bg-blue-50 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-blue-700 mb-4">
+            Satisfaction Guarantee
+          </span>
+          <h1 className="text-4xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
+            Refund &amp; <span className="text-blue-600">Cancellation Policy</span>
           </h1>
-          <p className="mx-auto mt-5 max-w-2xl text-sm leading-6 text-gray-600">Last adjusted: {currentDate}</p>
+          <p className="mx-auto mt-3 text-xs text-slate-500">Reflexsat IPTV (www.reflexsat-iptv4k.shop)</p>
         </header>
 
-        <div className="mt-10 space-y-10 text-base leading-7 text-on-surface-variant">
+        <div className="mt-10 space-y-8 text-sm sm:text-base leading-relaxed text-slate-600">
           {sections.map((section, index) => (
             <section key={section.title}>
-              <h2 className="text-2xl font-bold text-black">{index + 1}. {section.title}</h2>
-              {section.content.map((paragraph, i) => <p className="mt-4" key={i}>{paragraph}</p>)}
-              {section.items && section.items.length > 0 && <ul className="mt-4 list-disc space-y-2 pl-6 marker:text-[#36a9ff]">{section.items.map((item, i) => <li key={i}>{item}</li>)}</ul>}
-              {section.after && <p className="mt-4">{section.after}</p>}
+              <h2 className="text-xl sm:text-2xl font-bold text-slate-900 mb-3">{index + 1}. {section.title}</h2>
+              {section.content.map((paragraph, i) => <p className="mt-2" key={i}>{paragraph}</p>)}
+              {section.items && <ul className="mt-3 list-disc space-y-1.5 pl-6 marker:text-blue-600">{section.items.map((item, i) => <li key={i}>{item}</li>)}</ul>}
             </section>
           ))}
           <section>
-            <h2 className="text-2xl font-bold text-black">9. Contact Us</h2>
-            <p className="mt-4">If you have any questions regarding our Refund Policy, please contact our <Link className="font-semibold text-[#36a9ff] hover:text-[#36a9ff]" href="/contact">support team</Link>.</p>
+            <h2 className="text-xl sm:text-2xl font-bold text-slate-900 mb-3">6. Need Help?</h2>
+            <p className="mt-2">
+              If you have any questions or require troubleshooting help, please <Link className="font-semibold text-blue-600 hover:text-blue-800" href="/contact">contact our support team</Link>. We are here 24/7.
+            </p>
           </section>
         </div>
       </article>

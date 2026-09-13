@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Realm IPTV",
-  description: "Learn how Realm IPTV collects, uses, and protects personal information.",
+  title: "Privacy Policy | Reflexsat IPTV",
+  description: "Learn how Reflexsat IPTV collects, protects, and handles personal data in accordance with global privacy standards.",
   alternates: {
     canonical: "/privacy-policy",
   },
@@ -13,96 +13,76 @@ const sections = [
   {
     title: "1. Data We Collect",
     content: [
-      <>We collect personal data that you voluntarily provide when you subscribe to our IPTV service, request information about our products or services, or <Link className="font-semibold text-[#36a9ff] hover:text-[#36a9ff]" href="/contact">contact us</Link>. The personal data we collect may include the following:</>,
+      <>We collect personal information that you voluntarily provide when you subscribe to our IPTV service, request support, or <Link className="font-semibold text-blue-600 hover:text-blue-800" href="/contact">contact us</Link>. The personal data we collect may include:</>,
     ],
     items: [
-      "Contact information: Your email address, which we use for account creation and communication.",
-      "Payment data: Information required to process a purchase, such as your payment method. Payment details are processed and stored securely by our payment processor. We recommend reviewing that processor's privacy policy.",
-      "Device and connection information: When you access our service, we may automatically collect your IP address and device details, including device type and operating system. This information helps us maintain service performance and security.",
+      "Contact information: Your email address or WhatsApp contact, used solely for subscription delivery and customer support communications.",
+      "Payment data: Transaction reference identifiers required to verify purchases. All financial data is processed securely through encrypted third-party payment gateways; we never store your payment card numbers.",
+      "Technical connection details: Anonymized IP addresses and device client identifiers used strictly to manage concurrent connection limits and prevent server abuse.",
     ],
   },
   {
     title: "2. How We Use Your Data",
     content: ["We use the information we collect to:"],
     items: [
-      "Provide and manage your account, including keeping your subscription active.",
-      "Process transactions and bill you for the services you purchase.",
-      "Send administrative information, including account notices, service updates, and policy changes.",
-      "Protect our services by helping prevent unauthorized access, fraud, and security threats such as DDoS attacks.",
+      "Provision, maintain, and activate your Reflexsat IPTV credentials and playlist lines.",
+      "Process transactions securely and verify order completion.",
+      "Provide customer support and service notifications regarding scheduled server upgrades.",
+      "Protect server infrastructure from malicious attacks, unauthorized stream redistribution, and abuse.",
     ],
   },
   {
     title: "3. Legal Bases for Processing",
-    content: ["We process your personal information using one or more of the following legal bases:"],
-    items: [
-      "Consent: You have given us clear permission to use your personal information for a specific purpose.",
-      "Legitimate interests: Processing is necessary for legitimate business purposes, such as delivering our services and preventing fraudulent activity.",
-      "Performance of a contract: Processing is necessary to provide the services covered by our agreement with you.",
-    ],
+    content: ["We process your personal information based on legitimate contractual necessity to deliver the ordered streaming service, customer consent, and compliance with applicable data protection requirements."],
   },
   {
     title: "4. Data Retention",
-    content: ["We retain personal information only for as long as necessary to fulfil the purposes described in this policy, unless a longer retention period is required or permitted by law for tax, accounting, or other legal obligations."],
+    content: ["We retain account identifiers only for the duration of your active subscription and necessary accounting verification periods, after which records are purged."],
   },
   {
-    title: "5. Cookies & Tracking Technologies",
-    content: ["We may use cookies and similar technologies to collect or store information. These are primarily functional cookies that are essential for the website and client area to operate effectively. We do not use intrusive advertising tracking cookies."],
+    title: "5. Cookies & Tracking",
+    content: ["We only utilize strictly necessary functional session cookies required for core site navigation and device authentication. We do not use third-party behavioral advertising trackers."],
   },
   {
-    title: "6. Third-Party Services",
-    content: ["We may share data with third-party vendors, service providers, or agents that perform services for us or on our behalf and need the information to carry out their duties. These may include:"],
-    items: [
-      "Payment gateways, which process payments securely.",
-      "Analytics providers, such as Google Analytics, which help us improve our services. Information shared with these providers is typically anonymized and aggregated.",
-    ],
+    title: "6. Data Security",
+    content: ["We deploy 256-bit SSL encryption and strict server access controls to ensure your account details remain private and confidential."],
   },
   {
-    title: "7. Data Security",
-    content: ["We use appropriate technical and organizational security measures to protect the confidentiality of the personal information we process. However, no internet transmission or storage system can be guaranteed to be completely secure."],
-  },
-  {
-    title: "8. Your Data Protection Rights",
-    content: ["Your rights may depend on your location. Subject to applicable law, you may have the right to:"],
-    items: [
-      "Access and request copies of your personal information.",
-      "Request correction of inaccurate or incomplete information.",
-      "Request erasure of your personal information in certain circumstances.",
-      "Opt out of marketing and promotional communications at any time.",
-    ],
-    after: <>To exercise any of these rights, please <Link className="font-semibold text-[#36a9ff] hover:text-[#36a9ff]" href="/contact">contact our support team</Link>.</>,
-  },
-  {
-    title: "9. Children's Privacy",
-    content: ["Our services are not intended for anyone under the age of 18. We do not knowingly collect personal information from children under 18."],
+    title: "7. Your Rights",
+    content: ["You have the right to review, update, or request the deletion of your account contact details at any time by messaging our support desk."],
   },
 ];
 
 export default function PrivacyPolicyPage() {
   return (
-    <main className="flex-grow px-5 pb-20 pt-12 sm:px-8 md:pt-16 text-format-legal">
+    <main className="flex-grow px-5 pb-20 pt-16 sm:px-8 md:pt-20 text-format-legal bg-white">
       <article className="mx-auto max-w-4xl">
-        <header className="border-b border-black/10 pb-10 text-center mx-auto max-w-3xl">
-          <span className="inline-flex rounded-full border border-[#36a9ff]/35 bg-[#36a9ff]/[0.06] px-4 py-1.5 text-[10px] font-extrabold uppercase tracking-[0.18em] text-[#36a9ff]">Legal information</span>
-          <h1 className="mt-6 text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.05] tracking-tight">
-            <span className="block text-black">Privacy &amp; Data Protection</span>
-            <span className="mt-1 block text-[#36a9ff]">Official Policy.</span>
+        <header className="border-b border-slate-200 pb-10 text-center mx-auto max-w-3xl">
+          <span className="inline-flex rounded-full border border-blue-200 bg-blue-50 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-blue-700 mb-4">
+            Legal Transparency
+          </span>
+          <h1 className="text-4xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
+            Privacy Policy &amp; <span className="text-blue-600">Data Protection</span>
           </h1>
-          <p className="mx-auto mt-5 max-w-2xl text-sm leading-6 text-gray-600">Last adjusted: September 14, 2025</p>
+          <p className="mx-auto mt-3 text-xs text-slate-500">Updated for 2026 · Reflexsat IPTV (www.reflexsat-iptv4k.shop)</p>
         </header>
 
-        <div className="mt-10 space-y-10 text-base leading-7 text-on-surface-variant">
-          <p>Welcome to Realm IPTV. We are committed to protecting your personal information and respecting your privacy. If you have questions or concerns about this policy or our data practices, please <Link className="font-semibold text-[#36a9ff] hover:text-[#36a9ff]" href="/contact">contact our support team</Link>.</p>
+        <div className="mt-10 space-y-8 text-sm sm:text-base leading-relaxed text-slate-600">
+          <p>
+            Welcome to <strong className="text-slate-900 font-semibold">Reflexsat IPTV</strong> (&quot;reflexsat-iptv4k.shop&quot;). We are committed to safeguarding your personal information and respecting your privacy. If you have questions regarding this policy, please <Link className="font-semibold text-blue-600 hover:text-blue-800" href="/contact">contact our support team</Link>.
+          </p>
           {sections.map((section) => (
             <section key={section.title}>
-              <h2 className="text-2xl font-bold text-black">{section.title}</h2>
-              {section.content.map((paragraph, index) => <p className="mt-4" key={index}>{paragraph}</p>)}
-              {section.items && <ul className="mt-4 list-disc space-y-2 pl-6 marker:text-[#36a9ff]">{section.items.map((item, index) => <li key={index}>{item}</li>)}</ul>}
-              {section.after && <p className="mt-4">{section.after}</p>}
+              <h2 className="text-xl sm:text-2xl font-bold text-slate-900 mb-3">{section.title}</h2>
+              {section.content.map((paragraph, index) => <p className="mt-2" key={index}>{paragraph}</p>)}
+              {section.items && <ul className="mt-3 list-disc space-y-1.5 pl-6 marker:text-blue-600">{section.items.map((item, index) => <li key={index}>{item}</li>)}</ul>}
             </section>
           ))}
           <section>
-            <h2 className="text-2xl font-bold text-black">10. Contact Us</h2>
-            <p className="mt-4">If you would like to discuss this policy or our handling of your personal information, please contact our <Link className="font-semibold text-[#36a9ff] hover:text-[#36a9ff]" href="/contact">support team</Link>.</p>
+            <h2 className="text-xl sm:text-2xl font-bold text-slate-900 mb-3">8. Contact Us</h2>
+            <p className="mt-2">
+              For any questions regarding your data privacy, reach us at <a href="mailto:support@reflexsat-iptv4k.shop" className="text-blue-600 font-semibold underline">support@reflexsat-iptv4k.shop</a> or via our <Link className="font-semibold text-blue-600 hover:text-blue-800" href="/contact">contact form</Link>.
+            </p>
           </section>
         </div>
       </article>

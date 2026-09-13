@@ -2,81 +2,61 @@
 
 @theme {
   --color-surface: #ffffff;
-  --color-surface-dim: #082a45;
-  --color-surface-bright: #0c395c;
-  --color-surface-container-lowest: #031726;
-  --color-surface-container-low: #051f33;
-  --color-surface-container: #082a45;
-  --color-surface-container-high: #0c395c;
-  --color-surface-container-highest: #114c77;
-  --color-on-surface: #f8fafc;
-  --color-on-surface-variant: #94a3b8;
-  --color-inverse-surface: #f1f5f9;
-  --color-inverse-on-surface: #051f33;
-  --color-outline: #114c77;
-  --color-outline-variant: #0c395c;
-  --color-surface-tint: #36a9ff;
-  --color-primary: #36a9ff;
+  --color-surface-dim: #f8fafc;
+  --color-surface-bright: #ffffff;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f8fafc;
+  --color-surface-container: #f1f5f9;
+  --color-surface-container-high: #e2e8f0;
+  --color-surface-container-highest: #cbd5e1;
+  --color-on-surface: #0f172a;
+  --color-on-surface-variant: #475569;
+  --color-inverse-surface: #0f172a;
+  --color-inverse-on-surface: #ffffff;
+  --color-outline: #e2e8f0;
+  --color-outline-variant: #cbd5e1;
+  --color-surface-tint: #2563eb;
+  --color-primary: #2563eb;
   --color-on-primary: #ffffff;
-  --color-primary-container: #082a45;
-  --color-on-primary-container: #e0f2fe;
-  --color-inverse-primary: #bae6fd;
-  --color-secondary: #f9ebc7;
-  --color-on-secondary: #051f33;
-  --color-secondary-container: #082a45;
-  --color-on-secondary-container: #fdf1c3;
-  --color-tertiary: #14b8a6;
+  --color-primary-container: #eff6ff;
+  --color-on-primary-container: #1e40af;
+  --color-inverse-primary: #93c5fd;
+  --color-secondary: #0ea5e9;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #f0f9ff;
+  --color-on-secondary-container: #0369a1;
+  --color-tertiary: #10b981;
   --color-on-tertiary: #ffffff;
-  --color-tertiary-container: #0f766e;
-  --color-on-tertiary-container: #ccfbf1;
+  --color-tertiary-container: #ecfdf5;
+  --color-on-tertiary-container: #047857;
   --color-error: #ef4444;
   --color-on-error: #ffffff;
-  --color-error-container: #991b1b;
-  --color-on-error-container: #fecaca;
-  --color-primary-fixed: #e0f2fe;
-  --color-primary-fixed-dim: #bae6fd;
-  --color-on-primary-fixed: #082f49;
-  --color-on-primary-fixed-variant: #075985;
-  --color-secondary-fixed: #fdf1c3;
-  --color-secondary-fixed-dim: #f9ebc7;
-  --color-on-secondary-fixed: #051f33;
-  --color-on-secondary-fixed-variant: #082a45;
-  --color-tertiary-fixed: #ccfbf1;
-  --color-tertiary-fixed-dim: #99f6e4;
-  --color-on-tertiary-fixed: #042f2e;
-  --color-on-tertiary-fixed-variant: #115e59;
+  --color-error-container: #fef2f2;
+  --color-on-error-container: #b91c1c;
   --color-background: #ffffff;
   --color-on-background: #0f172a;
-  --color-surface-variant: #f1f5f9;
+  --color-surface-variant: #f8fafc;
 
-  /* Brand Colors Override - Realmiptv Purple/Violet Palette */
-  --color-primary-300: #f0abfc;
-  --color-primary-400: #e879f9;
-  --color-primary-500: #d946ef;
-  --color-primary-600: #c026d3;
+  /* Brand Colors - Reflexsat Sapphire & Slate Palette */
+  --color-primary-300: #93c5fd;
+  --color-primary-400: #60a5fa;
+  --color-primary-500: #3b82f6;
+  --color-primary-600: #2563eb;
+  --color-primary-700: #1d4ed8;
 
-  --color-secondary-400: #a78bfa;
-  --color-secondary-500: #8b5cf6;
-  --color-secondary-600: #7c3aed;
+  --color-secondary-400: #38bdf8;
+  --color-secondary-500: #0ea5e9;
+  --color-secondary-600: #0284c7;
 
   --color-accent-400: #34d399;
   --color-accent-500: #10b981;
   --color-accent-600: #059669;
 
-  --radius: 0.25rem;
-  --radius-lg: 0.5rem;
-  --radius-xl: 0.75rem;
+  --radius: 0.375rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
   --radius-full: 9999px;
-
-  --spacing-margin-desktop: 64px;
-  --spacing-unit: 4px;
-  --spacing-xs: 4px;
-  --spacing-sm: 8px;
-  --spacing-lg: 24px;
-  --spacing-md: 16px;
-  --spacing-xl: 32px;
-  --spacing-gutter: 24px;
-  --spacing-margin-mobile: 16px;
 
   --font-title-md: var(--font-inter);
   --font-headline-lg-mobile: var(--font-inter);
@@ -86,14 +66,13 @@
   --font-body-sm: var(--font-inter);
   --font-display-lg: var(--font-inter);
 
-  /* Note: FontSize configuration inside Tailwind CSS v4 */
   --text-title-md: 20px;
   --text-title-md--line-height: 28px;
-  --text-title-md--font-weight: 500;
+  --text-title-md--font-weight: 600;
 
   --text-headline-lg-mobile: 24px;
   --text-headline-lg-mobile--line-height: 32px;
-  --text-headline-lg-mobile--font-weight: 600;
+  --text-headline-lg-mobile--font-weight: 700;
 
   --text-body-lg: 16px;
   --text-body-lg--line-height: 24px;
@@ -102,7 +81,7 @@
   --text-headline-lg: 32px;
   --text-headline-lg--line-height: 40px;
   --text-headline-lg--letter-spacing: -0.01em;
-  --text-headline-lg--font-weight: 600;
+  --text-headline-lg--font-weight: 700;
 
   --text-label-caps: 12px;
   --text-label-caps--line-height: 16px;
@@ -116,68 +95,82 @@
   --text-display-lg: 48px;
   --text-display-lg--line-height: 56px;
   --text-display-lg--letter-spacing: -0.02em;
-  --text-display-lg--font-weight: 700;
+  --text-display-lg--font-weight: 800;
 }
 
 @layer base {
   body {
-    @apply bg-background text-on-background font-body-lg min-h-screen flex flex-col antialiased;
+    @apply bg-background text-on-background font-body-lg min-h-screen flex flex-col antialiased selection:bg-blue-100 selection:text-blue-900;
   }
 }
 
 @layer components {
-  .glass-panel {
-    background: rgba(255, 255, 255, 0.6);
-    backdrop-filter: blur(24px);
-    -webkit-backdrop-filter: blur(24px);
-    border: 1px solid rgba(0, 0, 0, 0.1);
+  .clean-panel {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
   }
 
-  .text-glow {
-    text-shadow: 0 0 20px rgba(217, 70, 239, 0.4);
+  .clean-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 1rem;
+    transition: all 0.2s ease-in-out;
   }
 
-  .btn-glow:hover {
-    box-shadow: 0 0 30px rgba(217, 70, 239, 0.6);
+  .clean-card:hover {
+    border-color: #cbd5e1;
+    box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.06), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
   }
 
-  .btn-primary-voltra {
-    background: linear-gradient(135deg, #d946ef 0%, #8b5cf6 100%);
+  .btn-primary-reflex {
+    background: #2563eb;
     color: #ffffff;
     font-weight: 700;
-    letter-spacing: 0.04em;
-    border-radius: var(--radius-xl);
-    /* Softer, consistent rounded buttons */
-    box-shadow: 0 4px 20px rgba(217, 70, 239, 0.4);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    animation: buttonPulseScale 2s infinite ease-in-out;
+    border-radius: 9999px;
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.25);
+    transition: all 0.2s ease-in-out;
   }
 
-  .btn-primary-voltra:hover {
-    box-shadow: 0 6px 30px rgba(217, 70, 239, 0.6);
-    transform: translateY(-2px);
-    animation-play-state: paused;
+  .btn-primary-reflex:hover {
+    background: #1d4ed8;
+    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
+    transform: translateY(-1px);
   }
 
-  .btn-primary-voltra:active {
+  .btn-primary-reflex:active {
     transform: translateY(0);
   }
 
-  .btn-secondary-voltra {
-    background: rgba(255, 255, 255, 0.9);
-    backdrop-filter: blur(24px);
-    -webkit-backdrop-filter: blur(24px);
-    border: 1px solid rgba(217, 70, 239, 0.2);
-    color: #d946ef;
+  .btn-secondary-reflex {
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    color: #0f172a;
     font-weight: 600;
-    border-radius: var(--radius-xl);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 9999px;
+    transition: all 0.2s ease-in-out;
   }
 
-  .btn-secondary-voltra:hover {
-    border-color: rgba(255, 255, 255, 0.35);
+  .btn-secondary-reflex:hover {
+    background: #f8fafc;
+    border-color: #94a3b8;
+    color: #0f172a;
+    transform: translateY(-1px);
+  }
+
+  .btn-whatsapp-clean {
+    background: #25D366;
     color: #ffffff;
-    transform: translateY(-2px);
+    font-weight: 700;
+    border-radius: 9999px;
+    box-shadow: 0 2px 8px rgba(37, 211, 102, 0.25);
+    transition: all 0.2s ease-in-out;
+  }
+
+  .btn-whatsapp-clean:hover {
+    background: #20bd5a;
+    box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
+    transform: translateY(-1px);
   }
 
   /* -------------------------------------------------------------
@@ -186,113 +179,113 @@
 
   /* 1. MARKETING / SALES PAGES (Home, Pricing, Reseller, Channels) */
   .text-format-marketing h1 {
-    @apply font-black uppercase tracking-tight text-black leading-tight text-3xl sm:text-5xl lg:text-6xl;
+    @apply font-extrabold tracking-tight text-slate-900 leading-tight text-3xl sm:text-5xl lg:text-6xl;
   }
 
   .text-format-marketing h2 {
-    @apply font-black uppercase tracking-tight text-black text-2xl sm:text-4xl;
+    @apply font-bold tracking-tight text-slate-900 text-2xl sm:text-4xl;
   }
 
   .text-format-marketing h3 {
-    @apply font-extrabold uppercase tracking-wide text-black text-lg sm:text-xl;
+    @apply font-bold tracking-normal text-slate-900 text-lg sm:text-xl;
   }
 
   .text-format-marketing p {
-    @apply text-gray-600 leading-relaxed text-sm sm:text-base font-normal;
+    @apply text-slate-600 leading-relaxed text-sm sm:text-base font-normal;
   }
 
   .text-format-marketing strong,
   .text-format-marketing b {
-    @apply font-bold text-black;
+    @apply font-bold text-slate-900;
   }
 
   .text-format-marketing mark,
   .text-format-marketing .text-highlight {
-    @apply bg-transparent text-primary-500 font-extrabold;
+    @apply bg-transparent text-blue-600 font-bold;
   }
 
   .text-format-marketing .badge-text {
-    @apply inline-flex items-center gap-1.5 rounded-full border border-primary-500/30 bg-primary-500/10 px-3.5 py-1 text-[11px] font-extrabold uppercase tracking-[0.18em] text-primary-600;
+    @apply inline-flex items-center gap-1.5 rounded-full border border-blue-200 bg-blue-50 px-3.5 py-1 text-[11px] font-bold uppercase tracking-[0.14em] text-blue-700;
   }
 
   /* 2. BLOG & EDITORIAL PAGES (Blog listing, Article detail) */
   .text-format-blog h1 {
-    @apply font-bold tracking-tight text-black leading-snug text-3xl sm:text-4xl md:text-5xl capitalize;
+    @apply font-bold tracking-tight text-slate-900 leading-snug text-3xl sm:text-4xl md:text-5xl capitalize;
   }
 
   .text-format-blog h2 {
-    @apply font-bold text-black tracking-normal mt-10 mb-4 text-xl sm:text-2xl border-b border-white/10 pb-2.5;
+    @apply font-bold text-slate-900 tracking-normal mt-10 mb-4 text-xl sm:text-2xl border-b border-slate-200 pb-2.5;
   }
 
   .text-format-blog h3 {
-    @apply font-semibold text-black tracking-normal mt-7 mb-3 text-lg sm:text-xl;
+    @apply font-semibold text-slate-900 tracking-normal mt-7 mb-3 text-lg sm:text-xl;
   }
 
   .text-format-blog p {
-    @apply text-gray-700 leading-8 text-base sm:text-lg mb-6 font-normal tracking-wide;
+    @apply text-slate-700 leading-8 text-base sm:text-lg mb-6 font-normal;
   }
 
   .text-format-blog strong,
   .text-format-blog b {
-    @apply font-bold text-black bg-black/[0.04] px-1 py-0.5 rounded;
+    @apply font-bold text-slate-900 bg-slate-100 px-1 py-0.5 rounded;
   }
 
   .text-format-blog em,
   .text-format-blog i {
-    @apply italic text-gray-600;
+    @apply italic text-slate-600;
   }
 
   .text-format-blog a {
-    @apply text-primary-500 font-medium underline underline-offset-4 decoration-primary-500/40 hover:text-primary-600 hover:decoration-primary-500 transition-colors;
+    @apply text-blue-600 font-medium underline underline-offset-4 decoration-blue-300 hover:text-blue-800 hover:decoration-blue-600 transition-colors;
   }
 
   /* 3. TECHNICAL GUIDES & INSTALLATION PAGES */
   .text-format-technical h1 {
-    @apply font-black uppercase tracking-tight text-black text-3xl sm:text-5xl;
+    @apply font-extrabold tracking-tight text-slate-900 text-3xl sm:text-5xl;
   }
 
   .text-format-technical h2 {
-    @apply font-extrabold tracking-tight text-black text-xl sm:text-3xl mt-8 mb-4 flex items-center gap-3;
+    @apply font-bold tracking-tight text-slate-900 text-xl sm:text-3xl mt-8 mb-4 flex items-center gap-3;
   }
 
   .text-format-technical h3 {
-    @apply font-bold text-black text-lg sm:text-xl mt-6 mb-2;
+    @apply font-semibold text-slate-900 text-lg sm:text-xl mt-6 mb-2;
   }
 
   .text-format-technical p {
-    @apply text-gray-600 leading-7 text-sm sm:text-base mb-4 font-normal;
+    @apply text-slate-600 leading-7 text-sm sm:text-base mb-4 font-normal;
   }
 
   .text-format-technical code,
   .text-format-technical pre {
-    @apply font-mono text-primary-600 bg-[#1a1a1a] px-2.5 py-1 rounded-md border border-white/10 text-xs sm:text-sm font-medium tracking-wide shadow-inner;
+    @apply font-mono text-blue-700 bg-slate-100 px-2.5 py-1 rounded-md border border-slate-200 text-xs sm:text-sm font-medium;
   }
 
   .text-format-technical strong,
   .text-format-technical b {
-    @apply font-bold text-black underline decoration-secondary-500/50 decoration-2 underline-offset-2;
+    @apply font-bold text-slate-900;
   }
 
   /* 4. LEGAL & POLICY DOCUMENTS */
   .text-format-legal h1 {
-    @apply font-black uppercase tracking-tight text-black text-3xl sm:text-4xl lg:text-5xl;
+    @apply font-extrabold tracking-tight text-slate-900 text-3xl sm:text-4xl lg:text-5xl;
   }
 
   .text-format-legal h2 {
-    @apply font-bold text-black text-xl sm:text-2xl tracking-normal mt-8 mb-3 border-l-4 border-primary-500 pl-3;
+    @apply font-bold text-slate-900 text-xl sm:text-2xl tracking-normal mt-8 mb-3 border-l-4 border-blue-600 pl-3;
   }
 
   .text-format-legal p {
-    @apply text-gray-600 leading-7 font-normal text-sm sm:text-base mb-4 tracking-normal;
+    @apply text-slate-600 leading-7 font-normal text-sm sm:text-base mb-4 tracking-normal;
   }
 
   .text-format-legal strong,
   .text-format-legal b {
-    @apply font-semibold text-black;
+    @apply font-semibold text-slate-900;
   }
 
   .text-format-legal a {
-    @apply font-semibold text-primary-500 hover:text-primary-600 transition-colors underline underline-offset-2;
+    @apply font-semibold text-blue-600 hover:text-blue-800 transition-colors underline underline-offset-2;
   }
 }
 
@@ -331,7 +324,7 @@
 @keyframes fadeUp {
   from {
     opacity: 0;
-    transform: translateY(28px);
+    transform: translateY(16px);
   }
 
   to {
@@ -340,76 +333,6 @@
   }
 }
 
-@keyframes gentle-bounce {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-5px);
-  }
-}
-
-.animate-gentle-bounce {
-  animation: gentle-bounce 3s ease-in-out infinite;
-}
-
 .animate-fade-up {
-  animation: fadeUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-}
-
-@keyframes float {
-
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-16px);
-  }
-}
-
-.animate-float {
-  animation: float 5.5s ease-in-out infinite;
-}
-
-@keyframes buttonPulseScale {
-  0% {
-    box-shadow: 0 0 0 0 rgba(217, 70, 239, 0.7);
-  }
-
-  70% {
-    box-shadow: 0 0 0 10px rgba(217, 70, 239, 0);
-  }
-
-  100% {
-    box-shadow: 0 0 0 0 rgba(217, 70, 239, 0);
-  }
-}
-
-.animate-button-pulse {
-  animation: buttonPulseScale 2s infinite cubic-bezier(0.66, 0, 0, 1);
-}
-
-@keyframes buttonPulseWhite {
-  0% {
-    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5);
-  }
-
-  70% {
-    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
-  }
-
-  100% {
-    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
-  }
-}
-
-.animate-button-pulse-white {
-  animation: buttonPulseWhite 2s infinite cubic-bezier(0.66, 0, 0, 1);
-}
-
-.animate-button-pulse:hover,
-.animate-button-pulse-white:hover {
-  animation-play-state: paused;
+  animation: fadeUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }

@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { CheckCircle2, Gift, Tv } from "lucide-react";
-import Image from "next/image";
+import Link from "next/link";
+import { CheckCircle2, Gift, Tv, Zap, ShieldCheck, Sparkles } from "lucide-react";
 
 type PlanFeature = {
   text: string;
@@ -21,15 +21,15 @@ type Plan = {
 };
 
 const commonFeatures: PlanFeature[] = [
-  { text: "RealMIPTV for {devices} Device{s}", included: true },
-  { text: "Uncompressed Ultra HD & 4K", included: true },
-  { text: "25,000+ Premium Channels", included: true },
-  { text: "100,000+ VODs (Daily Update)", included: true },
-  { text: "Premium Sports & PPV Pass", included: true },
-  { text: "Full EPG & 7-Day Catch-up", included: true },
-  { text: "Advanced Anti-Freeze VIP", included: true },
-  { text: "VPN Included Free", included: true },
-  { text: "Direct WhatsApp VIP Support", included: true },
+  { text: "Reflexsat IPTV subscription for {devices} Device{s}", included: true },
+  { text: "Uncompressed Ultra HD & True 4K", included: true },
+  { text: "50,000+ Premium Live Channels", included: true },
+  { text: "200,000+ VODs (Updated Daily)", included: true },
+  { text: "Major Sports & PPV Pass (60 FPS)", included: true },
+  { text: "Electronic Program Guide (EPG)", included: true },
+  { text: "Advanced Anti-Freeze 10.0 Technology", included: true },
+  { text: "Compatible With All Major IPTV Apps", included: true },
+  { text: "24/7 Dedicated WhatsApp VIP Support", included: true },
 ];
 
 const plans: Plan[] = [
@@ -45,7 +45,7 @@ const plans: Plan[] = [
   {
     id: "12-months",
     name: "12 MONTHS",
-    badge: "ULTIMATE",
+    badge: "BEST VALUE",
     price: 69.99,
     durationLabel: "12 Months",
     months: 12,
@@ -55,7 +55,7 @@ const plans: Plan[] = [
   {
     id: "6-months",
     name: "6 MONTHS",
-    badge: "VALUE",
+    badge: "POPULAR",
     price: 49.99,
     durationLabel: "6 Months",
     months: 6,
@@ -71,155 +71,164 @@ export default function PricingSection() {
 
   function handleOrder(plan: Plan) {
     const text = encodeURIComponent(
-      `Hello! I would like to purchase the ${plan.name} plan with ${devices} device connection${devices > 1 ? "s" : ""} for $${priceFor(plan)}.`
+      `Hello! I would like to order the Reflexsat IPTV ${plan.name} plan with ${devices} device connection${devices > 1 ? "s" : ""} for $${priceFor(plan)}.`
     );
-    window.open(`https://wa.me/213552069874?text=${text}`, "_blank", "noopener,noreferrer");
+    window.open(`https://wa.me/447882781998?text=${text}`, "_blank", "noopener,noreferrer");
   }
 
   return (
-    <section id="pricing" className="relative bg-transparent py-24">
+    <section id="pricing" className="relative bg-slate-50/50 py-24 border-b border-slate-200/80">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
-
         {/* Header */}
         <header className="mx-auto max-w-3xl text-center mb-12">
-          <div className="inline-flex items-center gap-2 rounded-full bg-[#36a9ff] px-4 py-1 mb-6">
-            <Gift className="h-4 w-4 text-black" />
-            <span className="text-[10px] font-bold text-black tracking-widest uppercase">
-              BEST VALUE PLANS
+          <div className="inline-flex items-center gap-2 rounded-full bg-blue-50 border border-blue-200/80 px-4 py-1 mb-5">
+            <Gift className="h-4 w-4 text-blue-600" />
+            <span className="text-[11px] font-bold text-blue-700 tracking-wider uppercase">
+              TRANSPARENT PRICING · NO HIDDEN FEES
             </span>
           </div>
-          <h2 className="text-4xl sm:text-5xl md:text-[54px] font-black tracking-tight leading-[1.1] uppercase drop-shadow-lg">
-            <span className="text-black">CHOOSE YOUR </span>
-            <span className="text-[#36a9ff]">REALMIPTV PLAN</span>
+          <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-900 leading-tight">
+            Choose Your <span className="text-blue-600">Reflexsat IPTV</span> Plan
           </h2>
-          <p className="mt-6 text-base sm:text-lg text-black/90 font-medium leading-relaxed max-w-2xl mx-auto">
-            Select your RealMIPTV subscription duration. Enjoy larger discounts on longer plans, and share the ultimate premium IPTV streaming experience across multiple devices simultaneously.
+          <p className="mt-4 text-base sm:text-lg text-slate-600 font-normal leading-relaxed max-w-2xl mx-auto">
+            Select your subscription duration with zero contract commitments. Enjoy bigger savings on longer plans,
+            with instant credentials delivery directly to your WhatsApp and email.
+          </p>
+          <p className="mt-2 text-xs sm:text-sm text-slate-500 max-w-2xl mx-auto">
+            Browse our{" "}
+            <Link href="/channels" className="font-semibold text-blue-600 hover:text-blue-800 underline">
+              50,000+ live channels lineup
+            </Link>
+            , view our{" "}
+            <Link href="/installation" className="font-semibold text-blue-600 hover:text-blue-800 underline">
+              device installation guides
+            </Link>
+            , or explore our{" "}
+            <Link href="/reseller" className="font-semibold text-blue-600 hover:text-blue-800 underline">
+              IPTV reseller credits
+            </Link>
+            .
           </p>
         </header>
 
-        {/* Device Selector */}
-        <div className="mx-auto mb-16 flex flex-col items-center">
-          <div className="flex items-center gap-2 mb-4">
-            <Tv className="h-4 w-4 text-[#36a9ff]" />
-            <p className="text-[11px] font-bold uppercase tracking-widest text-black">Select Number of Devices</p>
-          </div>
-          <div className="inline-flex rounded-full border border-[#36a9ff] p-1.5 bg-transparent shadow-[0_0_15px_rgba(54,169,255,0.2)]">
-            {[1, 2, 3].map((count) => {
-              const selected = devices === count;
-              return (
+        {/* Device Selector Switcher */}
+        <div className="mx-auto max-w-md w-full mb-14">
+          <div className="flex flex-col items-center gap-3 w-full">
+            <span className="text-xs font-bold uppercase tracking-wider text-slate-500">
+              Select Simultaneous Devices:
+            </span>
+            <div className="grid grid-cols-3 gap-2 w-full p-1.5 bg-white rounded-full border border-slate-200 shadow-xs">
+              {[1, 2, 3].map((num) => (
                 <button
-                  key={count}
-                  onClick={() => setDevices(count)}
-                  className={`rounded-full px-6 py-2.5 text-xs sm:text-sm font-bold transition-all uppercase tracking-wide ${
-                    selected
-                      ? "bg-[#36a9ff] text-white shadow-md"
-                      : "text-black hover:text-[#36a9ff]"
+                  key={num}
+                  onClick={() => setDevices(num)}
+                  type="button"
+                  className={`py-2.5 px-2 rounded-full text-xs sm:text-sm font-bold uppercase tracking-wide transition-all text-center whitespace-nowrap ${
+                    devices === num
+                      ? "bg-blue-600 text-white shadow-xs"
+                      : "text-slate-600 hover:text-slate-900 hover:bg-slate-50"
                   }`}
                 >
-                  {count} Device{count > 1 ? "S" : ""}
+                  {num} {num === 1 ? "Device" : "Devices"}
                 </button>
-              );
-            })}
+              ))}
+            </div>
           </div>
         </div>
 
-        {/* Pricing Cards */}
-        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 md:grid-cols-3 md:gap-8 items-stretch">
-          {plans.map((plan) => (
-            <article
-              key={plan.id}
-              className={`relative flex flex-col rounded-2xl bg-[#fdf1c3] p-8 text-left transition-transform duration-300 border-[6px] border-[#36a9ff] ${
-                plan.popular ? "md:scale-105 z-10 shadow-[0_0_40px_rgba(54,169,255,0.6)]" : "hover:-translate-y-2 shadow-xl"
-              }`}
-            >
-              {/* Card Header Row */}
-              <div className="flex items-center justify-between mb-4">
-                <span className="block text-[#36a9ff] font-black uppercase tracking-widest text-sm">
-                  {plan.badge}
-                </span>
-                <div className="flex items-center gap-2">
-                  {plan.popular && (
-                    <span className="bg-[#36a9ff] text-white text-[9px] font-black px-2.5 py-1 rounded-full uppercase tracking-wider">
-                      MOST POPULAR
+        {/* Pricing Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto items-stretch">
+          {plans.map((plan) => {
+            const isPopular = plan.popular;
+            return (
+              <div
+                key={plan.id}
+                className={`relative flex flex-col rounded-2xl bg-white p-7 sm:p-8 transition-all duration-200 ${
+                  isPopular
+                    ? "border-2 border-blue-600 shadow-xl md:-translate-y-2"
+                    : "border border-slate-200 shadow-sm hover:border-slate-300 hover:shadow-md"
+                }`}
+              >
+                {isPopular && (
+                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2">
+                    <span className="inline-flex items-center gap-1.5 rounded-full bg-blue-600 px-4 py-1 text-[11px] font-extrabold uppercase tracking-widest text-white shadow-sm">
+                      <Sparkles className="w-3.5 h-3.5" />
+                      {plan.badge}
                     </span>
-                  )}
-                  <Tv className="h-5 w-5 text-[#36a9ff]" />
-                </div>
-              </div>
+                  </div>
+                )}
 
-              <div className="pb-6">
-                <h3 className="text-[28px] font-black text-[#051f33] uppercase leading-none mb-4">{plan.name}</h3>
-                
-                <div className="flex items-baseline gap-1 mb-4">
-                  <span className="text-[46px] font-black tracking-tighter text-[#051f33] leading-none">${priceFor(plan)}</span>
-                </div>
-
-                <div className="inline-flex rounded-full bg-[#36a9ff] px-4 py-1.5">
-                  <span className="text-[10px] font-bold text-black uppercase tracking-wider">
-                    JUST ${monthlyPrice(plan)} / MONTH
-                  </span>
-                </div>
-              </div>
-
-              <ul className="mt-6 mb-8 flex-grow space-y-3.5">
-                {commonFeatures.map((feature, idx) => (
-                  <li key={idx} className="flex items-start gap-2.5">
-                    <CheckCircle2 className="h-[18px] w-[18px] shrink-0 text-[#36a9ff] fill-white" />
-                    <span className="text-xs sm:text-[13px] font-bold text-[#051f33]">
-                      {feature.text.replace('{devices}', devices.toString()).replace('{s}', devices > 1 ? 's' : '')}
+                {!isPopular && (
+                  <div className="mb-2">
+                    <span className="inline-block rounded-full bg-slate-100 px-3 py-0.5 text-[10px] font-bold uppercase tracking-wider text-slate-600">
+                      {plan.badge}
                     </span>
-                  </li>
-                ))}
-              </ul>
+                  </div>
+                )}
 
-              <div className="mt-auto pt-4">
+                <h3 className="text-xl font-bold text-slate-900">{plan.name}</h3>
+
+                {/* Price Display */}
+                <div className="mt-4 mb-6">
+                  <div className="flex items-baseline gap-1">
+                    <span className="text-4xl sm:text-5xl font-extrabold tracking-tight text-slate-900">
+                      ${priceFor(plan)}
+                    </span>
+                    <span className="text-sm font-semibold text-slate-500">
+                      / {plan.durationLabel.toLowerCase()}
+                    </span>
+                  </div>
+                  <p className="mt-1 text-xs font-semibold text-emerald-600">
+                    Only ${monthlyPrice(plan)} / month
+                  </p>
+                </div>
+
+                {/* CTA Button */}
                 <button
                   type="button"
                   onClick={() => handleOrder(plan)}
-                  className={`w-full py-4 text-sm font-black uppercase tracking-wide transition-all duration-300 rounded-full transform hover:scale-105 shadow-md ${
-                    plan.popular
-                      ? "bg-[#051f33] text-white hover:bg-[#0a365e] hover:shadow-xl"
-                      : "bg-[#36a9ff] text-white hover:bg-[#2196f3] hover:shadow-[#36a9ff]/50"
+                  className={`w-full py-3.5 px-6 rounded-full text-xs sm:text-sm font-extrabold uppercase tracking-wider transition-all duration-200 ${
+                    isPopular
+                      ? "btn-primary-reflex"
+                      : "btn-secondary-reflex"
                   }`}
                 >
                   {plan.buttonText}
                 </button>
+
+                {/* Features List */}
+                <div className="mt-8 pt-6 border-t border-slate-100 flex-grow">
+                  <p className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-4">
+                    Plan Includes:
+                  </p>
+                  <ul className="space-y-3">
+                    {commonFeatures.map((feat, idx) => {
+                      const text = feat.text
+                        .replace("{devices}", String(devices))
+                        .replace("{s}", devices > 1 ? "s" : "");
+                      return (
+                        <li key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-700">
+                          <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
+                          <span>{text}</span>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
               </div>
-            </article>
-          ))}
+            );
+          })}
         </div>
 
-        {/* Free Trial Banner */}
-        <div className="mx-auto mt-16 max-w-2xl flex flex-col sm:flex-row items-center justify-between gap-4 rounded-full bg-[#fdf1c3] p-2 pl-6 sm:pl-8 shadow-xl border-4 border-[#36a9ff]/30">
-          <div className="flex items-center gap-3">
-            <div className="bg-[#36a9ff] p-2 rounded-full">
-              <Gift className="h-5 w-5 text-black" />
-            </div>
-            <h3 className="text-sm sm:text-base font-black text-[#051f33] uppercase">
-              NEED FREE TRIAL 24H?
-            </h3>
-          </div>
-          <a
-            href="https://wa.me/213552069874?text=Hello,%20I%20would%20like%20to%20request%20a%20free%2024H%20trial."
-            target="_blank"
-            rel="noreferrer"
-            className="bg-[#36a9ff] hover:bg-[#2196f3] text-white text-sm font-black px-10 py-3.5 rounded-full uppercase transition-all shadow-md hover:scale-105 whitespace-nowrap"
-          >
-            TRY NOW
-          </a>
+        {/* Guarantee Banner */}
+        <div className="mt-12 text-center text-xs sm:text-sm text-slate-500">
+          <p className="flex flex-wrap items-center justify-center gap-x-2 gap-y-1 font-medium">
+            <ShieldCheck className="w-4 h-4 text-blue-600 inline" />
+            <span>Instant automated setup · Works on all IPTV players · 24/7 VIP WhatsApp Assistance ·</span>
+            <span>Backed by our <Link href="/refund-policy" className="font-semibold text-blue-600 hover:underline">Refund Policy</Link> ·</span>
+            <span>Have questions? Read our <Link href="/faq" className="font-semibold text-blue-600 hover:underline">FAQ</Link> or <Link href="/contact" className="font-semibold text-blue-600 hover:underline">Contact Support</Link></span>
+          </p>
         </div>
-
-        {/* Added Image Banner */}
-        <div className="mx-auto mt-12 max-w-5xl flex justify-center px-4">
-          <Image 
-            src="/imggt1_3.webp" 
-            alt="Supported Apps and Devices" 
-            width={1200} 
-            height={300} 
-            className="w-full h-auto object-contain drop-shadow-md rounded-xl"
-          />
-        </div>
-
       </div>
     </section>
   );
