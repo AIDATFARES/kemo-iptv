@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Reflexsat IPTV",
-  description: "Learn how Reflexsat IPTV collects, protects, and handles personal data in accordance with global privacy standards.",
+  title: "Kemo IPTV | Privacy Policy & Data Protection",
+  description:
+    "Learn how Kemo IPTV protects your personal data, ensures 256-bit SSL transaction security, and maintains privacy standards across our streaming services.",
   alternates: {
     canonical: "/privacy-policy",
   },
@@ -25,7 +26,7 @@ const sections = [
     title: "2. How We Use Your Data",
     content: ["We use the information we collect to:"],
     items: [
-      "Provision, maintain, and activate your Reflexsat IPTV credentials and playlist lines.",
+      "Provision, maintain, and activate your Kemo IPTV credentials and playlist lines.",
       "Process transactions securely and verify order completion.",
       "Provide customer support and service notifications regarding scheduled server upgrades.",
       "Protect server infrastructure from malicious attacks, unauthorized stream redistribution, and abuse.",
@@ -55,7 +56,7 @@ const sections = [
 
 export default function PrivacyPolicyPage() {
   return (
-    <main className="flex-grow px-5 pb-20 pt-16 sm:px-8 md:pt-20 text-format-legal bg-white">
+    <main className="flex-grow px-5 pb-20 pt-6 sm:pt-8 sm:px-8 text-format-legal bg-white">
       <article className="mx-auto max-w-4xl">
         <header className="border-b border-slate-200 pb-10 text-center mx-auto max-w-3xl">
           <span className="inline-flex rounded-full border border-blue-200 bg-blue-50 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-blue-700 mb-4">
@@ -64,12 +65,12 @@ export default function PrivacyPolicyPage() {
           <h1 className="text-4xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
             Privacy Policy &amp; <span className="text-blue-600">Data Protection</span>
           </h1>
-          <p className="mx-auto mt-3 text-xs text-slate-500">Updated for 2026 · Reflexsat IPTV (www.reflexsat-iptv4k.shop)</p>
+          <p className="mx-auto mt-3 text-xs text-slate-500">Updated for 2026 · Kemo IPTV (www.kemo-iptv.shop)</p>
         </header>
 
         <div className="mt-10 space-y-8 text-sm sm:text-base leading-relaxed text-slate-600">
           <p>
-            Welcome to <strong className="text-slate-900 font-semibold">Reflexsat IPTV</strong> (&quot;reflexsat-iptv4k.shop&quot;). We are committed to safeguarding your personal information and respecting your privacy. If you have questions regarding this policy, please <Link className="font-semibold text-blue-600 hover:text-blue-800" href="/contact">contact our support team</Link>.
+            Welcome to <strong className="text-slate-900 font-semibold">Kemo IPTV</strong> (&quot;kemo-iptv.shop&quot;). We are committed to safeguarding your personal information and respecting your privacy. If you have questions regarding this policy, please <Link className="font-semibold text-blue-600 hover:text-blue-800" href="/contact">contact our support team</Link>.
           </p>
           {sections.map((section) => (
             <section key={section.title}>
@@ -81,7 +82,7 @@ export default function PrivacyPolicyPage() {
           <section>
             <h2 className="text-xl sm:text-2xl font-bold text-slate-900 mb-3">8. Contact Us</h2>
             <p className="mt-2">
-              For any questions regarding your data privacy, reach us at <a href="mailto:support@reflexsat-iptv4k.shop" className="text-blue-600 font-semibold underline">support@reflexsat-iptv4k.shop</a> or via our <Link className="font-semibold text-blue-600 hover:text-blue-800" href="/contact">contact form</Link>.
+              For any questions regarding your data privacy, reach us at <a href="mailto:support@kemo-iptv.shop" className="text-blue-600 font-semibold underline">support@kemo-iptv.shop</a> or via our <Link className="font-semibold text-blue-600 hover:text-blue-800" href="/contact">contact form</Link>.
             </p>
           </section>
         </div>

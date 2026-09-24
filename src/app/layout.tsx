@@ -22,34 +22,46 @@ const geist = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "Reflexsat IPTV | #1 Premium 4K IPTV Subscription Service 2026",
-  description: "Experience high-performance streaming with Reflexsat IPTV. Stream over 50,000 live international channels, 200,000 movies and series on demand, and major pay-per-view sports events with ultra-stable anti-freeze server technology and instant multi-device setup.",
-  metadataBase: new URL("https://www.reflexsat-iptv4k.shop"),
+  title: {
+    default: "Kemo IPTV | Premium 4K IPTV Streaming 50k Channels, Live Sports & 200,000 Movies",
+    template: "%s",
+  },
+  description: "Upgrade your streaming with Kemo IPTV. Enjoy 50,000+ live 4K channels, major sports & 200,000+ VODs powered by Anti-Freeze 10.0. Start your free trial now!",
+  metadataBase: new URL("https://www.kemo-iptv.shop"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Reflexsat IPTV | #1 Premium 4K IPTV Subscription Service 2026",
-    description: "Experience high-performance streaming with Reflexsat IPTV. Stream over 50,000 live international channels, 200,000 movies on demand, and major PPV sports events with ultra-stable anti-freeze server technology.",
-    url: "https://www.reflexsat-iptv4k.shop",
-    siteName: "Reflexsat IPTV",
+    title: "Kemo IPTV | Premium 4K IPTV Streaming 50k Channels, Live Sports & 200,000 Movies",
+    description: "Upgrade your streaming with Kemo IPTV. Enjoy 50,000+ live 4K channels, major sports & 200,000+ VODs powered by Anti-Freeze 10.0. Start your free trial now!",
+    url: "https://www.kemo-iptv.shop",
+    siteName: "Kemo IPTV",
     locale: "en_US",
     type: "website",
     images: [
       {
-        url: "/reflexsat-iptv-buying-guide.jpg",
+        url: "/blog/kemo-iptv-buying-guide.jpg",
         width: 1200,
         height: 630,
-        alt: "Reflexsat IPTV - Premium 4K Live TV, Sports & Cinema Streaming",
+        alt: "Kemo IPTV - Premium 4K Live TV, Sports & Cinema Streaming",
         type: "image/jpeg",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Reflexsat IPTV | #1 Premium 4K IPTV Subscription Service 2026",
-    description: "Experience high-performance streaming with Reflexsat IPTV. Stream over 50,000 live international channels, 200,000 movies on demand, and major PPV sports events.",
-    images: ["/reflexsat-iptv-buying-guide.jpg"],
+    title: "Kemo IPTV | Premium 4K IPTV Streaming 50k Channels, Live Sports & 200,000 Movies",
+    description: "Upgrade your streaming with Kemo IPTV. Enjoy 50,000+ live 4K channels, major sports & 200,000+ VODs powered by Anti-Freeze 10.0. Start your free trial now!",
+    images: ["/blog/kemo-iptv-buying-guide.jpg"],
+  },
+  icons: {
+    icon: [
+      { url: "/icon.png", sizes: "512x512", type: "image/png" },
+      { url: "/favicon.ico", sizes: "48x48" },
+    ],
+    apple: [
+      { url: "/apple-icon.png", sizes: "180x180", type: "image/png" },
+    ],
   },
 };
 
@@ -61,6 +73,25 @@ export default function RootLayout({
   return (
     <html lang="en" className={`light ${inter.variable} ${geist.variable}`}>
       <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Kemo IPTV",
+              "url": "https://www.kemo-iptv.shop",
+              "logo": "https://www.kemo-iptv.shop/blog/kemo-iptv-buying-guide.jpg",
+              "description": "Premium 4K IPTV Subscription service with 50,000+ live channels, 200,000+ VODs, and live sports streaming.",
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+447882781998",
+                "contactType": "customer service",
+                "availableLanguage": ["English", "French", "Spanish", "Arabic"]
+              }
+            })
+          }}
+        />
       </head>
       <body className="bg-white text-slate-900 font-body-lg min-h-screen flex flex-col antialiased selection:bg-blue-100 selection:text-blue-900">
         {/* Navbar */}
@@ -76,10 +107,10 @@ export default function RootLayout({
                 <BrandLogo />
               </Link>
               <p className="text-sm leading-6 text-slate-400">
-                © 2026 Reflexsat IPTV. Satellite-grade 4K IPTV streaming infrastructure. All rights reserved.
+                © 2026 Kemo IPTV. High-performance 4K IPTV streaming infrastructure. All rights reserved.
               </p>
               <a
-                href="https://wa.me/447882781998?text=Hello,%20I%20have%20a%20question%20about%20Reflexsat%20IPTV."
+                href="https://wa.me/447882781998?text=Hello,%20I%20have%20a%20question%20about%20Kemo%20IPTV."
                 target="_blank"
                 rel="noreferrer"
                 className="flex max-w-[280px] items-center gap-3 rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-3.5 transition-colors hover:bg-emerald-500/20 group"
@@ -96,7 +127,7 @@ export default function RootLayout({
               </a>
               <p className="flex items-center gap-2 text-[11px] font-semibold tracking-wider text-slate-400">
                 <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
-                Reflexsat servers online · 99.9% uptime
+                Kemo IPTV servers online · 99.9% uptime
               </p>
             </div>
             
@@ -150,7 +181,7 @@ export default function RootLayout({
             </div>
             
             <div className="col-span-2 mt-4 flex flex-col gap-4 border-t border-slate-800 pt-8 text-xs text-slate-400 sm:col-span-4 md:flex-row md:items-center md:justify-between xl:col-span-5">
-              <p>© 2026 Reflexsat IPTV (www.reflexsat-iptv4k.shop). All rights reserved.</p>
+              <p>© 2026 Kemo IPTV (www.kemo-iptv.shop). All rights reserved.</p>
               <div className="flex flex-wrap gap-2">
                 <Link className="rounded-full border border-slate-800 px-3.5 py-1.5 hover:border-slate-700 hover:text-white transition-colors" href="/privacy-policy">Privacy Policy</Link>
                 <Link className="rounded-full border border-slate-800 px-3.5 py-1.5 hover:border-slate-700 hover:text-white transition-colors" href="/refund-policy">Refund Policy</Link>

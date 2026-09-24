@@ -19,37 +19,39 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const post = blogPosts.find((p) => p.slug === resolvedParams.slug);
 
   if (!post) {
-    return { title: 'Post Not Found | Reflexsat IPTV' };
+    return { title: 'Post Not Found | Kemo IPTV' };
   }
 
-  const imageUrl = post.coverImage || "/blog/reflexsat-blog-default.webp";
+  const title = post.metaTitle || `${post.title} | Kemo IPTV`;
+  const description = post.metaDescription || post.description;
+  const imageUrl = post.coverImage || "/blog/kemo-iptv-buying-guide.jpg";
 
   return {
-    title: `${post.title} | Reflexsat IPTV`,
-    description: post.description,
+    title,
+    description,
     alternates: {
       canonical: `/blog/${post.slug}`,
     },
     openGraph: {
-      title: `${post.title} | Reflexsat IPTV`,
-      description: post.description,
-      url: `https://www.reflexsat-iptv4k.shop/blog/${post.slug}`,
-      siteName: "Reflexsat IPTV",
+      title,
+      description,
+      url: `https://www.kemo-iptv.shop/blog/${post.slug}`,
+      siteName: "Kemo IPTV",
       type: "article",
       images: [
         {
           url: imageUrl,
           width: 1200,
           height: 675,
-          alt: `${post.title} - Reflexsat IPTV Streaming Guide`,
+          alt: `${post.title} - Kemo IPTV Streaming Guide`,
           type: "image/jpeg",
         },
       ],
     },
     twitter: {
       card: "summary_large_image",
-      title: `${post.title} | Reflexsat IPTV`,
-      description: post.description,
+      title,
+      description,
       images: [imageUrl],
     },
   };
@@ -136,7 +138,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
   };
 
   return (
-    <main className="flex-grow pt-24 pb-24 px-5 sm:px-8 max-w-[1000px] mx-auto w-full relative z-10 bg-white">
+    <main className="flex-grow pt-6 sm:pt-8 pb-20 px-5 sm:px-8 max-w-[1000px] mx-auto w-full relative z-10 bg-white">
       {faqJsonLd && (
         <script
           type="application/ld+json"
@@ -169,8 +171,8 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={post.coverImage}
-              alt={`${post.title} - Reflexsat IPTV Streaming Guide`}
-              title={`${post.title} | Reflexsat IPTV`}
+              alt={`${post.title} - Kemo IPTV Streaming Guide`}
+              title={`${post.title} | Kemo IPTV`}
               className="w-full h-full object-cover"
             />
           </div>
@@ -220,10 +222,10 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img
                         className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300"
-                        alt={`${relPost.title} - Reflexsat IPTV Guide`}
-                        title={`${relPost.title} | Reflexsat IPTV`}
+                        alt={`${relPost.title} - Kemo IPTV Guide`}
+                        title={`${relPost.title} | Kemo IPTV`}
                         loading="lazy"
-                        src={relPost.coverImage || "/blog/reflexsat-blog-default.webp"}
+                        src={relPost.coverImage || "/blog/kemo-iptv-buying-guide.jpg"}
                       />
                     </div>
                     <div className="p-5 flex flex-col flex-grow">

@@ -6,18 +6,18 @@ import { useState } from "react";
 
 const devices = [
   { id: "smart-tv", label: "Smart TV", icon: Monitor, title: "Smart TV Setup (Samsung, LG, Sony, etc.)", app: "IBO Player, Smart IPTV, or IPTV Smarters Pro", note: "Samsung Tizen TVs commonly use IBO Player or Smart IPTV, while LG webOS TVs support IPTV Smarters Pro and IBO Player." },
-  { id: "firestick", label: "Firestick", icon: Tv, title: "Amazon Firestick 4K Setup", app: "TiviMate or IPTV Smarters Pro", note: "Download Downloader from the Amazon Appstore, install your favorite player (TiviMate recommended), and sign in using your Reflexsat IPTV credentials." },
+  { id: "firestick", label: "Firestick", icon: Tv, title: "Amazon Firestick 4K Setup", app: "TiviMate or IPTV Smarters Pro", note: "Download Downloader from the Amazon Appstore, install your favorite player (TiviMate recommended), and sign in using your Kemo IPTV credentials." },
   { id: "android", label: "Android TV & Box", icon: Smartphone, title: "Android TV & Android Box Setup", app: "TiviMate or IPTV Smarters Pro", note: "Install your player from the Google Play Store and enter the Xtream Codes API details supplied in your welcome message." },
   { id: "ios", label: "iOS (iPhone & iPad)", icon: Apple, title: "Apple iOS Setup", app: "IPTV Smarters Player or GSE Smart IPTV", note: "Install a compatible player from the Apple App Store and enter the server details from your welcome message." },
-  { id: "mag", label: "MAG Device", icon: Box, title: "MAG Box Setup", app: "Portal URL", note: "Provide your MAG MAC address (00:1A:79:...) to Reflexsat support on WhatsApp so we can authorize your portal before you connect." },
+  { id: "mag", label: "MAG Device", icon: Box, title: "MAG Box Setup", app: "Portal URL", note: "Provide your MAG MAC address (00:1A:79:...) to Kemo IPTV support on WhatsApp so we can authorize your portal before you connect." },
   { id: "enigma", label: "Enigma2 & PC", icon: Satellite, title: "Enigma2 & Windows/Mac Setup", app: "VLC Player, IPTV Smarters PC or XtreamTV", note: "Use the M3U playlist file in VLC or enter your Xtream Codes parameters into the desktop IPTV player." },
 ];
 
 const faqs = [
-  { question: "1. How do I configure Reflexsat IPTV on a Smart TV?", answer: <>Install a player application such as IBO Player or IPTV Smarters from your TV&apos;s app store. Open the app and input the M3U playlist URL or Xtream Codes credentials (Server, Username, Password) from your <Link href="/pricing" className="text-blue-600 font-semibold hover:underline">welcome email</Link>.</> },
+  { question: "1. How do I configure Kemo IPTV on a Smart TV?", answer: <>Install a player application such as IBO Player or IPTV Smarters from your TV&apos;s app store. Open the app and input the M3U playlist URL or Xtream Codes credentials (Server, Username, Password) from your <Link href="/pricing" className="text-blue-600 font-semibold hover:underline">welcome email</Link>.</> },
   { question: "2. Where do I find my M3U URL and Xtream credentials?", answer: <>Your connection credentials are sent to your WhatsApp and email immediately after checkout. <Link href="/contact" className="text-blue-600 font-semibold hover:underline">Contact our support desk</Link> if you need them resent.</> },
   { question: "3. How can I ensure zero buffering during live sports?", answer: <>We recommend connecting your streaming device via Ethernet cable where possible, or using 5GHz Wi-Fi with at least 25 Mbps download speed. Our streams run on <Link href="/how-it-works" className="text-blue-600 font-semibold hover:underline">anti-freeze 10.0 servers</Link> designed for peak traffic.</> },
-  { question: "4. How do I set up Reflexsat IPTV using Xtream Codes API?", answer: <>Choose &apos;Login with Xtream Codes API&apos; inside your player. Enter any name, then copy the Server URL, Username, and Password provided with your <Link href="/pricing" className="text-blue-600 font-semibold hover:underline">Reflexsat plan</Link>.</> },
+  { question: "4. How do I set up Kemo IPTV using Xtream Codes API?", answer: <>Choose &apos;Login with Xtream Codes API&apos; inside your player. Enter any name, then copy the Server URL, Username, and Password provided with your <Link href="/pricing" className="text-blue-600 font-semibold hover:underline">Kemo IPTV plan</Link>.</> },
   { question: "5. Can I connect using a MAC address (Portal URL)?", answer: <>Yes. MAG boxes and STB emulators can be activated using their MAC address. Message our <Link href="/contact" className="text-blue-600 font-semibold hover:underline">support team on WhatsApp</Link> to bind your device.</> },
 ];
 
@@ -70,7 +70,7 @@ export default function DeviceSetupGuide() {
           <div>
             <h3 className="text-2xl font-bold text-slate-900">{device.title}</h3>
             <p className="mt-1 text-xs sm:text-sm text-slate-600">
-              Follow these simple steps to configure your {device.label} for <strong className="text-slate-900">Reflexsat IPTV</strong>.
+              Follow these simple steps to configure your {device.label} for <strong className="text-slate-900">Kemo IPTV</strong>.
             </p>
           </div>
         </div>
@@ -111,7 +111,7 @@ export default function DeviceSetupGuide() {
               </p>
               <div className="mt-3 p-3 rounded-xl bg-white border border-slate-200 font-mono text-xs text-slate-700">
                 <span className="font-bold text-blue-600 mr-2">Server & Credentials:</span>
-                Provided in your Reflexsat welcome email / WhatsApp
+                Provided in your Kemo IPTV welcome email / WhatsApp
               </div>
             </div>
           </div>
@@ -133,7 +133,7 @@ export default function DeviceSetupGuide() {
       {/* Installation FAQ */}
       <div className="mx-auto mt-20 max-w-[1000px]">
         <h2 className="mb-8 text-center text-2xl sm:text-3xl font-extrabold text-slate-900">
-          Setup FAQ
+          Frequently Asked Questions About IPTV Installation
         </h2>
         <div className="grid gap-4 md:grid-cols-2">
           {faqs.map((faq) => (

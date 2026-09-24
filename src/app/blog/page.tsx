@@ -9,7 +9,7 @@ export default function Blog() {
   const gridPosts = blogPosts.slice(1);
 
   return (
-    <main className="flex-grow pt-24 pb-24 px-5 sm:px-8 max-w-[1300px] mx-auto w-full relative z-10 bg-white">
+    <main className="flex-grow pt-6 sm:pt-8 pb-20 px-5 sm:px-8 max-w-[1300px] mx-auto w-full relative z-10 bg-white">
       {/* Header */}
       <header className="mb-14 text-center md:text-left">
         <span className="inline-block py-1.5 px-4 rounded-full bg-blue-50 border border-blue-200 text-blue-700 font-bold text-xs tracking-wider uppercase mb-4">
@@ -19,7 +19,7 @@ export default function Blog() {
           Latest News &amp; <span className="text-blue-600">Streaming Guides</span>
         </h1>
         <p className="text-slate-600 text-base sm:text-lg max-w-3xl leading-relaxed">
-          Stay updated with 4K streaming technology, player setup guides, and tips to optimize your Reflexsat IPTV experience.
+          Stay updated with 4K streaming technology, player setup guides, and tips to optimize your Kemo IPTV experience.
           Explore our <Link href="/pricing" className="font-semibold text-blue-600 hover:underline">subscription plans</Link>, browse our <Link href="/channels" className="font-semibold text-blue-600 hover:underline">50,000+ channel catalog</Link>, or check out our <Link href="/installation" className="font-semibold text-blue-600 hover:underline">device setup tutorials</Link>.
         </p>
       </header>
@@ -33,8 +33,8 @@ export default function Blog() {
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   className="w-full h-full object-cover transform group-hover:scale-102 transition-transform duration-500"
-                  alt={`${featuredPost.title} - Reflexsat IPTV Streaming Guide`}
-                  title={`${featuredPost.title} | Reflexsat IPTV`}
+                  alt={`${featuredPost.title} - Kemo IPTV Streaming Guide`}
+                  title={`${featuredPost.title} | Kemo IPTV`}
                   fetchPriority="high"
                   src={featuredPost.coverImage || ""}
                 />
@@ -68,8 +68,8 @@ export default function Blog() {
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300"
-                  alt={`${post.title} - Reflexsat IPTV Guide`}
-                  title={`${post.title} | Reflexsat IPTV`}
+                  alt={`${post.title} - Kemo IPTV Guide`}
+                  title={`${post.title} | Kemo IPTV`}
                   loading="lazy"
                   src={post.coverImage || ""}
                 />

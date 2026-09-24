@@ -22,22 +22,22 @@ type Plan = {
 };
 
 const commonFeatures: PlanFeature[] = [
-  { text: "Reflexsat IPTV subscription for {devices} Device{s}", included: true },
-  { text: "Uncompressed Ultra HD & True 4K", included: true },
-  { text: "50,000+ Premium Live Channels", included: true },
-  { text: "200,000+ VODs (Updated Daily)", included: true },
-  { text: "Major Sports & PPV Pass (60 FPS)", included: true },
-  { text: "Electronic Program Guide (EPG)", included: true },
-  { text: "Advanced Anti-Freeze 10.0 Technology", included: true },
-  { text: "Compatible With All Major IPTV Apps", included: true },
-  { text: "24/7 Dedicated WhatsApp VIP Support", included: true },
+  { text: "Kemo IPTV Premium Access for {devices} Device{s}", included: true },
+  { text: "Uncompressed Ultra HD, 4K & FHD Streams", included: true },
+  { text: "50,000+ Premium Live Global Channels", included: true },
+  { text: "200,000+ VOD Movies & Series (Updated Daily)", included: true },
+  { text: "Major Sports & PPV Events Pass (60 FPS)", included: true },
+  { text: "Electronic Program Guide (Interactive EPG)", included: true },
+  { text: "Anti-Freeze 10.0 Zero-Buffering Technology", included: true },
+  { text: "Compatible With Firestick, Smart TVs & IPTV Apps", included: true },
+  { text: "24/7 Dedicated WhatsApp VIP Support & Setup", included: true },
 ];
 
 const plans: Plan[] = [
   {
     id: "3-months",
-    name: "3 MONTHS",
-    badge: "STARTER",
+    name: "3 MONTHS IPTV",
+    badge: "STARTER PLAN",
     price: 35,
     durationLabel: "3 Months",
     months: 3,
@@ -45,18 +45,18 @@ const plans: Plan[] = [
   },
   {
     id: "12-months",
-    name: "12 MONTHS",
-    badge: "BEST VALUE",
+    name: "12 MONTHS IPTV",
+    badge: "BEST VALUE · POPULAR",
     price: 69.99,
     durationLabel: "12 Months",
     months: 12,
     popular: true,
-    buttonText: "GET 12 MONTHS",
+    buttonText: "GET 12 MONTHS ACCESS",
   },
   {
     id: "6-months",
-    name: "6 MONTHS",
-    badge: "POPULAR",
+    name: "6 MONTHS IPTV",
+    badge: "POPULAR CHOICE",
     price: 49.99,
     durationLabel: "6 Months",
     months: 6,
@@ -65,19 +65,19 @@ const plans: Plan[] = [
 ];
 
 const includedFeatures = [
-  { icon: Tv, title: "+50,000 Channels", text: <>Explore live channels from around the world, including 4K sports, news and entertainment in our <Link href="/channels" className="text-blue-600 font-semibold hover:underline">channel lineup</Link>.</> },
-  { icon: MonitorSmartphone, title: "200,000+ VODs", text: <>Enjoy a massive, regularly updated catalog of movies and series on all <Link href="/installation" className="text-blue-600 font-semibold hover:underline">supported devices</Link>.</> },
-  { icon: Zap, title: "Anti-Freeze 10.0", text: <>Optimized server technology ensures zero buffering even during peak global sporting events. Learn <Link href="/how-it-works" className="text-blue-600 font-semibold hover:underline">how it works</Link>.</> },
-  { icon: Headphones, title: "24/7 VIP Support", text: <>The Reflexsat support team is ready to assist with setup and streaming questions on WhatsApp via our <Link href="/contact" className="text-blue-600 font-semibold hover:underline">support desk</Link>.</> },
-  { icon: Sparkles, title: "Fast Activation", text: <>Your Reflexsat IPTV details are delivered instantly. Follow our <Link href="/installation" className="text-blue-600 font-semibold hover:underline">installation guides</Link> to get started in minutes.</> },
-  { icon: CreditCard, title: "TV Guide (EPG)", text: "Accurate electronic program guides with catch-up functionality on supported players." },
+  { icon: Tv, title: "+50,000 Live Channels", text: <>Explore live international channels in 4K UHD, covering world sports, news, and entertainment in our <Link href="/channels" className="text-blue-600 font-semibold hover:underline">channel lineup</Link>.</> },
+  { icon: MonitorSmartphone, title: "200,000+ VOD Movies & Series", text: <>Enjoy a massive, regularly updated cinema catalog of movies and full series across all <Link href="/installation" className="text-blue-600 font-semibold hover:underline">supported devices</Link>.</> },
+  { icon: Zap, title: "Anti-Freeze 10.0 Technology", text: <>Engineered server clusters guarantee 99.9% uptime and zero buffering during high-traffic matches. Learn <Link href="/how-it-works" className="text-blue-600 font-semibold hover:underline">how it works</Link>.</> },
+  { icon: Headphones, title: "24/7 WhatsApp VIP Support", text: <>The Kemo IPTV engineering desk is ready 24/7 to assist with activation and playlist setup on WhatsApp via our <Link href="/contact" className="text-blue-600 font-semibold hover:underline">support desk</Link>.</> },
+  { icon: Sparkles, title: "Instant 5-Minute Delivery", text: <>Your Kemo IPTV credentials arrive instantly upon ordering. Follow our <Link href="/installation" className="text-blue-600 font-semibold hover:underline">installation guides</Link> to start watching immediately.</> },
+  { icon: CreditCard, title: "Interactive EPG & Catch-Up", text: "Accurate electronic program guide with seamless navigation and catch-up on supported IPTV players." },
 ];
 
 const billingQuestions = [
-  { question: "1. Which payment methods are accepted?", answer: <>We accept credit/debit cards, PayPal, and major cryptocurrencies (Bitcoin, USDT). <Link className="font-semibold text-blue-600 hover:text-blue-800" href="/contact">Contact Reflexsat support</Link> if you need guidance before ordering.</> },
-  { question: "2. Is my order protected?", answer: <>Yes. All transactions are securely processed with 256-bit SSL encryption and backed by our <Link className="font-semibold text-blue-600 hover:text-blue-800" href="/refund-policy">refund policy</Link>. We never store payment card credentials.</> },
-  { question: "3. Will my subscription auto-renew?", answer: <>No surprise rebills. Subscriptions are prepaid. You will receive an optional reminder before your plan expires so you can easily renew on your terms. Have questions? See our <Link className="font-semibold text-blue-600 hover:text-blue-800" href="/faq">FAQ</Link>.</> },
-  { question: "4. Can I upgrade my plan or add extra connections later?", answer: <>Yes. <Link className="font-semibold text-blue-600 hover:text-blue-800" href="/contact">Contact our support team on WhatsApp</Link> at any time and we will upgrade your account seamlessly.</> },
+  { question: "1. Which payment methods are accepted?", answer: <>We accept credit/debit cards, PayPal, and major cryptocurrencies (Bitcoin, USDT). <Link className="font-semibold text-blue-600 hover:text-blue-800" href="/contact">Contact Kemo IPTV support on WhatsApp</Link> if you need payment guidance before ordering.</> },
+  { question: "2. Is my order protected?", answer: <>Yes. All transactions are securely processed with 256-bit SSL encryption and backed by our <Link className="font-semibold text-blue-600 hover:text-blue-800" href="/refund-policy">refund policy</Link>. We never store sensitive payment credentials.</> },
+  { question: "3. Will my subscription auto-renew?", answer: <>No surprise rebills. All Kemo IPTV plans are 100% prepaid. You will receive an optional reminder before your plan expires so you can easily renew on your terms. Have questions? See our <Link className="font-semibold text-blue-600 hover:text-blue-800" href="/faq">FAQ</Link>.</> },
+  { question: "4. Can I upgrade my plan or add extra connections later?", answer: <>Yes. <Link className="font-semibold text-blue-600 hover:text-blue-800" href="/contact">Contact our support team on WhatsApp</Link> at any time and we will upgrade your account connections seamlessly.</> },
 ];
 
 const planComparison = [
@@ -98,13 +98,13 @@ export default function PricingPageContent() {
 
   function handleOrder(plan: Plan) {
     const text = encodeURIComponent(
-      `Hello! I would like to order the Reflexsat IPTV ${plan.name} plan with ${devices} device connection${devices > 1 ? "s" : ""} for $${priceFor(plan)}.`
+      `Hello! I would like to order the Kemo IPTV ${plan.name} plan with ${devices} device connection${devices > 1 ? "s" : ""} for $${priceFor(plan)}.`
     );
     window.open(`https://wa.me/447882781998?text=${text}`, "_blank", "noopener,noreferrer");
   }
 
   return (
-    <section className="relative overflow-hidden bg-white py-16 sm:py-20 lg:py-24">
+    <section className="relative overflow-hidden bg-white pt-6 sm:pt-8 pb-16 sm:pb-20 lg:pb-24">
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
         
         {/* Header */}
@@ -116,10 +116,10 @@ export default function PricingPageContent() {
             </span>
           </div>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-slate-900 leading-tight">
-            Reflexsat IPTV <span className="text-blue-600">Subscription Plans</span>
+            Kemo IPTV <span className="text-blue-600">Subscription Plans</span>
           </h1>
           <p className="mx-auto mt-4 text-base sm:text-lg text-slate-600 max-w-2xl leading-relaxed">
-            Choose your preferred subscription duration with uncompressed 4K streaming and zero long-term commitments.
+            Choose your ideal Kemo IPTV subscription package with uncompressed 4K streaming, zero hardware contracts, and instant delivery via WhatsApp and email.
           </p>
           <p className="mx-auto mt-2 max-w-2xl text-xs sm:text-sm text-slate-500">
             Need guidance? Check our <Link className="font-semibold text-blue-600 hover:text-blue-800" href="/installation">setup guide</Link>, view our <Link className="font-semibold text-blue-600 hover:text-blue-800" href="/channels">channel lineup</Link>, learn <Link className="font-semibold text-blue-600 hover:text-blue-800" href="/how-it-works">how it works</Link>, or explore <Link className="font-semibold text-blue-600 hover:text-blue-800" href="/reseller">reseller panel credits</Link>.
@@ -215,7 +215,7 @@ export default function PricingPageContent() {
                   type="button"
                   onClick={() => handleOrder(plan)}
                   className={`w-full py-4 text-xs sm:text-sm font-extrabold uppercase tracking-wider transition-all duration-200 rounded-full ${
-                    isPopular ? "btn-primary-reflex" : "btn-secondary-reflex"
+                    isPopular ? "btn-primary-kemo" : "btn-secondary-kemo"
                   }`}
                 >
                   {plan.buttonText}
@@ -233,13 +233,13 @@ export default function PricingPageContent() {
             </div>
             <div>
               <h3 className="text-base font-bold text-slate-900">
-                Want to test Reflexsat IPTV first?
+                Want to test Kemo IPTV first?
               </h3>
               <p className="text-xs text-slate-600">Request a free 24-hour trial with instant activation.</p>
             </div>
           </div>
           <a
-            href="https://wa.me/447882781998?text=Hello,%20I%20would%20like%20to%20request%20a%20free%2024H%20trial%20for%20Reflexsat%20IPTV."
+            href="https://wa.me/447882781998?text=Hello,%20I%20would%20like%20to%20request%20a%20free%2024H%20trial%20for%20Kemo%20IPTV."
             target="_blank"
             rel="noreferrer"
             className="btn-whatsapp-clean px-6 py-3 text-xs uppercase tracking-wider font-extrabold whitespace-nowrap"
@@ -255,7 +255,7 @@ export default function PricingPageContent() {
               Detailed Plan Specs
             </span>
             <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-              Compare <span className="text-blue-600">Reflexsat Plans</span>
+              Compare <span className="text-blue-600">Kemo IPTV Plan Features</span>
             </h2>
           </div>
 
@@ -289,7 +289,7 @@ export default function PricingPageContent() {
         <section className="mt-24">
           <div className="text-center mb-12">
             <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-              Included With Every <span className="text-blue-600">Reflexsat Subscription</span>
+              Included With Every <span className="text-blue-600">Kemo IPTV Subscription</span>
             </h2>
           </div>
 
@@ -312,7 +312,7 @@ export default function PricingPageContent() {
         {/* Billing Questions FAQ */}
         <section className="mx-auto mt-24 max-w-4xl">
           <h2 className="text-center text-2xl sm:text-3xl font-extrabold text-slate-900">
-            Billing & Subscription FAQ
+            Kemo IPTV Billing & Subscription FAQ
           </h2>
           <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4">
             {billingQuestions.map((item) => (
@@ -333,7 +333,7 @@ export default function PricingPageContent() {
 
         <div className="mt-16 flex items-center justify-center gap-2 text-xs sm:text-sm text-slate-500">
           <ShieldCheck className="h-4 w-4 text-blue-600" />
-          <span>Secure checkout with 256-bit SSL encryption · 24/7 Reflexsat IPTV WhatsApp VIP Support</span>
+          <span>Secure checkout with 256-bit SSL encryption · 24/7 Kemo IPTV WhatsApp VIP Support</span>
         </div>
       </div>
     </section>

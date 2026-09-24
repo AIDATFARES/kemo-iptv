@@ -39,8 +39,8 @@ export default function BrandMarquee({
               <div className="relative w-full h-full overflow-hidden rounded-xl">
                 <Image 
                   src={`/${imagesFolder}/${brand}`} 
-                  alt={`Watch ${cleanBrandName} live in 4K on Reflexsat IPTV`} 
-                  title={`${cleanBrandName} - Reflexsat IPTV Live Stream`}
+                  alt={`Watch ${cleanBrandName} live in 4K on Kemo IPTV`} 
+                  title={`${cleanBrandName} - Kemo IPTV Live Stream`}
                   fill
                   sizes="(max-width: 640px) 100px, (max-width: 1024px) 130px, 150px"
                   className={imageClassName || "object-contain rounded-lg"}

@@ -7,7 +7,7 @@ export default function FeaturesSection() {
     {
       icon: Monitor,
       title: "4K ULTRA HD STREAMING",
-      desc: "Enjoy every channel and live event in stunning 4K, Full HD, and 60 FPS HD. Reflexsat IPTV anti-freeze technology ensures smooth streaming on any device.",
+      desc: "Enjoy every channel and live event in stunning 4K, Full HD, and 60 FPS HD. Kemo IPTV anti-freeze technology ensures smooth streaming on any device.",
     },
     {
       icon: Layers,
@@ -17,7 +17,7 @@ export default function FeaturesSection() {
     {
       icon: Film,
       title: "200,000+ MOVIES & SERIES",
-      desc: "Explore a massive VOD library featuring the latest movies, hit series, and documentaries—available on demand with your Reflexsat IPTV subscription.",
+      desc: "Explore a massive VOD library featuring the latest movies, hit series, and documentaries—available on demand with your Kemo IPTV subscription.",
     },
   ];
 
@@ -35,7 +35,7 @@ export default function FeaturesSection() {
     {
       icon: Globe,
       title: "Works Worldwide",
-      desc: "Enjoy Reflexsat IPTV anywhere on any standard internet connection.",
+      desc: "Enjoy Kemo IPTV anywhere on any standard internet connection.",
     },
     {
       icon: ShieldCheck,
@@ -55,7 +55,7 @@ export default function FeaturesSection() {
           </span>
           <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 leading-tight">
             Everything You Need for the{" "}
-            <span className="block text-blue-600">Ultimate Reflexsat IPTV Experience</span>
+            <span className="block text-blue-600">Ultimate Kemo IPTV Experience</span>
           </h2>
         </div>
 

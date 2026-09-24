@@ -7,22 +7,22 @@ export default function DeviceSupport() {
     {
       icon: Tv,
       title: "Smart TVs",
-      desc: "Samsung Tizen, LG webOS, Android TV, Google TV, Sony & TCL.",
+      desc: "Samsung Tizen, LG webOS, Android TV, Google TV, Sony, Hisense & Philips.",
     },
     {
       icon: Box,
-      title: "Streaming Sticks & Boxes",
-      desc: "Amazon Firestick 4K, Apple TV 4K, MAG, Nvidia Shield & Xiaomi Box.",
+      title: "Streaming Sticks & TV Boxes",
+      desc: "Amazon Firestick 4K/Max, Apple TV 4K, MAG, Nvidia Shield & Formuler.",
     },
     {
       icon: Smartphone,
-      title: "Mobile & Tablets",
-      desc: "iPhone, iPad, Android phones, Samsung Galaxy & tablets on the go.",
+      title: "Mobiles & Tablets",
+      desc: "Apple iOS (iPhone, iPad), Android phones & tablets with top IPTV players.",
     },
     {
       icon: Monitor,
-      title: "PCs & Consoles",
-      desc: "Windows 11, macOS, Linux, Web browsers & IPTV players.",
+      title: "PCs, Macs & Web Browsers",
+      desc: "Windows 11/10, macOS, Linux, Web IPTV players, and VLC media player.",
     },
   ];
 
@@ -35,9 +35,9 @@ export default function DeviceSupport() {
           <div className="w-full lg:flex-1 relative">
             <div className="relative rounded-3xl overflow-hidden border border-slate-200 bg-slate-50 p-4 shadow-sm">
               <Image
-                src="/reflexsat-compatible-devices.webp"
-                alt="Reflexsat IPTV multi-device streaming compatibility for Firestick, Apple TV 4K, Smart TV, Android, iOS and PC"
-                title="Reflexsat IPTV Supported Streaming Devices & Platforms"
+                src="/kemo-compatible-devices.webp"
+                alt="Kemo IPTV multi-device streaming compatibility for Firestick, Apple TV 4K, Smart TV, Android, iOS and PC"
+                title="Kemo IPTV Supported Streaming Devices & Platforms"
                 width={800}
                 height={500}
                 className="w-full h-auto object-cover rounded-2xl"
@@ -57,25 +57,21 @@ export default function DeviceSupport() {
           <div className="w-full lg:flex-1 space-y-6">
             <div>
               <span className="inline-block py-1.5 px-4 rounded-full bg-blue-50 text-blue-700 font-bold text-xs tracking-wider uppercase mb-4 border border-blue-200/80">
-                Universal Compatibility
+                Universal Device Compatibility
               </span>
               <h2 className="text-3xl sm:text-5xl font-extrabold text-slate-900 leading-[1.1] tracking-tight mb-4">
-                Stream <span className="text-blue-600">Reflexsat IPTV</span> on Any Screen
+                Stream <span className="text-blue-600">Kemo IPTV</span> on Any Screen, Anytime
               </h2>
               <p className="text-slate-600 text-base sm:text-lg leading-relaxed">
-                Reflexsat IPTV is engineered to deliver fluid 4K streaming across all your household hardware.
-                Whether relaxing in the living room watching{" "}
-                <Link href="/channels" className="font-semibold text-blue-600 hover:underline">
-                  50,000+ live sports and movies
-                </Link>{" "}
-                or streaming on mobile devices, enjoy crystal-clear playback without hardware limitations.
-                Choose a{" "}
+                Kemo IPTV is engineered for effortless, fluid 4K streaming across all your favorite hardware.
+                Whether you are enjoying live sports on an Amazon Firestick 4K, watching PPV on Apple TV, or streaming movies on your phone while traveling, Kemo IPTV delivers instant channel switching with zero buffering.
+                Select a{" "}
                 <Link href="/pricing" className="font-semibold text-blue-600 hover:underline">
-                  multi-screen subscription plan
+                  multi-screen IPTV subscription
                 </Link>{" "}
-                to connect multiple rooms at once, or consult our{" "}
+                to connect multiple household rooms, or follow our easy{" "}
                 <Link href="/installation" className="font-semibold text-blue-600 hover:underline">
-                  step-by-step setup guides
+                  IPTV device setup guides
                 </Link>
                 .
               </p>
@@ -104,7 +100,7 @@ export default function DeviceSupport() {
             <div className="pt-2 flex flex-col sm:flex-row items-center gap-4">
               <Link
                 href="/installation"
-                className="w-full sm:w-auto btn-primary-reflex py-3.5 px-7 text-xs sm:text-sm font-extrabold uppercase tracking-wider text-center"
+                className="w-full sm:w-auto btn-primary-kemo py-3.5 px-7 text-xs sm:text-sm font-extrabold uppercase tracking-wider text-center"
               >
                 View Step-by-Step Setup Guides &rarr;
               </Link>

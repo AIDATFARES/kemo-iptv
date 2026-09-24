@@ -14,11 +14,11 @@ export default function BlogOfferCard() {
           </div>
           
           <h3 className="text-2xl md:text-3xl font-bold text-slate-900 mb-2">
-            Experience <span className="text-blue-600">Reflexsat IPTV</span>
+            Experience <span className="text-blue-600">Kemo IPTV</span>
           </h3>
           
           <p className="text-slate-600 text-sm md:text-base mb-0 max-w-2xl leading-relaxed">
-            Upgrade your streaming with satellite-grade, anti-freeze 10.0 infrastructure. Over 50,000 live channels, 4K 60FPS sports, and 200,000+ VODs.
+            Upgrade your streaming with high-performance anti-freeze infrastructure. Over 50,000 live channels, 4K 60FPS sports, and 200,000+ VODs on demand.
           </p>
         </div>
         
@@ -27,7 +27,7 @@ export default function BlogOfferCard() {
             href="/pricing"
             className="btn-primary-reflex inline-flex items-center justify-center w-full md:w-auto px-7 py-3.5 text-xs sm:text-sm font-extrabold uppercase tracking-wider"
           >
-            View Reflexsat Plans
+            View Kemo IPTV Plans
             <ArrowRight className="w-4 h-4 ml-2" />
           </Link>
         </div>

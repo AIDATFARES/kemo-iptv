@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 import { blogPosts } from '@/data/blog';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://www.reflexsat-iptv4k.shop';
+  const baseUrl = 'https://www.kemo-iptv.shop';
 
   const staticRoutes: MetadataRoute.Sitemap = [
     {

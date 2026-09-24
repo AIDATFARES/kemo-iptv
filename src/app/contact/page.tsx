@@ -5,13 +5,13 @@ import { Mail, MessageCircle, ArrowRight, Clock, Send, ShieldCheck } from "lucid
 
 export default function Contact() {
   return (
-    <main className="flex-grow pt-24 pb-24 px-6 md:px-12 max-w-[1300px] mx-auto w-full relative z-10 bg-white">
+    <main className="flex-grow pt-6 sm:pt-8 pb-20 px-6 md:px-12 max-w-[1300px] mx-auto w-full relative z-10 bg-white">
       <div className="mx-auto mb-14 max-w-3xl text-center">
         <span className="inline-block py-1.5 px-4 rounded-full bg-blue-50 border border-blue-200 text-blue-700 font-bold text-xs tracking-wider uppercase mb-4">
           Direct Customer Care
         </span>
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-tight">
-          Get in Touch with <span className="text-blue-600">Reflexsat Support</span>
+          Get in Touch with <span className="text-blue-600">Kemo IPTV Support</span>
         </h1>
         <p className="mx-auto mt-4 max-w-2xl text-base text-slate-600 leading-relaxed">
           Need help <Link href="/pricing" className="text-blue-600 font-semibold hover:underline">choosing a package</Link>,{" "}
@@ -32,9 +32,9 @@ export default function Contact() {
             <p className="text-xs text-slate-500 mb-4">For billing inquiries and general support.</p>
             <a
               className="text-xs sm:text-sm font-bold text-blue-600 hover:text-blue-800 transition-colors break-all"
-              href="mailto:support@reflexsat-iptv4k.shop"
+              href="mailto:support@kemo-iptv.shop"
             >
-              support@reflexsat-iptv4k.shop
+              support@kemo-iptv.shop
             </a>
           </div>
 
@@ -51,7 +51,7 @@ export default function Contact() {
             </p>
             <a
               className="btn-whatsapp-clean inline-flex items-center gap-2 px-6 py-2.5 text-xs font-bold uppercase tracking-wider"
-              href="https://wa.me/447882781998?text=Hello,%20I%20need%20support%20for%20Reflexsat%20IPTV."
+              href="https://wa.me/447882781998?text=Hello,%20I%20need%20support%20for%20Kemo%20IPTV."
               target="_blank"
               rel="noreferrer"
             >
@@ -82,7 +82,7 @@ export default function Contact() {
               const name = (form.elements.namedItem('name') as HTMLInputElement)?.value || '';
               const subject = (form.elements.namedItem('subject') as HTMLInputElement)?.value || '';
               const msg = (form.elements.namedItem('message') as HTMLTextAreaElement)?.value || '';
-              const prompt = `Hello Reflexsat support,\n\nName: ${name}\nSubject: ${subject}\n\n${msg}`;
+              const prompt = `Hello Kemo IPTV support,\n\nName: ${name}\nSubject: ${subject}\n\n${msg}`;
               window.open(`https://wa.me/447882781998?text=${encodeURIComponent(prompt)}`, "_blank");
             }}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -144,7 +144,7 @@ export default function Contact() {
 
               <div className="mt-2 flex justify-end">
                 <button
-                  className="btn-primary-reflex px-8 py-3.5 text-xs sm:text-sm font-extrabold uppercase tracking-wider flex items-center gap-2"
+                  className="btn-primary-kemo px-8 py-3.5 text-xs sm:text-sm font-extrabold uppercase tracking-wider flex items-center gap-2"
                   type="submit"
                 >
                   <span>Send Message via WhatsApp Desk</span>

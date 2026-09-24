@@ -5,24 +5,24 @@ export default function ChannelCategories() {
   const topFeatures = [
     {
       icon: Monitor,
-      title: "4K ULTRA HD STREAMING",
-      desc: "Enjoy every channel and live event in stunning 4K, Full HD, and 60 FPS HD. Reflexsat IPTV anti-freeze technology ensures smooth, buffer-free playback on any screen.",
+      title: "4K ULTRA HD IPTV STREAMING",
+      desc: "Stream every channel and live sports event in crisp 4K, Full HD, and 60 FPS. Kemo IPTV anti-freeze server technology ensures fluid, buffer-free playback on every screen.",
       tags: ["4K UHD", "60 FPS", "ANTI-FREEZE"],
       href: "/how-it-works",
       linkText: "Learn about our streaming technology",
     },
     {
       icon: Layers,
-      title: "50,000+ LIVE CHANNELS",
-      desc: "Access over 50,000 live international channels covering sports, news, documentaries, and entertainment networks from more than 150 countries worldwide.",
+      title: "50,000+ LIVE IPTV CHANNELS",
+      desc: "Access over 50,000 live international channels covering premium sports, global news, kids' programming, and entertainment networks across 150+ countries.",
       tags: ["150+ COUNTRIES", "LIVE SPORTS", "NEWS & KIDS"],
       href: "/channels",
       linkText: "Explore complete channels list",
     },
     {
       icon: Film,
-      title: "200,000+ MOVIES & SERIES",
-      desc: "Explore a massive on-demand VOD catalog featuring blockbuster cinema, entire television series, and multi-language audio and subtitle tracks.",
+      title: "200,000+ VOD MOVIES & SERIES",
+      desc: "Explore a massive on-demand IPTV library featuring blockbuster cinema premieres, full TV series boxsets, and multi-language audio and subtitle tracks.",
       tags: ["DAILY UPDATES", "MULTI-AUDIO", "VOD 4K"],
       href: "/channels",
       linkText: "Browse on-demand movie catalog",
@@ -32,23 +32,23 @@ export default function ChannelCategories() {
   const bottomFeatures = [
     {
       icon: Zap,
-      title: "Instant Setup",
-      desc: "Receive your account details within minutes after order placement.",
+      title: "Instant IPTV Setup",
+      desc: "Receive your M3U playlist and Xtream Codes credentials via WhatsApp within 5 minutes.",
     },
     {
       icon: Smartphone,
-      title: "Multi-Platform",
-      desc: "Works seamlessly on Smart TV, Firestick, Android, iOS, and PC.",
+      title: "Universal Device Support",
+      desc: "Stream Kemo IPTV seamlessly on Smart TVs, Firestick, Android, Apple TV, iOS, and PC.",
     },
     {
       icon: Globe2,
-      title: "Global Coverage",
-      desc: "Stream anywhere in the world on any standard internet connection.",
+      title: "Global Server Network",
+      desc: "Stream buffer-free worldwide with high-bandwidth European and North American CDN nodes.",
     },
     {
       icon: ShieldCheck,
-      title: "99.9% Server Uptime",
-      desc: "Load-balanced server clusters engineered for peak live-sport traffic.",
+      title: "99.9% Anti-Freeze Uptime",
+      desc: "Load-balanced server clusters engineered to maintain 60 FPS stability during peak live sports.",
     },
   ];
 
@@ -59,24 +59,24 @@ export default function ChannelCategories() {
         {/* Heading */}
         <div className="mx-auto mb-14 max-w-4xl text-center">
           <span className="inline-block py-1.5 px-4 rounded-full bg-blue-50 text-blue-700 font-bold text-xs tracking-wider uppercase mb-4 border border-blue-200/80">
-            Satellite-Grade Infrastructure
+            Enterprise Streaming Infrastructure
           </span>
           <h2 className="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
-            Everything You Need for the <br className="hidden md:block" />
-            <span className="text-blue-600">Ultimate Reflexsat IPTV Experience</span>
+            Why Choose <br className="hidden md:block" />
+            <span className="text-blue-600">Kemo IPTV Service</span>
           </h2>
           <p className="mt-4 text-slate-600 text-base sm:text-lg max-w-2xl mx-auto">
             Engineered from the ground up for stability, speed, and premium variety. Explore our{" "}
             <Link href="/channels" className="font-semibold text-blue-600 hover:text-blue-800 underline decoration-blue-200 hover:decoration-blue-600">
               50,000+ live channel lineup
             </Link>
-            , check our{" "}
+            , choose an affordable{" "}
             <Link href="/pricing" className="font-semibold text-blue-600 hover:text-blue-800 underline decoration-blue-200 hover:decoration-blue-600">
-              subscription plans
+              IPTV subscription plan
             </Link>
-            , or see how to{" "}
+            , or follow our simple{" "}
             <Link href="/installation" className="font-semibold text-blue-600 hover:text-blue-800 underline decoration-blue-200 hover:decoration-blue-600">
-              install on your device
+              device installation tutorials
             </Link>
             .
           </p>

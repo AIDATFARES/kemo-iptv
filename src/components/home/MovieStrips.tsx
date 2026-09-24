@@ -38,9 +38,9 @@ export default function MovieStrips() {
         </p>
         <Link 
           href="/channels"
-          className="btn-primary-reflex inline-flex items-center justify-center px-8 py-3.5 text-xs sm:text-sm font-bold tracking-wider uppercase"
+          className="btn-primary-kemo inline-flex items-center justify-center px-8 py-3.5 text-xs sm:text-sm font-bold tracking-wider uppercase"
         >
-          View Reflexsat IPTV Channel List &rarr;
+          View Kemo IPTV Channel List &rarr;
         </Link>
       </div>
 
@@ -66,8 +66,8 @@ export default function MovieStrips() {
               <div key={i} className="flex-shrink-0 w-[160px] h-[220px] md:w-[220px] md:h-[300px] relative rounded-2xl overflow-hidden shadow-sm border border-slate-200 hover:border-blue-400 hover:shadow-md transition-all duration-200">
                 <Image 
                   src={`/movie_new/${img}`} 
-                  alt={`Watch ${cleanMovieTitle} on-demand in 4K on Reflexsat IPTV`} 
-                  title={`${cleanMovieTitle} - Reflexsat IPTV 4K VOD`}
+                  alt={`Watch ${cleanMovieTitle} on-demand in 4K on Kemo IPTV`} 
+                  title={`${cleanMovieTitle} - Kemo IPTV 4K VOD`}
                   fill 
                   sizes="(max-width: 640px) 240px, 340px" 
                   className="object-cover" 

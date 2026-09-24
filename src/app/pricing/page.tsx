@@ -1,23 +1,23 @@
 import PricingPageContent from "@/components/pricing/PricingPageContent";
 
 export const metadata = {
-  title: "Reflexsat IPTV Pricing & Plans 2026 | Premium 4K IPTV Subscription",
-  description: "Browse affordable Reflexsat IPTV subscription plans. Stream 50,000+ live channels, 200,000+ VODs, and PPV sports with anti-freeze servers and instant multi-device setup.",
+  title: "Kemo IPTV | IPTV Subscription Plans & Pricing – From $4.20",
+  description: "Discover flexible Kemo IPTV subscription plans from $4.20/mo. Get 50,000+ live 4K channels, zero contracts & instant delivery. Choose your plan today!",
   alternates: {
     canonical: "/pricing",
   },
   openGraph: {
-    title: "Reflexsat IPTV Pricing & Plans 2026 | Premium 4K IPTV Subscription",
-    description: "Browse affordable Reflexsat IPTV subscription plans. Stream 50,000+ live channels, 200,000+ VODs, and PPV sports with anti-freeze servers.",
-    url: "https://www.reflexsat-iptv4k.shop/pricing",
-    siteName: "Reflexsat IPTV",
+    title: "Kemo IPTV | IPTV Subscription Plans & Pricing – From $4.20",
+    description: "Discover flexible Kemo IPTV subscription plans from $4.20/mo. Get 50,000+ live 4K channels, zero contracts & instant delivery. Choose your plan today!",
+    url: "https://www.kemo-iptv.shop/pricing",
+    siteName: "Kemo IPTV",
     type: "website",
     images: [
       {
-        url: "/reflexsat-iptv-buying-guide.jpg",
+        url: "/blog/kemo-iptv-buying-guide.jpg",
         width: 1200,
         height: 630,
-        alt: "Reflexsat IPTV Subscription Pricing & Plans 2026",
+        alt: "Kemo IPTV Subscription Pricing & Plans 2026",
       },
     ],
   },

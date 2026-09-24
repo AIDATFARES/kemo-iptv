@@ -21,22 +21,22 @@ type Plan = {
 };
 
 const commonFeatures: PlanFeature[] = [
-  { text: "Reflexsat IPTV subscription for {devices} Device{s}", included: true },
-  { text: "Uncompressed Ultra HD & True 4K", included: true },
-  { text: "50,000+ Premium Live Channels", included: true },
-  { text: "200,000+ VODs (Updated Daily)", included: true },
-  { text: "Major Sports & PPV Pass (60 FPS)", included: true },
-  { text: "Electronic Program Guide (EPG)", included: true },
-  { text: "Advanced Anti-Freeze 10.0 Technology", included: true },
-  { text: "Compatible With All Major IPTV Apps", included: true },
-  { text: "24/7 Dedicated WhatsApp VIP Support", included: true },
+  { text: "Kemo IPTV Premium Access for {devices} Device{s}", included: true },
+  { text: "Uncompressed Ultra HD, 4K & FHD Streams", included: true },
+  { text: "50,000+ Premium Live Global Channels", included: true },
+  { text: "200,000+ VOD Movies & Series (Updated Daily)", included: true },
+  { text: "Major Sports & PPV Events Pass (60 FPS)", included: true },
+  { text: "Electronic Program Guide (Interactive EPG)", included: true },
+  { text: "Anti-Freeze 10.0 Zero-Buffering Technology", included: true },
+  { text: "Compatible With Firestick, Smart TVs & IPTV Apps", included: true },
+  { text: "24/7 Dedicated WhatsApp VIP Support & Setup", included: true },
 ];
 
 const plans: Plan[] = [
   {
     id: "3-months",
-    name: "3 MONTHS",
-    badge: "STARTER",
+    name: "3 MONTHS IPTV",
+    badge: "STARTER PLAN",
     price: 35,
     durationLabel: "3 Months",
     months: 3,
@@ -44,18 +44,18 @@ const plans: Plan[] = [
   },
   {
     id: "12-months",
-    name: "12 MONTHS",
-    badge: "BEST VALUE",
+    name: "12 MONTHS IPTV",
+    badge: "BEST VALUE · POPULAR",
     price: 69.99,
     durationLabel: "12 Months",
     months: 12,
     popular: true,
-    buttonText: "GET 12 MONTHS",
+    buttonText: "GET 12 MONTHS ACCESS",
   },
   {
     id: "6-months",
-    name: "6 MONTHS",
-    badge: "POPULAR",
+    name: "6 MONTHS IPTV",
+    badge: "POPULAR CHOICE",
     price: 49.99,
     durationLabel: "6 Months",
     months: 6,
@@ -71,7 +71,7 @@ export default function PricingSection() {
 
   function handleOrder(plan: Plan) {
     const text = encodeURIComponent(
-      `Hello! I would like to order the Reflexsat IPTV ${plan.name} plan with ${devices} device connection${devices > 1 ? "s" : ""} for $${priceFor(plan)}.`
+      `Hello! I would like to order the Kemo IPTV ${plan.name} plan with ${devices} device connection${devices > 1 ? "s" : ""} for $${priceFor(plan)}.`
     );
     window.open(`https://wa.me/447882781998?text=${text}`, "_blank", "noopener,noreferrer");
   }
@@ -84,15 +84,14 @@ export default function PricingSection() {
           <div className="inline-flex items-center gap-2 rounded-full bg-blue-50 border border-blue-200/80 px-4 py-1 mb-5">
             <Gift className="h-4 w-4 text-blue-600" />
             <span className="text-[11px] font-bold text-blue-700 tracking-wider uppercase">
-              TRANSPARENT PRICING · NO HIDDEN FEES
+              TRANSPARENT IPTV PRICING · NO CONTRACTS
             </span>
           </div>
           <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-900 leading-tight">
-            Choose Your <span className="text-blue-600">Reflexsat IPTV</span> Plan
+            Choose Your <span className="text-blue-600">Kemo IPTV</span> Subscription Plan
           </h2>
           <p className="mt-4 text-base sm:text-lg text-slate-600 font-normal leading-relaxed max-w-2xl mx-auto">
-            Select your subscription duration with zero contract commitments. Enjoy bigger savings on longer plans,
-            with instant credentials delivery directly to your WhatsApp and email.
+            Get instant access to 50,000+ live channels, 200,000+ VOD releases, and 4K sports with zero hardware commitments, zero hidden fees, and immediate credentials delivery via WhatsApp and email.
           </p>
           <p className="mt-2 text-xs sm:text-sm text-slate-500 max-w-2xl mx-auto">
             Browse our{" "}
@@ -115,7 +114,7 @@ export default function PricingSection() {
         <div className="mx-auto max-w-md w-full mb-14">
           <div className="flex flex-col items-center gap-3 w-full">
             <span className="text-xs font-bold uppercase tracking-wider text-slate-500">
-              Select Simultaneous Devices:
+              Select Simultaneous Device Connections:
             </span>
             <div className="grid grid-cols-3 gap-2 w-full p-1.5 bg-white rounded-full border border-slate-200 shadow-xs">
               {[1, 2, 3].map((num) => (
@@ -224,7 +223,7 @@ export default function PricingSection() {
         <div className="mt-12 text-center text-xs sm:text-sm text-slate-500">
           <p className="flex flex-wrap items-center justify-center gap-x-2 gap-y-1 font-medium">
             <ShieldCheck className="w-4 h-4 text-blue-600 inline" />
-            <span>Instant automated setup · Works on all IPTV players · 24/7 VIP WhatsApp Assistance ·</span>
+            <span>Instant automated setup · Anti-Freeze 10.0 servers · 24/7 VIP WhatsApp support ·</span>
             <span>Backed by our <Link href="/refund-policy" className="font-semibold text-blue-600 hover:underline">Refund Policy</Link> ·</span>
             <span>Have questions? Read our <Link href="/faq" className="font-semibold text-blue-600 hover:underline">FAQ</Link> or <Link href="/contact" className="font-semibold text-blue-600 hover:underline">Contact Support</Link></span>
           </p>

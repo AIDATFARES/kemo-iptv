@@ -7,18 +7,18 @@ export default function HowItWorksSection() {
     {
       num: "Step 01",
       icon: CreditCard,
-      title: "1. Choose Your Reflexsat IPTV Plan",
+      title: "1. Select Your Kemo IPTV Plan",
       desc: (
         <>
-          Select your desired duration and simultaneous connections from our{" "}
+          Choose your preferred duration and simultaneous screen connections from our{" "}
           <Link href="/pricing" className="text-blue-600 font-semibold hover:underline">
-            subscription pricing table
+            IPTV subscription plans
           </Link>
-          . Enjoy instant activation, zero long-term contracts, and full access to our entire streaming catalog.
+          . Enjoy instant automated activation, zero locked-in contracts, and immediate access to 50,000+ live channels and 200,000+ VODs.
         </>
       ),
-      image: "/reflexsat-step-1.png",
-      alt: "Select your Reflexsat IPTV subscription duration and connections",
+      image: "/kemo-step-1.png",
+      alt: "Select your Kemo IPTV subscription duration and connections",
     },
     {
       num: "Step 02",
@@ -26,35 +26,35 @@ export default function HowItWorksSection() {
       title: "2. Receive Instant Setup Credentials",
       desc: (
         <>
-          Within minutes of ordering, your personalized M3U playlist URL and Xtream Codes API login are delivered to your WhatsApp and email. Have questions? Our{" "}
+          Within minutes of checkout, your personal M3U playlist link and Xtream Codes API credentials arrive directly in your WhatsApp and email. Have questions? Our{" "}
           <Link href="/contact" className="text-blue-600 font-semibold hover:underline">
-            24/7 support desk
+            24/7 VIP support desk
           </Link>{" "}
-          is always standing by.
+          is always ready to assist.
         </>
       ),
-      image: "/reflexsat-step-2.png",
-      alt: "Receive instant Reflexsat IPTV Xtream Codes credentials and M3U playlist URL",
+      image: "/kemo-step-2.png",
+      alt: "Receive instant Kemo IPTV Xtream Codes credentials and M3U playlist URL",
     },
     {
       num: "Step 03",
       icon: PlayCircle,
-      title: "3. Connect Your Favorite App & Enjoy",
+      title: "3. Connect Your IPTV App & Stream in 4K",
       desc: (
         <>
-          Follow our{" "}
+          Load your playlist into top IPTV players like IPTV Smarters Pro, TiviMate, or IBO Player using our{" "}
           <Link href="/installation" className="text-blue-600 font-semibold hover:underline">
-            step-by-step device guides
-          </Link>{" "}
-          for Firestick, Smart TV, Apple TV, or mobile. Start streaming over{" "}
+            step-by-step installation guides
+          </Link>
+          . Start enjoying over{" "}
           <Link href="/channels" className="text-blue-600 font-semibold hover:underline">
             50,000+ live 4K channels
           </Link>{" "}
-          and 200,000+ VOD titles immediately!
+          and 200,000+ movies instantly.
         </>
       ),
-      image: "/reflexsat-step-3.png",
-      alt: "Start 4K live TV and sports streaming with Reflexsat IPTV on any device",
+      image: "/kemo-step-3.png",
+      alt: "Start 4K live TV and sports streaming with Kemo IPTV on any device",
     },
   ];
 
@@ -64,13 +64,13 @@ export default function HowItWorksSection() {
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="inline-block py-1.5 px-4 rounded-full bg-blue-50 text-blue-700 font-bold text-xs tracking-wider uppercase mb-4 border border-blue-200/80">
-            Effortless Setup
+            Quick 5-Minute Setup
           </span>
           <h2 className="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
-            How to Start Streaming With <span className="text-blue-600">Reflexsat IPTV</span>
+            How to Start Streaming With <span className="text-blue-600">Kemo IPTV</span>
           </h2>
           <p className="text-slate-600 text-base sm:text-lg mt-4 leading-relaxed max-w-2xl mx-auto">
-            Get up and running in under 5 minutes. No satellite dish, no technician visits, and no complicated hardware.
+            Get up and streaming in under 5 minutes. No satellite dishes, no technician visits, and no complicated hardware required.
           </p>
         </div>
 

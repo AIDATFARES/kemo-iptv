@@ -1,25 +1,25 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "50,000+ Live Channels & 200,000+ VODs | Reflexsat IPTV Catalog",
+  title: "Kemo IPTV | 50,000+ Channels & Live Sports Lineup",
   description:
-    "Explore the complete Reflexsat IPTV channel lineup. Over 50,000 premium live international sports, news, and entertainment channels in 4K & Full HD.",
+    "Explore 50,000+ live IPTV channels from 150+ countries. Watch live 4K sports, PPV events, global news & 200,000+ VODs with Kemo IPTV. View the full lineup!",
   alternates: {
     canonical: "/channels",
   },
   openGraph: {
-    title: "50,000+ Live Channels & 200,000+ VODs | Reflexsat IPTV Catalog",
+    title: "Kemo IPTV | 50,000+ Channels & Live Sports Lineup",
     description:
-      "Explore the complete Reflexsat IPTV channel lineup. Over 50,000 premium live international sports, news, and entertainment channels in 4K.",
-    url: "https://www.reflexsat-iptv4k.shop/channels",
-    siteName: "Reflexsat IPTV",
+      "Explore 50,000+ live IPTV channels from 150+ countries. Watch live 4K sports, PPV events, global news & 200,000+ VODs with Kemo IPTV. View the full lineup!",
+    url: "https://www.kemo-iptv.shop/channels",
+    siteName: "Kemo IPTV",
     type: "website",
     images: [
       {
-        url: "/reflexsat-sports-streaming-setup.jpg",
+        url: "/blog/kemo-sports-streaming-setup.jpg",
         width: 1200,
         height: 675,
-        alt: "Reflexsat IPTV 50,000+ Channels & Live Sports Lineup",
+        alt: "Kemo IPTV 50,000+ Channels & Live Sports Lineup",
       },
     ],
   },

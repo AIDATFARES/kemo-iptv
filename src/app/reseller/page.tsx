@@ -1,24 +1,25 @@
 import ResellerPageContent from "@/components/reseller/ResellerPageContent";
 
 export const metadata = {
-  title: "Become an IPTV Reseller | Start Your IPTV Business - Reflexsat IPTV",
+  title: "Kemo IPTV | IPTV Reseller Program – Credits & Xtream Panel",
   description:
-    "Join the official Reflexsat IPTV Reseller Program. High-margin IPTV reseller panel, no expiry credits, sub-reseller creation, and 24/7 dedicated WhatsApp support.",
+    "Start your IPTV business with Kemo IPTV. Access our Xtream Codes control panel, no-expiry wholesale credits & 24/7 VIP support. Explore reseller plans today!",
   alternates: {
     canonical: "/reseller",
   },
   openGraph: {
-    title: "Become an IPTV Reseller | Start Your IPTV Business - Reflexsat IPTV",
-    description: "Join the official Reflexsat IPTV Reseller Program. High-margin IPTV reseller panel, no expiry credits, and 24/7 support.",
-    url: "https://www.reflexsat-iptv4k.shop/reseller",
-    siteName: "Reflexsat IPTV",
+    title: "Kemo IPTV | IPTV Reseller Program – Credits & Xtream Panel",
+    description:
+      "Start your IPTV business with Kemo IPTV. Access our Xtream Codes control panel, no-expiry wholesale credits & 24/7 VIP support. Explore reseller plans today!",
+    url: "https://www.kemo-iptv.shop/reseller",
+    siteName: "Kemo IPTV",
     type: "website",
     images: [
       {
-        url: "/reflexsat-tv-mockup.webp",
+        url: "/blog/kemo-best-iptv-players.jpg",
         width: 1200,
         height: 630,
-        alt: "Reflexsat IPTV Official Reseller Panel Program",
+        alt: "Kemo IPTV Official Reseller Panel Program",
       },
     ],
   },

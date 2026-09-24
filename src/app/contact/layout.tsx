@@ -1,25 +1,25 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "24/7 VIP Customer Support & Free Trial | Reflexsat IPTV",
+  title: "Kemo IPTV | 24/7 Support Desk – WhatsApp & Email Help",
   description:
-    "Contact Reflexsat IPTV 24/7 engineering support desk for technical setup assistance, billing questions, or to request your instant free 24-hour test account.",
+    "Connect directly with the Kemo IPTV support team. Get 24/7 help with device setup, subscription activation, and technical questions on WhatsApp or email.",
   alternates: {
     canonical: "/contact",
   },
   openGraph: {
-    title: "24/7 VIP Customer Support & Free Trial | Reflexsat IPTV",
+    title: "Kemo IPTV | 24/7 Support Desk – WhatsApp & Email Help",
     description:
-      "Contact Reflexsat IPTV 24/7 engineering support desk for technical setup assistance or free trials.",
-    url: "https://www.reflexsat-iptv4k.shop/contact",
-    siteName: "Reflexsat IPTV",
+      "Connect directly with the Kemo IPTV support team. Get 24/7 help with device setup, subscription activation, and technical questions on WhatsApp or email.",
+    url: "https://www.kemo-iptv.shop/contact",
+    siteName: "Kemo IPTV",
     type: "website",
     images: [
       {
-        url: "/reflexsat-tv-mockup.webp",
+        url: "/blog/kemo-best-iptv-players.jpg",
         width: 1200,
         height: 630,
-        alt: "Reflexsat IPTV 24/7 VIP Support and Free Trial Helpdesk",
+        alt: "Kemo IPTV 24/7 VIP Support and Free Trial Helpdesk",
       },
     ],
   },

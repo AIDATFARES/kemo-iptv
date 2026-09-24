@@ -2,6 +2,8 @@ import HeroSection from "@/components/home/HeroSection";
 import Link from "next/link";
 
 export const metadata = {
+  title: "Kemo IPTV | Premium 4K IPTV Streaming 50k Channels, Live Sports & 200,000 Movies",
+  description: "Upgrade your streaming with Kemo IPTV. Enjoy 50,000+ live 4K channels, major sports & 200,000+ VODs powered by Anti-Freeze 10.0. Start your free trial now!",
   alternates: {
     canonical: "/",
   },
@@ -66,7 +68,7 @@ export default function Home() {
       {/* Comprehensive SEO Interlinking Bar */}
       <div className="w-full bg-slate-50/60 py-8 px-4 text-center border-y border-slate-200/70 relative z-20">
         <p className="text-center text-sm md:text-base text-slate-700 max-w-4xl mx-auto font-medium leading-relaxed mb-3">
-          Explore the complete <Link prefetch={false} className="font-bold text-blue-600 hover:underline" href="/channels">50,000+ Reflexsat IPTV Channel List</Link>, choose an affordable <Link prefetch={false} className="font-bold text-blue-600 hover:underline" href="/pricing">Subscription Plan</Link>, or follow our <Link prefetch={false} className="font-bold text-blue-600 hover:underline" href="/installation">Installation Guide</Link> to start streaming in under 5 minutes.
+          Explore the complete <Link prefetch={false} className="font-bold text-blue-600 hover:underline" href="/channels">50,000+ Kemo IPTV Channel List</Link>, choose an affordable <Link prefetch={false} className="font-bold text-blue-600 hover:underline" href="/pricing">Subscription Plan</Link>, or follow our <Link prefetch={false} className="font-bold text-blue-600 hover:underline" href="/installation">Installation Guide</Link> to start streaming in under 5 minutes.
         </p>
         <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-xs font-bold text-slate-500">
           <Link href="/how-it-works" className="hover:text-blue-600 transition-colors">How It Works</Link>
@@ -89,9 +91,9 @@ export default function Home() {
       <div className="w-full bg-white py-12 border-b border-slate-200/70 relative z-10 flex justify-center px-4">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="/reflexsat-devices-banner.webp"
-          alt="Reflexsat IPTV 4K streaming supported across Firestick, Apple TV, Smart TV, Android, iOS, Windows and MAG devices"
-          title="Reflexsat IPTV Multi-Screen Device Compatibility"
+          src="/kemo-devices-banner.webp"
+          alt="Kemo IPTV 4K streaming supported across Firestick, Apple TV, Smart TV, Android, iOS, Windows and MAG devices"
+          title="Kemo IPTV Multi-Screen Device Compatibility"
           loading="lazy"
           className="max-w-full h-auto w-full md:w-[1024px] object-contain"
         />

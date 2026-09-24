@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Refund Policy | Reflexsat IPTV",
-  description: "Learn about the refund policy, eligibility criteria, and process for Reflexsat IPTV subscriptions.",
+  title: "Kemo IPTV | Refund Policy & Money-Back Guarantee",
+  description:
+    "Read Kemo IPTV's transparent refund policy and money-back guarantee. Clear terms, cancellation procedures, and customer satisfaction commitments explained.",
   alternates: {
     canonical: "/refund-policy",
   },
@@ -14,13 +15,13 @@ const sections = [
     title: "Our Quality Commitment",
     content: [
       <>
-        At Reflexsat IPTV, we stand behind the reliability of our{" "}
+        At Kemo IPTV, we stand behind the reliability of our{" "}
         <Link className="font-semibold text-blue-600 hover:text-blue-800" href="/how-it-works">
           satellite-grade streaming infrastructure
         </Link>
         . We offer a transparent, fair refund policy across all{" "}
         <Link className="font-semibold text-blue-600 hover:text-blue-800" href="/pricing">
-          Reflexsat subscription packages
+          Kemo IPTV subscription packages
         </Link>{" "}
         to protect your purchase.
       </>,
@@ -66,7 +67,7 @@ const sections = [
 
 export default function RefundPolicyPage() {
   return (
-    <main className="flex-grow px-5 pb-20 pt-16 sm:px-8 md:pt-20 text-format-legal bg-white">
+    <main className="flex-grow px-5 pb-20 pt-6 sm:pt-8 sm:px-8 text-format-legal bg-white">
       <article className="mx-auto max-w-4xl">
         <header className="border-b border-slate-200 pb-10 text-center mx-auto max-w-3xl">
           <span className="inline-flex rounded-full border border-blue-200 bg-blue-50 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-blue-700 mb-4">
@@ -75,7 +76,7 @@ export default function RefundPolicyPage() {
           <h1 className="text-4xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
             Refund &amp; <span className="text-blue-600">Cancellation Policy</span>
           </h1>
-          <p className="mx-auto mt-3 text-xs text-slate-500">Reflexsat IPTV (www.reflexsat-iptv4k.shop)</p>
+          <p className="mx-auto mt-3 text-xs text-slate-500">Kemo IPTV (www.kemo-iptv.shop)</p>
         </header>
 
         <div className="mt-10 space-y-8 text-sm sm:text-base leading-relaxed text-slate-600">

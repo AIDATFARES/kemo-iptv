@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/api/'],
     },
-    sitemap: 'https://www.reflexsat-iptv4k.shop/sitemap.xml',
+    sitemap: 'https://www.kemo-iptv.shop/sitemap.xml',
   };
 }

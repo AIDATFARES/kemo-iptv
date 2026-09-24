@@ -3,23 +3,25 @@ import DeviceSetupGuide from "@/components/installation/DeviceSetupGuide";
 import { Clock3, Download, Headphones, Link2, Monitor, PlayCircle } from "lucide-react";
 
 export const metadata = {
-  title: "Reflexsat IPTV Setup & Installation Guide 2026 | All Devices",
-  description: "Easy step-by-step instructions to set up Reflexsat IPTV on Amazon Firestick, Smart TVs (Samsung, LG), Android TV, Apple TV, MAG boxes, and Windows/Mac.",
+  title: "Kemo IPTV | IPTV Setup Guide – Easy 5-Minute Device Config",
+  description:
+    "Learn how to set up Kemo IPTV on Firestick, Smart TVs, Apple TV, Android, and iOS in under 5 minutes. Simple M3U and Xtream Codes steps. Follow the guide!",
   alternates: {
     canonical: "/installation",
   },
   openGraph: {
-    title: "Reflexsat IPTV Setup & Installation Guide 2026 | All Devices",
-    description: "Easy step-by-step instructions to set up Reflexsat IPTV on Amazon Firestick, Smart TVs, Android TV, Apple TV, and MAG boxes.",
-    url: "https://www.reflexsat-iptv4k.shop/installation",
-    siteName: "Reflexsat IPTV",
+    title: "Kemo IPTV | IPTV Setup Guide – Easy 5-Minute Device Config",
+    description:
+      "Learn how to set up Kemo IPTV on Firestick, Smart TVs, Apple TV, Android, and iOS in under 5 minutes. Simple M3U and Xtream Codes steps. Follow the guide!",
+    url: "https://www.kemo-iptv.shop/installation",
+    siteName: "Kemo IPTV",
     type: "article",
     images: [
       {
-        url: "/reflexsat-firestick-iptv-setup.jpg",
+        url: "/blog/kemo-firestick-iptv-setup.jpg",
         width: 1200,
         height: 675,
-        alt: "Reflexsat IPTV Multi-Device Setup and Installation Guide",
+        alt: "Kemo IPTV Multi-Device Setup and Installation Guide",
       },
     ],
   },
@@ -27,20 +29,20 @@ export const metadata = {
 
 export default function Installation() {
   return (
-    <main className="mx-auto w-full max-w-[1400px] flex-grow px-5 pb-20 pt-12 sm:px-8 md:px-12 text-format-technical bg-white">
+    <main className="mx-auto w-full max-w-[1400px] flex-grow px-5 pb-20 pt-6 sm:pt-8 sm:px-8 md:px-12 text-format-technical bg-white">
       <header className="mx-auto mb-16 max-w-3xl text-center sm:mb-20">
         <span className="inline-flex rounded-full border border-blue-200 bg-blue-50 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-blue-700 mb-4">
           Quick Setup Tutorial
         </span>
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-tight">
-          Reflexsat IPTV <span className="text-blue-600">Installation Guide</span>
+          Kemo IPTV <span className="text-blue-600">Installation Guide</span>
         </h1>
         <p className="mx-auto mt-4 max-w-2xl text-base text-slate-600 leading-relaxed">
-          Comprehensive step-by-step instructions to configure Reflexsat IPTV on all your streaming hardware.
+          Step-by-step instructions to configure your Kemo IPTV subscription on Amazon Firestick, Smart TVs, Apple TV 4K, Android, iOS, and PC in under 5 minutes.
         </p>
         <p className="mx-auto mt-2 max-w-2xl text-xs sm:text-sm text-slate-500">
           Works seamlessly on Smart TVs, Firestick, Android, iOS, Windows, and MAG. Need a plan first? View our{" "}
-          <Link className="font-semibold text-blue-600 hover:text-blue-800" href="/pricing">Reflexsat IPTV Pricing</Link>, check our{" "}
+          <Link className="font-semibold text-blue-600 hover:text-blue-800" href="/pricing">Kemo IPTV Pricing</Link>, check our{" "}
           <Link className="font-semibold text-blue-600 hover:text-blue-800" href="/channels">Channel List</Link>, or discover{" "}
           <Link className="font-semibold text-blue-600 hover:text-blue-800" href="/how-it-works">How Streaming Works</Link>.
         </p>
@@ -69,7 +71,7 @@ export default function Installation() {
               <h3 className="text-slate-900 font-bold text-base">1. Download Player App</h3>
               <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
                 Install a trusted IPTV player application (such as TiviMate, IPTV Smarters Pro, or IBO Player) from your device&apos;s app store. Read our guide to the{" "}
-                <Link href="/blog/best-iptv-players" className="text-blue-600 font-semibold hover:underline">
+                <Link href="/blog/best-iptv-players-apps-guide" className="text-blue-600 font-semibold hover:underline">
                   best IPTV players in 2026
                 </Link>
                 .
@@ -85,7 +87,7 @@ export default function Installation() {
               <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
                 Enter the M3U playlist URL or Xtream Codes API login (Server URL, username & password) sent after ordering your{" "}
                 <Link href="/pricing" className="text-blue-600 font-semibold hover:underline">
-                  Reflexsat plan
+                  Kemo IPTV plan
                 </Link>
                 .
               </p>
@@ -129,7 +131,7 @@ export default function Installation() {
         <div className="mt-6 flex justify-center gap-4">
           <a
             className="btn-whatsapp-clean px-7 py-3 text-xs font-bold uppercase tracking-wider"
-            href="https://wa.me/447882781998?text=Hello,%20I%20need%20help%20setting%20up%20Reflexsat%20IPTV%20on%20my%20device."
+            href="https://wa.me/447882781998?text=Hello,%20I%20need%20help%20setting%20up%20Kemo%20IPTV%20on%20my%20device."
             target="_blank"
             rel="noreferrer"
           >

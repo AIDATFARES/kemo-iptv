@@ -66,12 +66,12 @@ const planFeatures = [
 const advantages = [
   {
     icon: ShoppingCart,
-    title: "COMPATIBLE WITH ALL DEVICES",
+    title: "UNIVERSAL HARDWARE COMPATIBILITY",
     description: (
       <>
-        Your clients can stream on Smart TV, Firestick, Android, MAG, Apple TV, PC, and mobile apps with our{" "}
+        Your clients can stream on Smart TVs, Amazon Firestick, Android boxes, MAG, Apple TV 4K, PC, and mobiles with our{" "}
         <Link href="/installation" className="text-blue-600 font-semibold hover:underline">
-          universal device setup guides
+          step-by-step device guides
         </Link>
         .
       </>
@@ -79,35 +79,35 @@ const advantages = [
   },
   {
     icon: Server,
-    title: "HIGH-CAPACITY SERVERS",
+    title: "ANTI-FREEZE SERVER CLUSTERS",
     description: (
       <>
-        Built on{" "}
+        Built on high-throughput{" "}
         <Link href="/how-it-works" className="text-blue-600 font-semibold hover:underline">
-          anti-freeze 10.0 architecture
+          Anti-Freeze 10.0 architecture
         </Link>{" "}
-        to ensure pristine stability during global sporting events and peak weekend traffic.
+        to ensure zero-lag playback during major sports games and peak traffic hours.
       </>
     ),
   },
   {
     icon: Headphones,
-    title: "DIRECT RESELLER SUPPORT",
+    title: "24/7 DEDICATED RESELLER VIP DESK",
     description: (
       <>
-        Our{" "}
+        Our specialized{" "}
         <Link href="/contact" className="text-blue-600 font-semibold hover:underline">
-          reseller support desk
+          reseller support team
         </Link>{" "}
-        is available 7 days a week on WhatsApp to assist with line activations, renewals, and technical inquiries.
+        is on call 24/7 via WhatsApp to assist with instant credit top-ups, line migrations, and troubleshooting.
       </>
     ),
   },
   {
     icon: Zap,
-    title: "INTUITIVE CONTROL PANEL",
+    title: "POWERFUL REBRANDED CONTROL PANEL",
     description:
-      "Manage customer lines, edit bouquet packages, monitor active streams, and issue free test accounts with a few clicks.",
+      "Manage client subscriptions, customize channel bouquet packages, monitor active concurrent connections, and generate free test accounts effortlessly.",
   },
 ];
 
@@ -115,7 +115,7 @@ const resellerFaqs = [
   {
     question: "Do panel credits expire?",
     answer:
-      "No. Your Reflexsat reseller credits never expire. You can consume them at your own pace whenever you sell or renew a subscription.",
+      "No. Your Kemo IPTV reseller credits never expire. You can consume them at your own pace whenever you sell or renew a subscription.",
   },
   {
     question: "Can I create sub-resellers?",
@@ -143,8 +143,8 @@ export default function ResellerPageContent() {
 
   const handleOrderPanel = (plan?: CreditPlan) => {
     const message = plan
-      ? `Hello! I would like to order the Reflexsat IPTV Reseller Panel with ${plan.credits} Credits for $${plan.price}.`
-      : `Hello! I am interested in becoming a Reflexsat IPTV Reseller and would like to request panel access.`;
+      ? `Hello! I would like to order the Kemo IPTV Reseller Panel with ${plan.credits} Credits for $${plan.price}.`
+      : `Hello! I am interested in becoming a Kemo IPTV Reseller and would like to request panel access.`;
     window.open(
       `https://wa.me/447882781998?text=${encodeURIComponent(message)}`,
       "_blank",
@@ -153,7 +153,7 @@ export default function ResellerPageContent() {
   };
 
   const handleFreeTrial = () => {
-    const message = `Hello! I am interested in testing a Reflexsat IPTV Reseller Panel demo.`;
+    const message = `Hello! I am interested in testing a Kemo IPTV Reseller Panel demo.`;
     window.open(
       `https://wa.me/447882781998?text=${encodeURIComponent(message)}`,
       "_blank",
@@ -162,7 +162,7 @@ export default function ResellerPageContent() {
   };
 
   return (
-    <section className="relative overflow-hidden bg-white py-16 sm:py-20 lg:py-24 text-format-marketing">
+    <section className="relative overflow-hidden bg-white pt-6 sm:pt-8 pb-16 sm:pb-20 lg:pb-24 text-format-marketing">
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
         
         {/* HERO SECTION */}
@@ -173,11 +173,11 @@ export default function ResellerPageContent() {
           </span>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-tight">
-            Reflexsat IPTV <span className="text-blue-600">Reseller Program</span>
+            Kemo IPTV <span className="text-blue-600">Reseller Program</span>
           </h1>
 
           <p className="mx-auto mt-5 max-w-3xl text-sm sm:text-base leading-relaxed text-slate-600">
-            Launch your own profitable IPTV business backed by Reflexsat high-performance server infrastructure.
+            Launch your own profitable IPTV business backed by Kemo IPTV high-performance server infrastructure.
             Deliver over{" "}
             <Link href="/channels" className="text-blue-600 font-semibold hover:underline">
               50,000 live channels &amp; 200,000 VODs
@@ -200,7 +200,7 @@ export default function ResellerPageContent() {
           <div className="mt-8 flex items-center justify-center gap-4">
             <button
               onClick={handleFreeTrial}
-              className="btn-primary-reflex px-8 py-3.5 text-xs sm:text-sm font-extrabold uppercase tracking-wider"
+              className="btn-primary-kemo px-8 py-3.5 text-xs sm:text-sm font-extrabold uppercase tracking-wider"
             >
               Request Panel Demo
             </button>
@@ -211,10 +211,10 @@ export default function ResellerPageContent() {
         <div className="mt-20">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-              Credit Packages &amp; Pricing
+              Kemo IPTV Wholesale Credits &amp; Pricing
             </h2>
             <p className="mt-2 text-sm text-slate-500">
-              Transparent tier pricing with zero hidden activation fees.
+              Transparent tier pricing with zero setup fees. 1 Credit = 1 Month of full IPTV subscription.
             </p>
           </div>
 
@@ -270,8 +270,8 @@ export default function ResellerPageContent() {
                   onClick={() => handleOrderPanel(plan)}
                   className={`mt-6 w-full rounded-full py-3.5 text-xs font-bold uppercase tracking-wider transition-all ${
                     plan.popular
-                      ? "btn-primary-reflex"
-                      : "btn-secondary-reflex"
+                      ? "btn-primary-kemo"
+                      : "btn-secondary-kemo"
                   }`}
                 >
                   Order {plan.credits} Credits
@@ -298,7 +298,7 @@ export default function ResellerPageContent() {
         <div className="mt-28">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-              Why Partner With <span className="text-blue-600">Reflexsat IPTV</span>?
+              Why Partner With <span className="text-blue-600">Kemo IPTV</span>?
             </h2>
           </div>
 
@@ -378,7 +378,7 @@ export default function ResellerPageContent() {
         {/* TRUST BADGE */}
         <div className="mt-16 flex items-center justify-center gap-2 text-xs font-semibold text-slate-500">
           <ShieldCheck className="h-4 w-4 text-blue-600" />
-          <span>Official Reflexsat IPTV Xtream Codes Reseller Panel · 99.9% Uptime Guarantee</span>
+          <span>Official Kemo IPTV Xtream Codes Reseller Panel · 99.9% Uptime Guarantee</span>
         </div>
       </div>
     </section>

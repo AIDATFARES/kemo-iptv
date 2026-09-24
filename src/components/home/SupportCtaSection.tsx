@@ -11,41 +11,41 @@ export default function SupportCtaSection() {
             <span>24/7 Live Assistance</span>
           </div>
           <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">
-            Have Questions or Need Help Getting Set Up?
+            Need Immediate Help or Advice on Your IPTV Setup?
           </h2>
           <p className="mt-3 text-sm text-slate-600 leading-relaxed">
-            The <strong className="text-slate-900 font-semibold">Reflexsat IPTV</strong>{" "}
+            Our dedicated <strong className="text-slate-900 font-semibold">Kemo IPTV VIP support team</strong>{" "}
             <Link href="/contact" className="text-blue-600 font-semibold hover:underline">
-              support team
+              responds in under 5 minutes
             </Link>{" "}
-            responds in under 5 minutes on WhatsApp. You can also follow our{" "}
+            on WhatsApp. Whether you need help setting up your Firestick or Smart TV, activating credentials, or browsing our{" "}
             <Link href="/installation" className="text-blue-600 font-semibold hover:underline">
               device installation tutorials
             </Link>{" "}
-            or explore the{" "}
+            and{" "}
             <Link href="/faq" className="text-blue-600 font-semibold hover:underline">
               FAQ knowledge base
-            </Link>{" "}
-            for immediate answers.
+            </Link>
+            , we are here 24 hours a day.
           </p>
         </div>
 
         <div className="flex shrink-0 flex-col gap-3 w-full sm:w-auto">
           <a
             className="btn-whatsapp-clean px-6 py-3.5 text-xs uppercase tracking-wider font-extrabold inline-flex items-center justify-center gap-2 text-center"
-            href="https://wa.me/447882781998?text=Hello,%20I%20have%20a%20question%20about%20Reflexsat%20IPTV."
+            href="https://wa.me/447882781998?text=Hello,%20I%20have%20a%20question%20about%20Kemo%20IPTV."
             rel="noreferrer"
             target="_blank"
           >
             <MessageSquare className="h-4 w-4" />
-            Chat on WhatsApp
+            Chat on WhatsApp (Live Support)
           </a>
           <a
-            className="btn-secondary-reflex px-6 py-3.5 text-xs uppercase tracking-wider font-bold inline-flex items-center justify-center gap-2 text-center"
-            href="mailto:support@reflexsat-iptv4k.shop"
+            className="btn-secondary-kemo px-6 py-3.5 text-xs uppercase tracking-wider font-bold inline-flex items-center justify-center gap-2 text-center"
+            href="mailto:support@kemo-iptv.shop"
           >
             <Mail className="h-4 w-4" />
-            support@reflexsat-iptv4k.shop
+            support@kemo-iptv.shop
           </a>
         </div>
       </div>

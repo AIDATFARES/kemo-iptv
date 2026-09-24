@@ -4,28 +4,28 @@ import { motion } from "framer-motion";
 import { Bolt, Clapperboard, Globe2, Layers3, Monitor, ShieldCheck, Smartphone } from "lucide-react";
 
 const primaryFeatures = [
-  { icon: Monitor, title: "4K Ultra HD Streaming", text: "Enjoy your Reflexsat IPTV subscription with crisp 4K, Full HD, and 60 FPS streams. Advanced anti-freeze technology ensures seamless playback.", tags: ["4K UHD", "FULL HD", "ANTI-FREEZE"] },
+  { icon: Monitor, title: "4K Ultra HD Streaming", text: "Enjoy your Kemo IPTV subscription with crisp 4K, Full HD, and 60 FPS streams. Advanced anti-freeze technology ensures seamless playback.", tags: ["4K UHD", "FULL HD", "ANTI-FREEZE"] },
   { icon: Layers3, title: "+50,000 Live Channels", text: "Access over 50,000 global live IPTV channels spanning premium sports, international news, kids' programming, and exclusive entertainment networks.", tags: ["150+ COUNTRIES", "SPORTS", "NEWS", "KIDS"] },
   { icon: Clapperboard, title: "200,000+ VODs", text: "Dive into a massive on-demand library featuring over 200,000 movies, hit series, documentaries, and sports replays, updated regularly.", tags: ["120,000+ FILMS", "SERIES", "200,000+ VODS"] },
 ];
 
 const benefits = [
-  { icon: Bolt, title: "Instant Activation", text: "Your Reflexsat account activates within minutes." },
+  { icon: Bolt, title: "Instant Activation", text: "Your Kemo IPTV account activates within minutes." },
   { icon: Smartphone, title: "All Devices Supported", text: "Stream on Smart TVs, Firestick, iOS, and Android." },
-  { icon: Globe2, title: "Works Worldwide", text: "Take your Reflexsat IPTV service anywhere globally." },
+  { icon: Globe2, title: "Works Worldwide", text: "Take your Kemo IPTV service anywhere globally." },
   { icon: ShieldCheck, title: "99.9% Server Uptime", text: "Ultra-reliable servers for stable, buffer-free viewing." },
 ];
 
-export default function WhyReflexsatSection() {
+export default function WhyKemoSection() {
   return (
     <section className="relative overflow-hidden bg-white py-24 sm:py-28 border-b border-slate-200">
       <div className="relative mx-auto max-w-[1120px] px-5 sm:px-8">
         <div className="mx-auto mb-14 max-w-3xl text-center">
           <span className="inline-flex rounded-full border border-blue-200 bg-blue-50 px-4 py-1.5 text-[10px] font-extrabold uppercase tracking-widest text-blue-700">PREMIUM FEATURES</span>
           <h2 className="mt-6 text-3xl font-extrabold text-slate-900 sm:text-5xl">
-            Everything You Need for the <span className="text-blue-600">Ultimate Reflexsat Experience</span>
+            Everything You Need for the <span className="text-blue-600">Ultimate Kemo Experience</span>
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-sm leading-6 text-slate-600">Reflexsat IPTV delivers premium live television, sports events, and on-demand entertainment seamlessly.</p>
+          <p className="mx-auto mt-4 max-w-2xl text-sm leading-6 text-slate-600">Kemo IPTV delivers premium live television, sports events, and on-demand entertainment seamlessly.</p>
         </div>
 
         <div className="grid gap-6 md:grid-cols-3">

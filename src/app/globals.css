@@ -37,7 +37,7 @@
   --color-on-background: #0f172a;
   --color-surface-variant: #f8fafc;
 
-  /* Brand Colors - Reflexsat Sapphire & Slate Palette */
+  /* Brand Colors - Kemo IPTV Palette */
   --color-primary-300: #93c5fd;
   --color-primary-400: #60a5fa;
   --color-primary-500: #3b82f6;
@@ -123,7 +123,8 @@
     box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.06), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
   }
 
-  .btn-primary-reflex {
+  .btn-primary-reflex,
+  .btn-primary-kemo {
     background: #2563eb;
     color: #ffffff;
     font-weight: 700;
@@ -132,17 +133,20 @@
     transition: all 0.2s ease-in-out;
   }
 
-  .btn-primary-reflex:hover {
+  .btn-primary-reflex:hover,
+  .btn-primary-kemo:hover {
     background: #1d4ed8;
     box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
     transform: translateY(-1px);
   }
 
-  .btn-primary-reflex:active {
+  .btn-primary-reflex:active,
+  .btn-primary-kemo:active {
     transform: translateY(0);
   }
 
-  .btn-secondary-reflex {
+  .btn-secondary-reflex,
+  .btn-secondary-kemo {
     background: #ffffff;
     border: 1px solid #cbd5e1;
     color: #0f172a;
@@ -151,7 +155,8 @@
     transition: all 0.2s ease-in-out;
   }
 
-  .btn-secondary-reflex:hover {
+  .btn-secondary-reflex:hover,
+  .btn-secondary-kemo:hover {
     background: #f8fafc;
     border-color: #94a3b8;
     color: #0f172a;
@@ -171,6 +176,66 @@
     background: #20bd5a;
     box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
     transform: translateY(-1px);
+  }
+
+  /* -------------------------------------------------------------
+     Button Animations (Glow Pulse & Continuous Shimmer Sweep)
+     ------------------------------------------------------------- */
+  @keyframes button-shimmer {
+    0% {
+      transform: translateX(-160%) skewX(-20deg);
+    }
+    30%, 100% {
+      transform: translateX(260%) skewX(-20deg);
+    }
+  }
+
+  @keyframes pulse-subtle-blue {
+    0%, 100% {
+      box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3), 0 0 0 0 rgba(37, 99, 235, 0.35);
+    }
+    50% {
+      box-shadow: 0 6px 20px rgba(37, 99, 235, 0.45), 0 0 0 6px rgba(37, 99, 235, 0);
+    }
+  }
+
+  @keyframes pulse-subtle-green {
+    0%, 100% {
+      box-shadow: 0 4px 14px rgba(37, 211, 102, 0.3), 0 0 0 0 rgba(37, 211, 102, 0.4);
+    }
+    50% {
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45), 0 0 0 6px rgba(37, 211, 102, 0);
+    }
+  }
+
+  .animate-btn-blue {
+    animation: pulse-subtle-blue 3.2s infinite ease-in-out;
+  }
+
+  .animate-btn-green {
+    animation: pulse-subtle-green 3.2s infinite ease-in-out 1.6s;
+  }
+
+  .btn-shimmer-effect {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn-shimmer-effect::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.3) 50%,
+      transparent 100%
+    );
+    animation: button-shimmer 3.6s infinite ease-in-out;
+    pointer-events: none;
   }
 
   /* -------------------------------------------------------------

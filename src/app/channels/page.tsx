@@ -21,11 +21,11 @@ import BrandMarquee from "@/components/home/BrandMarquee";
 const categoryCards = [
   {
     icon: Trophy,
-    title: "Live Sports Networks",
+    title: "Live 4K Sports & PPV Networks",
     items: [
-      "Premier League, Champions League, La Liga & Serie A",
-      "NBA, NFL Sunday Ticket, UFC Fight Nights, Boxing & F1",
-      "Sky Sports, TNT Sports, beIN Sports, ESPN+, DAZN & PPV"
+      "Premier League, UEFA Champions League, La Liga & Serie A",
+      "NBA, NFL Sunday Ticket, UFC Fight Nights, Boxing & Formula 1",
+      "Sky Sports, TNT Sports, beIN Sports, ESPN+, DAZN & PPV events"
     ],
     count: "12,500+ Live Feeds",
     tag: "MOST POPULAR"
@@ -34,59 +34,59 @@ const categoryCards = [
     icon: Film,
     title: "Cinema & Premium Movies",
     items: [
-      "Blockbuster premieres & 24/7 dedicated movie networks",
-      "Full 4K Ultra HD & 1080p high bitrate streaming",
-      "HBO, Cinemax, Sky Cinema, Starz, Showtime & VOD"
+      "Cinema premieres & 24/7 dedicated blockbuster networks",
+      "Uncompressed 4K Ultra HD & 1080p high bitrate streaming",
+      "HBO, Cinemax, Sky Cinema, Starz, Paramount+ & Daily VOD"
     ],
     count: "200,000+ Movies & Series"
   },
   {
     icon: Newspaper,
-    title: "International News",
+    title: "Global 24/7 Live News",
     items: [
-      "24/7 continuous global breaking news channels",
-      "National, regional, financial and business coverage",
-      "BBC News, CNN, Sky News, Fox News, CNBC, Bloomberg"
+      "24/7 continuous international breaking news channels",
+      "National, regional, financial and real-time business coverage",
+      "BBC News, CNN, Sky News, Fox News, CNBC, Bloomberg & more"
     ],
     count: "3,200+ News Feeds"
   },
   {
     icon: Baby,
-    title: "Kids & Family",
+    title: "Kids & Family Entertainment",
     items: [
-      "Cartoons, educational programming & family films",
-      "Safe child-friendly networks with multi-language audio",
-      "Disney Channel, Cartoon Network, Nickelodeon, Boomerang"
+      "Animated series, educational programming & family cinema",
+      "Safe family-friendly networks with multi-language audio",
+      "Disney Channel, Cartoon Network, Nickelodeon, Boomerang & CBeebies"
     ],
     count: "2,800+ Channels"
   },
   {
     icon: Monitor,
-    title: "General Entertainment",
+    title: "General Entertainment & Docs",
     items: [
-      "Top-rated dramas, sitcoms, reality TV & lifestyle shows",
-      "US, UK, Canadian & European flagship networks",
-      "Discovery, Nat Geo, History, TLC, Bravo, AMC & ITV"
+      "Top-rated global dramas, reality TV & premium lifestyle shows",
+      "US, UK, Canadian, Australian & European flagship channels",
+      "Discovery, Nat Geo, History Channel, TLC, Bravo, AMC & ITV"
     ],
     count: "15,000+ Channels"
   },
   {
     icon: Globe2,
-    title: "Worldwide Regional Packages",
+    title: "150+ Country Regional IPTV Packages",
     items: [
-      "150+ country packages with native language audio",
-      "Dedicated local sports, cultural programming & regional news",
-      "UK, USA, Canada, Europe, MENA, Latin America & Asia"
+      "150+ international countries with localized audio and EPG",
+      "Dedicated local sports, cultural networks & regional stations",
+      "USA, UK, Canada, Europe, MENA, Latin America, Africa & Asia"
     ],
     count: "+50,000 Channels"
   },
   {
     icon: Layers3,
-    title: "On-Demand TV Series",
+    title: "On-Demand TV Series & Boxsets",
     items: [
-      "Complete season boxsets with automatic new episode updates",
-      "High-speed streaming servers with multiple subtitle options",
-      "Streaming hits from Netflix, Apple TV+, Amazon & HBO Max"
+      "Complete season boxsets with automatic latest episode updates",
+      "High-speed CDN servers with multi-language subtitle tracks",
+      "Binge-worthy shows from Netflix, Apple TV+, Amazon Prime & HBO"
     ],
     count: "+120,000 Episodes"
   }
@@ -94,7 +94,7 @@ const categoryCards = [
 
 export default function ChannelsPage() {
   return (
-    <main className="min-h-screen bg-white text-slate-900 pt-24 pb-24 relative overflow-hidden">
+    <main className="min-h-screen bg-white text-slate-900 pt-6 sm:pt-8 pb-20 relative overflow-hidden">
       <div className="max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-10 relative z-10">
         
         {/* Header Banner */}
@@ -105,7 +105,7 @@ export default function ChannelsPage() {
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight">
-            Reflexsat IPTV <span className="text-blue-600">Channel Lineup</span>
+            Kemo IPTV <span className="text-blue-600">Channel Lineup</span>
           </h1>
 
           <p className="mx-auto mt-4 max-w-2xl text-base sm:text-lg text-slate-600 leading-relaxed">
@@ -185,10 +185,10 @@ export default function ChannelsPage() {
               <CirclePlay className="w-6 h-6" />
             </div>
             <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900">
-              Ready to Start Streaming With Reflexsat?
+              Ready to Stream 50,000+ Channels With Kemo IPTV?
             </h2>
             <p className="mt-3 text-slate-600 text-sm sm:text-base leading-relaxed">
-              Order your subscription plan today and receive your playlist and Xtream Codes login credentials on WhatsApp in minutes. Need help configuring your app? Follow our{" "}
+              Order your Kemo IPTV subscription today and receive your M3U playlist and Xtream Codes login credentials on WhatsApp in minutes. Need help configuring your app? Follow our{" "}
               <Link href="/installation" className="text-blue-600 font-bold underline">
                 device installation tutorials
               </Link>
@@ -205,12 +205,12 @@ export default function ChannelsPage() {
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/pricing"
-                className="btn-primary-reflex px-8 py-3.5 text-xs sm:text-sm font-extrabold uppercase tracking-wider"
+                className="btn-primary-kemo px-8 py-3.5 text-xs sm:text-sm font-extrabold uppercase tracking-wider"
               >
                 View Subscription Plans
               </Link>
               <a
-                href="https://wa.me/447882781998?text=Hello,%20I%20would%20like%20to%20request%20a%20free%20trial%20for%20Reflexsat%20IPTV."
+                href="https://wa.me/447882781998?text=Hello,%20I%20would%20like%20to%20request%20a%20free%20trial%20for%20Kemo%20IPTV."
                 target="_blank"
                 rel="noreferrer"
                 className="btn-whatsapp-clean px-8 py-3.5 text-xs sm:text-sm font-extrabold uppercase tracking-wider"

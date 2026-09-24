@@ -32,10 +32,10 @@ export default function LatestArticlesSection() {
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    alt={`${post.title} - Reflexsat IPTV Streaming Guide`}
-                    title={`${post.title} | Reflexsat IPTV`}
+                    alt={`${post.title} - Kemo IPTV Streaming Guide`}
+                    title={`${post.title} | Kemo IPTV`}
                     loading="lazy"
-                    src={post.coverImage || "/blog/reflexsat-blog-default.webp"}
+                    src={post.coverImage || "/blog/kemo-iptv-buying-guide.jpg"}
                   />
                   <div className="absolute bottom-0 w-full h-1/2 bg-gradient-to-t from-[#141414] to-transparent"></div>
                   <span className="absolute top-4 left-4 px-3 py-1 bg-white backdrop-blur-md text-black rounded-full text-xs font-bold border border-black/10">

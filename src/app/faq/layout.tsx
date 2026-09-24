@@ -1,25 +1,25 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Frequently Asked Questions | Reflexsat IPTV Service & Setup",
+  title: "Kemo IPTV | IPTV FAQ – Common Questions, Setup & Billing",
   description:
-    "Find answers to common questions about Reflexsat IPTV subscriptions, device compatibility, anti-freeze technology, channel line-up, and payment methods.",
+    "Find fast, helpful answers to common questions about Kemo IPTV. Learn about device compatibility, free trial activation, payment methods, and setup guides.",
   alternates: {
     canonical: "/faq",
   },
   openGraph: {
-    title: "Frequently Asked Questions | Reflexsat IPTV Service & Setup",
+    title: "Kemo IPTV | IPTV FAQ – Common Questions, Setup & Billing",
     description:
-      "Find answers to common questions about Reflexsat IPTV subscriptions, device compatibility, and anti-freeze technology.",
-    url: "https://www.reflexsat-iptv4k.shop/faq",
-    siteName: "Reflexsat IPTV",
+      "Find fast, helpful answers to common questions about Kemo IPTV. Learn about device compatibility, free trial activation, payment methods, and setup guides.",
+    url: "https://www.kemo-iptv.shop/faq",
+    siteName: "Kemo IPTV",
     type: "website",
     images: [
       {
-        url: "/reflexsat-compatible-devices.webp",
+        url: "/blog/kemo-best-iptv-players.jpg",
         width: 1200,
         height: 630,
-        alt: "Reflexsat IPTV Frequently Asked Questions & Device Compatibility",
+        alt: "Kemo IPTV Frequently Asked Questions & Device Compatibility",
       },
     ],
   },
