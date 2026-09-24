@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Kemo IPTV — Premium 4K IPTV Streaming Platform
 
-## Getting Started
+Official web application and marketing platform for **Kemo IPTV** ([www.kemo-iptv.shop](https://www.kemo-iptv.shop)). Built with Next.js 16 (App Router), React 19, Tailwind CSS v4, and Lucide Icons.
 
-First, run the development server:
+---
+
+## 🌟 Features & Highlights
+
+- **50,000+ Live Channels:** International coverage across 150+ countries (Sports, News, Cinema, Kids, Documentaries).
+- **200,000+ VOD Movies & Series:** Daily updated 4K and FHD on-demand libraries with multi-language subtitle tracks.
+- **Anti-Freeze 10.0 Technology:** Dedicated multi-cluster CDN infrastructure and dynamic load balancing for buffer-free live sports.
+- **60 FPS Sports Streams:** Premier League, Champions League, NBA, NFL, UFC PPV, and Formula 1 with zero blackouts.
+- **Multi-Device Compatibility:** Amazon Firestick, Apple TV 4K, Android TV, Google TV, Samsung Tizen, LG webOS, PC, and MAG.
+- **Automated Xtream Codes & M3U Provisioning:** Instant WhatsApp activation and 24/7 VIP technical support.
+
+---
+
+## 🚀 Tech Stack
+
+- **Framework:** [Next.js 16](https://nextjs.org/) (App Router, Turbopack)
+- **UI Library:** [React 19](https://react.dev/)
+- **Styling:** [Tailwind CSS v4](https://tailwindcss.com/)
+- **Icons:** [Lucide React](https://lucide.dev/)
+- **Markdown:** `react-markdown` + `remark-gfm`
+- **Image Processing:** `sharp`
+
+---
+
+## 🛠️ Getting Started
+
+First, install dependencies:
+
+```bash
+npm install
+```
+
+Run the local development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser to view the application.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+To create an optimized production build:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm run start
+```
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 📄 License & Copyright
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+© 2026 Kemo IPTV ([www.kemo-iptv.shop](https://www.kemo-iptv.shop)). All rights reserved.
